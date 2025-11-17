@@ -10,7 +10,7 @@ export default function MainHeader() {
           <span>1,200</span>
         </div>
         <Link className="logo" href="/">
-          <Image src="/assets/images/common/logo.svg" alt="logo" fill />
+          <Image src="/assets/images/layout/logo.svg" alt="logo" fill />
         </Link>
         <div className="order-side">
           <button className="order-ring">
@@ -21,6 +21,7 @@ export default function MainHeader() {
           </button>
         </div>
       </div>
+      <div className="main-header-body"></div>
     </div>
   );
 }

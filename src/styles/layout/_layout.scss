@@ -1,0 +1,101 @@
+@use "../abstracts" as *;
+.footer {
+  @include flex(0px);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 58px;
+  background-color: #fff;
+  border-top: 1px solid #ededed;
+  padding: 0 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(/assets/images/layout/footer_bg.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 86px;
+    height: 58px;
+  }
+  .footer-left {
+    @include flex(0px);
+    width: 100%;
+    height: 100%;
+    padding-right: 43px;
+  }
+  .footer-right {
+    @include flex(0px);
+    width: 100%;
+    height: 100%;
+    padding-left: 43px;
+  }
+  .ai-icon {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    background-image: url(/assets/images/layout/AI_icon.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    &::before {
+      content: "AI";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include fontDefinition(10px, 500, 100%);
+      color: #1c1c1c;
+      opacity: 0.4;
+    }
+  }
+  .footer-btn {
+    flex: 1;
+    @include flex(6px);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0;
+    opacity: 0.4;
+    &.act {
+      opacity: 1;
+    }
+    span {
+      display: block;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include fontDefinition(10px, 500, 100%);
+      color: #1c1c1c;
+      &.icon01 {
+        width: 20px;
+        height: 20px;
+        background-image: url(/assets/images/layout/footer_icon01.svg);
+      }
+      &.icon02 {
+        width: 18px;
+        height: 20px;
+        background-image: url(/assets/images/layout/footer_icon02.svg);
+      }
+      &.icon03 {
+        width: 17px;
+        height: 20px;
+        background-image: url(/assets/images/layout/footer_icon03.svg);
+      }
+      &.icon04 {
+        width: 20px;
+        height: 20px;
+        background-image: url(/assets/images/layout/footer_icon04.svg);
+      }
+    }
+  }
+}
