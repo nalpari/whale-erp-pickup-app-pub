@@ -1,0 +1,128 @@
+@use "../abstracts" as *;
+
+// 의미 없음
+.icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/assets/images/common/btn_icon.svg);
+  margin-right: 8px;
+}
+
+/******************** btn-color 모음 *****************/
+.black {
+  background-color: $normal-back-color;
+  color: $normal-font-color;
+  &.hover,
+  &:hover {
+    background-color: $normal-h-back-color;
+  }
+  &.active,
+  &:active {
+    background-color: $normal-a-back-color;
+  }
+  &:disabled {
+    background-color: $normal-d-back-color;
+  }
+}
+.org {
+  background-color: $org-back-color;
+  color: $org-font-color;
+  &.hover,
+  &:hover {
+    background-color: $org-h-back-color;
+  }
+  &.active,
+  &:active {
+    background-color: $org-a-back-color;
+  }
+  &:disabled {
+    background-color: $org-d-back-color;
+  }
+}
+.pink {
+  background-color: $pink-back-color;
+  color: $pink-font-color;
+  &.hover,
+  &:hover {
+    background-color: $pink-h-back-color;
+  }
+  &.active,
+  &:active {
+    background-color: $pink-a-back-color;
+  }
+  &:disabled {
+    background-color: $pink-d-back-color;
+  }
+}
+.outline {
+  background-color: $out-back-color;
+  color: $out-font-color;
+  border: 1px solid $out-border-color;
+  &.hover,
+  &:hover {
+    background-color: $out-h-back-color;
+    color: #fff;
+    border-color: $out-h-back-color;
+  }
+  &.active,
+  &:active {
+    background-color: $out-a-back-color;
+  }
+  &:disabled {
+    background-color: $out-d-back-color;
+    color: $out-d-font-color;
+    border-color: $out-d-border-color;
+  }
+}
+.log {
+  background-color: $log-back-color;
+  color: $log-font-color;
+  &.hover,
+  &:hover {
+    background-color: $log-h-back-color;
+  }
+  &.active,
+  &:active {
+    background-color: $log-a-back-color;
+  }
+  &:disabled {
+    background-color: $log-d-back-color;
+  }
+}
+
+/******************** btn-type 모음 *****************/
+// btn-frame 공통
+@mixin btn-frame($height, $padding, $font-size, $i-size) {
+  height: $height;
+  padding: 0px $padding;
+  border-radius: 6px;
+  @include fontDefinition($font-size, $font-w-600, 135%);
+  font-family: "Pretendard", sans-serif;
+  letter-spacing: 0;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  i {
+    width: $i-size;
+    height: $i-size;
+  }
+  &:disabled {
+    cursor: default;
+  }
+  &.ic-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// 데스크탑 small 버튼
+.btn-form {
+  @include btn-frame(48px, 24px, $n-btn-font, 24px);
+  &.outline {
+    @include btn-frame(30px, 12px, $sn-btn-font, 24px);
+    font-weight: 500;
+  }
+}
