@@ -1,7 +1,10 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function MainHeader() {
+  const bottomSheetControler = useBottomSheetControler();
   return (
     <div className="main-header">
       <div className="main-header-top">
@@ -26,7 +29,12 @@ export default function MainHeader() {
           <button className="search-btn">매장명, 메뉴검색</button>
         </div>
         <div className="location-btn-wrap">
-          <button className="location-btn act">
+          <button
+            className={`location-btn ${
+              bottomSheetControler.locationSheet ? "act" : ""
+            }`}
+            onClick={() => bottomSheetControler.setLocationSheet(true)}
+          >
             <span className="location-icon"></span>
             <span className="location-text">위치를 설정해 주세요</span>
           </button>
