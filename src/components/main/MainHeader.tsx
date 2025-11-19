@@ -40,8 +40,13 @@ export default function MainHeader() {
           </button>
         </div>
         <div className="filter-wrap">
-          <button className="filter-btn">
-            <span className="filter-text">가까운 순</span>
+          <button
+            className={`filter-btn ${
+              bottomSheetControler.arraySheet ? "act" : ""
+            }`}
+            onClick={() => bottomSheetControler.setArraySheet(true)}
+          >
+            <span className="filter-text">리뷰 많은 순</span>
           </button>
           <button className="filter-btn act">
             <span className="filter-text">영업중</span>

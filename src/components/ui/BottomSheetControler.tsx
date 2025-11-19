@@ -1,15 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import LocationSheet from "../bottomSheet/LocationSheet";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import LocationSheet from "../bottomSheet/LocationSheet";
+import ArraySheet from "../bottomSheet/ArraySheet";
 
 export default function BottomSheetControler() {
   const bottomSheetControler = useBottomSheetControler();
 
   useEffect(() => {
     // 모든 팝업 상태를 배열로 확인
-    const isAnyBottomSheetOpen = bottomSheetControler.locationSheet;
+    const isAnyBottomSheetOpen =
+      bottomSheetControler.locationSheet || bottomSheetControler.arraySheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -22,7 +24,12 @@ export default function BottomSheetControler() {
     return () => {
       document.body.classList.remove("open");
     };
-  }, [bottomSheetControler.locationSheet]);
+  }, [bottomSheetControler.locationSheet, bottomSheetControler.arraySheet]);
 
-  return <>{bottomSheetControler.locationSheet && <LocationSheet />}</>;
+  return (
+    <>
+      {bottomSheetControler.locationSheet && <LocationSheet />}
+      {bottomSheetControler.arraySheet && <ArraySheet />}
+    </>
+  );
 }

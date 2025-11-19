@@ -1,5 +1,6 @@
 @use "../abstracts" as *;
 
+// 위치 설정
 .location-list {
   @include flex(12px);
   flex-direction: column;
@@ -38,4 +39,30 @@
     @include fontDefinition(15px, 400, 140%);
     color: #777;
   }
+}
+
+.array-list {
+  @include flex(0px);
+  flex-direction: column;
+  padding: 24px 0 0;
+}
+.array-item {
+  &:first-child {
+    button {
+      padding-top: 0;
+    }
+  }
+  &:last-child {
+    button {
+      padding-bottom: 0;
+    }
+  }
+}
+.array-addr {
+  display: block;
+  width: 100%;
+  text-align: left;
+  @include fontDefinition(15px, 500, 140%);
+  color: #444;
+  padding: 10px 0;
 }
