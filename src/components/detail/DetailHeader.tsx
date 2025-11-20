@@ -68,8 +68,9 @@ export default function DetailHeader() {
         <div className="store-desc-wrap">
           <div className="store-desc">스페셜티 커피의 환상적인 맛</div>
           <div className="store-desc-info">
-            <span className="order">주문수 : 34</span>
+            <span className="order">주문수 34</span>
             <span className="bookmark">28</span>
+            <span className="comment">5,086</span>
           </div>
         </div>
         <div className="detail-tab-wrap">
@@ -79,7 +80,7 @@ export default function DetailHeader() {
           </button>
           <button className="detail-tab-item">
             <span className="comment icon"></span>
-            <span>후기 (16)</span>
+            <span>후기</span>
           </button>
           <button className="detail-tab-item">
             <span className="bookmark icon"></span>

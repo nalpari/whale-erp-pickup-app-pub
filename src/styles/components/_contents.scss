@@ -40,6 +40,7 @@
   }
 }
 
+// detail
 .detail-wrap {
   width: 100%;
   min-height: 100vh;
@@ -134,9 +135,26 @@
           background-size: cover;
         }
       }
+      &.comment {
+        position: relative;
+        padding-left: 18px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 15px;
+          height: 15px;
+          background: url(/assets/images/layout/comment.svg) no-repeat center
+            center;
+          background-size: cover;
+        }
+      }
     }
   }
 }
+
 .detail-tab-wrap {
   @include flex(6px);
   align-items: center;
@@ -191,6 +209,97 @@
       background: url(/assets/images/contents/detail_data_arr.svg) no-repeat
         center center;
       background-size: cover;
+    }
+  }
+}
+
+// contents
+.detail-contents {
+  margin-top: 10px;
+  border-top: 1px solid #f2f0f0;
+  background-color: #fff;
+}
+.dt-contents-inner {
+  padding: 32px 24px 24px;
+}
+.contents-tab-wrap {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.menu-list {
+  @include flex(15px);
+  flex-direction: column;
+  margin-top: 20px;
+  .menu-title {
+    @include fontDefinition(16px, 600, 140%);
+    color: #1a1a1a;
+  }
+}
+.menu-item {
+  position: relative;
+  .menu-item-btn {
+    @include flex(24px);
+    width: 100%;
+    text-align: left;
+  }
+  .menu-item-img {
+    flex: none;
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 6.5px 24px;
+    background-color: #f8f8f8;
+    img {
+      width: 100%;
+    }
+  }
+  .menu-item-info {
+    margin-top: 6px;
+    .menu-name {
+      @include fontDefinition(15px, 500, 140%);
+      color: #1a1a1a;
+    }
+    .menu-price {
+      @include flex(6px);
+      align-items: center;
+      margin-top: 3px;
+      @include fontDefinition(15px, 700, 140%);
+      color: #1a1a1a;
+      .discount {
+        @include fontDefinition(14px, 400, 140%);
+        color: #777;
+        text-decoration: line-through;
+      }
+    }
+    .menu-desc {
+      margin-top: 7px;
+      @include fontDefinition(14px, 400, 140%);
+      color: #777;
+    }
+  }
+  &.ready {
+    &::before {
+      content: "일시품절";
+      @include flex(0px);
+      align-items: center;
+      justify-content: center;
+      @include fontDefinition(17px, 500, 140%);
+      color: #1a1a1a;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 32px;
+      border: 1px solid #ededed;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 1;
     }
   }
 }
