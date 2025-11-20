@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function MainContents() {
+  const router = useRouter();
   return (
     <div className="main-contents">
       <div className="contents-list">
@@ -34,12 +37,16 @@ export default function MainContents() {
             </div>
             <div className="contents-map">58m 도보 1분</div>
             <div className="btn-wrap">
-              <button className="call-btn "> 전화</button>
+              <button className="call-btn act"> 전화</button>
             </div>
           </div>
         </div>
         {Array.from({ length: 10 }).map((_, index) => (
-          <div className="contents-item " key={index}>
+          <div
+            className="contents-item "
+            key={index}
+            onClick={() => router.push(`/detail`)}
+          >
             <div className="contents-img ">
               <div className="badge-wrap">
                 <div>
@@ -69,7 +76,7 @@ export default function MainContents() {
               </div>
               <div className="contents-map">58m 도보 1분</div>
               <div className="btn-wrap">
-                <button className="call-btn act"> 전화</button>
+                <button className="call-btn "> 전화</button>
               </div>
             </div>
           </div>

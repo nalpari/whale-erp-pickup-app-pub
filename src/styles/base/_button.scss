@@ -1,16 +1,5 @@
 @use "../abstracts" as *;
 
-// 의미 없음
-.icon {
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url(/assets/images/common/btn_icon.svg);
-  margin-right: 8px;
-}
-
 /******************** btn-color 모음 *****************/
 .black {
   background-color: $normal-back-color;
