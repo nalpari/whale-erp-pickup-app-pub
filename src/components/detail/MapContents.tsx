@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { usePopupControler } from "@/store/usePopupControler";
 
 export default function MapContents() {
+  const popupControler = usePopupControler();
   return (
     <div className="map-contents">
       <div className="map-data">
@@ -20,7 +22,10 @@ export default function MapContents() {
           </div>
         </div>
         <div className="map-btn-bx">
-          <button className="map-btn">
+          <button
+            className="map-btn"
+            onClick={() => popupControler.setMapPopup(true)}
+          >
             <i className="map-btn-icon"></i>지도보기
           </button>
         </div>

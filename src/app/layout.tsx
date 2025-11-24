@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/style.scss";
 import BottomSheetControler from "@/components/ui/BottomSheetControler";
+import PopupControler from "@/components/ui/PopupControler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         {children}
         <BottomSheetControler />
+        <PopupControler />
       </body>
     </html>
   );
