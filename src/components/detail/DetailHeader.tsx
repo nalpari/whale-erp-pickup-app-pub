@@ -88,7 +88,7 @@ export default function DetailHeader() {
           </button>
         </div>
         <div className="detail-store-data">
-          <Link href="/">
+          <Link href="/detail/map">
             이번 신메뉴는 말차+크림 음료 3종입니다! 9월16일부터 일주일간 1,000원
             할인된 금액으로 할인된 금액으로할인된 금액으로할인된 금액으로
           </Link>
