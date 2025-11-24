@@ -651,3 +651,101 @@
     }
   }
 }
+
+// 구매후기
+.review-contents {
+  margin-top: 66px;
+  padding: 32px 24px 0;
+}
+.review-item {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  .review-head {
+    @include flex(0px);
+    align-items: center;
+    margin-bottom: 15px;
+    h2 {
+      @include fontDefinition(15px, 600, 140%);
+      color: #1a1a1a;
+    }
+    .review-date {
+      margin-left: auto;
+      @include fontDefinition(15px, 400, 140%);
+      color: #777;
+    }
+  }
+  .review-menu {
+    @include flex(6px);
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    span {
+      display: inline-block;
+      @include fontDefinition(14px, 400, 140%);
+      color: #444;
+      border: 1px solid #ededed;
+      border-radius: 100px;
+      padding: 6.5px 13px;
+    }
+  }
+  .review-txt {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    word-break: keep-all;
+  }
+  .review-img-wrap {
+    margin-top: 18px;
+    margin-right: -24px;
+    .mySwiper {
+      padding-right: 24px;
+    }
+    .review-img-item {
+      display: block;
+      text-align: left;
+      flex: none;
+      width: 100%;
+      height: 100px;
+      border-radius: 32px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+  .review-comment-wrap {
+    padding-top: 22px;
+    border-top: 1px solid #ededed;
+    margin-top: 22px;
+    .comment-date {
+      text-align: right;
+      @include fontDefinition(15px, 400, 140%);
+      color: #777;
+      margin-bottom: 10px;
+    }
+  }
+  .review-comment {
+    @include flex(24px);
+    .comment-symbol {
+      flex: none;
+      width: 46px;
+      height: 46px;
+      background-color: #1ac7b7;
+      border-radius: 50%;
+    }
+    .comment-txt {
+      @include fontDefinition(15px, 400, 140%);
+      color: #1a1a1a;
+      word-break: keep-all;
+    }
+  }
+}

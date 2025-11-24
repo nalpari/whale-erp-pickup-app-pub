@@ -8,8 +8,10 @@ import "swiper/css/navigation";
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function DetailHeader() {
+  const router = useRouter();
   return (
     <div className="detail-header">
       <div className="detail-img-wrap">
@@ -74,11 +76,17 @@ export default function DetailHeader() {
           </div>
         </div>
         <div className="detail-tab-wrap">
-          <button className="detail-tab-item">
+          <button
+            className="detail-tab-item"
+            onClick={() => router.push("/detail/map")}
+          >
             <span className="location icon"></span>
             <span>점포정보</span>
           </button>
-          <button className="detail-tab-item">
+          <button
+            className="detail-tab-item"
+            onClick={() => router.push("/detail/review")}
+          >
             <span className="comment icon"></span>
             <span>후기</span>
           </button>

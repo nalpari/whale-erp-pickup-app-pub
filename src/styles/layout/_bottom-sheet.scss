@@ -5,8 +5,18 @@
 }
 .react-modal-sheet-backdrop {
   background-color: rgba(0, 0, 0, 0.5) !important;
-  transition: none !important;
+  animation-duration: 0s !important;
   animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  will-change: auto !important;
+}
+
+// data attribute로도 시도
+[data-rsbs-backdrop] {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
 }
 .react-modal-sheet-container {
   border-radius: 32px 32px 0 0 !important;
