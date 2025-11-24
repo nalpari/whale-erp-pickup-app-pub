@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import { useRouter } from "next/navigation";
 
 export default function DetailContents() {
   const bottomSheetControler = useBottomSheetControler();
+  const router = useRouter();
   return (
     <div className="detail-contents">
       <div className="dt-contents-inner">
@@ -26,6 +28,7 @@ export default function DetailContents() {
         </div>
         <dl className="menu-list">
           <dt className="menu-title">시그니처</dt>
+          {/* ready 클래스 추가시 일시품절 표시 */}
           <dd className="menu-item ready">
             <button className="menu-item-btn">
               <div className="menu-item-img">
@@ -48,7 +51,10 @@ export default function DetailContents() {
           </dd>
           {Array.from({ length: 2 }).map((_, index) => (
             <dd className="menu-item" key={index}>
-              <button className="menu-item-btn">
+              <button
+                className="menu-item-btn"
+                onClick={() => router.push(`/detail/${index + 1}`)}
+              >
                 <div className="menu-item-img">
                   <Image
                     src="/assets/images/contents/menu_img01.svg"
@@ -71,7 +77,8 @@ export default function DetailContents() {
         </dl>
         <dl className="menu-list">
           <dt className="menu-title">아메리카노</dt>
-          <dd className="menu-item">
+          {/* ready 클래스 추가시 일시품절 표시 */}
+          <dd className="menu-item ready">
             <button className="menu-item-btn">
               <div className="menu-item-img">
                 <Image

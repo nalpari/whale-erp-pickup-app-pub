@@ -1,4 +1,32 @@
 @use "../abstracts" as *;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  z-index: 999999;
+  background-color: #fff;
+  .header-inner {
+    @include flex(0px);
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+  }
+  .back-btn {
+    flex: none;
+    @include flex(0px);
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e2e2e2;
+    background: url(/assets/images/contents/back_arr.svg) no-repeat center
+      center;
+    background-size: 18px 12px;
+  }
+}
 .badge {
   display: inline-flex;
   gap: 4px;
@@ -414,5 +442,81 @@
       background: rgba(255, 255, 255, 0.9);
       z-index: 1;
     }
+  }
+}
+
+//메뉴 컨텐츠
+.menu-contents {
+  padding: 66px 24px 0;
+}
+.menu-badge-wrap {
+  @include flex(6px);
+  align-items: center;
+}
+.menu-info {
+  @include flex(0px);
+}
+.menu-data {
+  @include flex(7px);
+  flex-direction: column;
+  .menu-name {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .menu-price {
+    @include fontDefinition(15px, 700, 100%);
+    color: #1a1a1a;
+    .discount {
+      @include fontDefinition(14px, 400, 100%);
+      color: #777;
+      text-decoration: line-through;
+    }
+  }
+}
+.menu-zoom {
+  margin-left: auto;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url(/assets/images/contents/menu_zoom_icon.svg) no-repeat center
+    center;
+  background-size: 19px 19px;
+  border: 1px solid #ededed;
+  background-color: #fff;
+  border-radius: 14px;
+}
+.menu-count-wrap {
+  @include flex(0px);
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  border-radius: 6px;
+  margin-top: 15px;
+  .menu-minus {
+    display: block;
+    width: 44px;
+    height: 100%;
+    background: url(/assets/images/contents/minus.svg) no-repeat center center;
+    background-size: 24px 24px;
+    border-right: 1px solid #eee;
+    background-color: #fff;
+  }
+  .menu-plus {
+    display: block;
+    width: 44px;
+    height: 100%;
+    background: url(/assets/images/contents/plus.svg) no-repeat center center;
+    background-size: 16px 16px;
+    border-left: 1px solid #eee;
+    background-color: #fff;
+  }
+  .menu-count {
+    flex: 1;
+    display: block;
+    text-align: center;
+    @include fontDefinition(15px, 400, 140%);
+    color: #888;
   }
 }
