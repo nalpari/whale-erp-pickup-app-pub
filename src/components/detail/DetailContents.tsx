@@ -1,11 +1,28 @@
+"use client";
 import Image from "next/image";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function DetailContents() {
+  const bottomSheetControler = useBottomSheetControler();
   return (
     <div className="detail-contents">
       <div className="dt-contents-inner">
         <div className="contents-tab-wrap">
-          <button className="tab-item">시그니처</button>
+          <div className="tab-list">
+            <button className="tab-item">시그니처</button>
+            <button className="tab-item act">에이드&주스</button>
+            <button className="tab-item">논커피</button>
+            <button className="tab-item">스무디</button>
+            <button className="tab-item">스무디&프라페</button>
+            <button
+              className={`tab-item arr ${
+                bottomSheetControler.categorySheet ? "act" : ""
+              }`}
+              onClick={() => bottomSheetControler.setCategorySheet(true)}
+            >
+              <i className="arr-icon"></i>
+            </button>
+          </div>
         </div>
         <dl className="menu-list">
           <dt className="menu-title">시그니처</dt>

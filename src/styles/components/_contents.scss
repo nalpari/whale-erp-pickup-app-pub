@@ -46,6 +46,69 @@
   min-height: 100vh;
   background-color: #f8f8f8;
 }
+.AI-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  background: url(/assets/images/layout/AI_icon.svg) no-repeat center center;
+  background-size: cover;
+  z-index: 99;
+  &.act {
+    bottom: 150px;
+  }
+}
+.basket-btn {
+  @include flex(0px);
+  align-items: center;
+  position: fixed;
+  bottom: 34px;
+  left: 24px;
+  width: calc(100% - 48px);
+  height: 68px;
+  text-align: left;
+  padding: 0 24px;
+  background-color: rgba(68, 68, 68, 0.9);
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+  .basket-btn-name {
+    @include flex(0px);
+    align-items: center;
+    .basket-btn-icon {
+      display: block;
+      background: url(/assets/images/contents/basket_tab_icon.svg) no-repeat
+        center center;
+      background-size: cover;
+      width: 18px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    b {
+      @include flex(6px);
+      align-items: center;
+      @include fontDefinition(15px, 600, 140%);
+      color: #fff;
+      i {
+        @include flex(0px);
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        border-radius: 50%;
+        @include fontDefinition(12px, 700, 140%);
+        color: #1a1a1a;
+      }
+    }
+  }
+  .basket-btn-count {
+    margin-left: auto;
+    @include fontDefinition(20px, 700, 140%);
+    color: #fff;
+  }
+}
 .detail-img-wrap {
   position: relative;
   .swiper-pagination {
@@ -227,6 +290,56 @@
   top: 0;
   left: 0;
   z-index: 2;
+  background-color: #fff;
+  margin: -20px -24px -20px;
+  padding: 20px 0px 20px 24px;
+}
+.tab-list {
+  @include flex(6px);
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-right: 24px;
+  .tab-item {
+    flex: none;
+    display: inline-block;
+    border: 1px solid #ededed;
+    border-radius: 80px;
+    padding: 9px 17px;
+    @include fontDefinition(14px, 400, 140%);
+    color: #444;
+    transition: all 0.15s ease;
+    &.arr {
+      @include flex(0px);
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      .arr-icon {
+        flex: none;
+        display: block;
+        width: 16px;
+        height: 9px;
+        background: url(/assets/images/contents/tab_arr.svg) no-repeat center
+          center;
+        background-size: cover;
+      }
+    }
+    &.act {
+      background-color: #444;
+      color: #fff;
+      font-weight: 600;
+      .arr-icon {
+        background: url(/assets/images/contents/tab_arr_act.svg) no-repeat
+          center center;
+        background-size: cover;
+      }
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .menu-list {
   @include flex(15px);
