@@ -23,6 +23,7 @@
     pointer-events: none;
     font-size: $font-ds-14;
     .modal-content {
+      width: 100%;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -72,6 +73,35 @@
         -ms-flex-pack: end;
         justify-content: flex-end;
         padding: 10px;
+      }
+    }
+  }
+}
+
+.modal-popup {
+  &.photo {
+    background-color: #1c1c1c;
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+          background-color: transparent;
+          border: none;
+          height: auto;
+          .modal-close {
+            position: absolute;
+            top: 18px;
+            transform: translateY(0);
+            right: unset;
+            left: 24px;
+            background: url(/assets/images/popup/photo_close.svg) no-repeat
+              center center;
+            background-size: 12px 12px;
+            z-index: 3;
+          }
+        }
+        .modal-body {
+          background-color: transparent;
+        }
       }
     }
   }

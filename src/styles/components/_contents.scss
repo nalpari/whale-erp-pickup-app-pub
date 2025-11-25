@@ -670,7 +670,7 @@
   .review-head {
     @include flex(0px);
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     h2 {
       @include fontDefinition(15px, 600, 140%);
       color: #1a1a1a;
@@ -722,30 +722,27 @@
       }
     }
   }
-  .review-comment-wrap {
+  .review-comment {
+    @include flex(24px);
     padding-top: 22px;
     border-top: 1px solid #ededed;
     margin-top: 22px;
-    .comment-date {
-      text-align: right;
-      @include fontDefinition(15px, 400, 140%);
-      color: #777;
-      margin-bottom: 10px;
-    }
-  }
-  .review-comment {
-    @include flex(24px);
     .comment-symbol {
       flex: none;
       width: 46px;
       height: 46px;
-      background-color: #1ac7b7;
       border-radius: 50%;
+      margin-top: 3px;
     }
     .comment-txt {
       @include fontDefinition(15px, 400, 140%);
       color: #1a1a1a;
       word-break: keep-all;
+    }
+    .comment-date {
+      text-align: left;
+      @include fontDefinition(15px, 400, 140%);
+      color: #777;
     }
   }
 }

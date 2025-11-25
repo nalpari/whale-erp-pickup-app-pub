@@ -3,13 +3,14 @@
 import { useEffect } from "react";
 import { usePopupControler } from "@/store/usePopupControler";
 import MapPopup from "../popup/MapPopup";
+import PhotoPopup from "../popup/PhotoPopup";
 
 export default function PopupControler() {
   const popupControler = usePopupControler();
 
   useEffect(() => {
     // 모든 팝업 상태를 배열로 확인
-    const isAnyPopupOpen = popupControler.mapPopup;
+    const isAnyPopupOpen = popupControler.mapPopup || popupControler.photoPopup;
 
     // body 클래스 토글
     if (isAnyPopupOpen) {
@@ -22,7 +23,12 @@ export default function PopupControler() {
     return () => {
       document.body.classList.remove("open");
     };
-  }, [popupControler.mapPopup]);
+  }, [popupControler.mapPopup, popupControler.photoPopup]);
 
-  return <>{popupControler.mapPopup && <MapPopup />}</>;
+  return (
+    <>
+      {popupControler.mapPopup && <MapPopup />}
+      {popupControler.photoPopup && <PhotoPopup />}
+    </>
+  );
 }
