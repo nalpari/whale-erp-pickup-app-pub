@@ -9,11 +9,37 @@ import { Pagination } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function DetailHeader() {
   const router = useRouter();
+  const [openFixHeader, setOpenFixHeader] = useState(false);
+
+  // 상단 고정 헤더 추가
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setOpenFixHeader(window.scrollY > 400);
+    });
+  }, []);
+
   return (
     <div className="detail-header">
+      <div className={`header ${openFixHeader ? "act" : ""}`}>
+        <div className="header-inner">
+          <div className="back-btn-bx">
+            <button
+              className="back-btn"
+              onClick={() => router.push("/detail")}
+            ></button>
+          </div>
+          <h1>힘이나는커피생활무교점</h1>
+          <div className="order-side">
+            <button className="order-basket">
+              <span>2</span>
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="detail-img-wrap">
         <div className="store-ready">
           <span>매장 점검 중 입니다.</span>
@@ -90,7 +116,7 @@ export default function DetailHeader() {
             <span className="comment icon"></span>
             <span>후기</span>
           </button>
-          <button className="detail-tab-item">
+          <button className="detail-tab-item act">
             <span className="bookmark icon"></span>
             <span>찜</span>
           </button>
