@@ -149,7 +149,9 @@
   .header {
     top: -66px;
     transition: all 0.15s ease;
-    &.act {
+  }
+  &.act {
+    .header {
       top: 0;
     }
   }

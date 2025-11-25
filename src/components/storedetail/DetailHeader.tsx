@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Header from "@/components/ui/Header";
 
 export default function DetailHeader() {
   const router = useRouter();
@@ -23,23 +24,8 @@ export default function DetailHeader() {
   }, []);
 
   return (
-    <div className="detail-header">
-      <div className={`header ${openFixHeader ? "act" : ""}`}>
-        <div className="header-inner">
-          <div className="back-btn-bx">
-            <button
-              className="back-btn"
-              onClick={() => router.push("/")}
-            ></button>
-          </div>
-          <h1>힘이나는커피생활무교점</h1>
-          <div className="order-side">
-            <button className="order-basket">
-              <span>2</span>
-            </button>
-          </div>
-        </div>
-      </div>
+    <div className={`detail-header ${openFixHeader ? "act" : ""}`}>
+      <Header url="/" title="힘이나는커피생활무교점" basket={true} />
       <div className="detail-img-wrap">
         <div className="store-ready">
           <span>매장 점검 중 입니다.</span>
