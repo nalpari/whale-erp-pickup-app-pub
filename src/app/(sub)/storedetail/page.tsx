@@ -1,5 +1,5 @@
-import DetailHeader from "@/components/detail/DetailHeader";
-import DetailContents from "@/components/detail/DetailContents";
+import DetailHeader from "@/components/storedetail/DetailHeader";
+import DetailContents from "@/components/storedetail/DetailContents";
 
 export default function DetailPage() {
   return (

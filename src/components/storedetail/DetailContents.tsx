@@ -53,7 +53,7 @@ export default function DetailContents() {
             <dd className="menu-item" key={index}>
               <button
                 className="menu-item-btn"
-                onClick={() => router.push(`/detail/${index + 1}`)}
+                onClick={() => router.push(`/storedetail/${index + 1}`)}
               >
                 <div className="menu-item-img">
                   <Image

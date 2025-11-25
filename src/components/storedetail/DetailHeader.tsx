@@ -29,7 +29,7 @@ export default function DetailHeader() {
           <div className="back-btn-bx">
             <button
               className="back-btn"
-              onClick={() => router.push("/detail")}
+              onClick={() => router.push("/")}
             ></button>
           </div>
           <h1>힘이나는커피생활무교점</h1>
@@ -107,14 +107,14 @@ export default function DetailHeader() {
         <div className="detail-tab-wrap">
           <button
             className="detail-tab-item"
-            onClick={() => router.push("/detail/map")}
+            onClick={() => router.push("/storedetail/map")}
           >
             <span className="location icon"></span>
             <span>점포정보</span>
           </button>
           <button
             className="detail-tab-item"
-            onClick={() => router.push("/detail/review")}
+            onClick={() => router.push("/storedetail/review")}
           >
             <span className="comment icon"></span>
             <span>후기</span>
@@ -126,7 +126,7 @@ export default function DetailHeader() {
           </button>
         </div>
         <div className="detail-store-data">
-          <Link href="/detail/map">
+          <Link href="/storedetail/map">
             이번 신메뉴는 말차+크림 음료 3종입니다! 9월16일부터 일주일간 1,000원
             할인된 금액으로 할인된 금액으로할인된 금액으로할인된 금액으로
           </Link>

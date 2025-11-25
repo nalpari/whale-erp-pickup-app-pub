@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import MapContents from "@/components/detail/MapContents";
+import MapContents from "@/components/storedetail/MapContents";
 
 export default function MapPage() {
   const router = useRouter();
@@ -11,7 +11,7 @@ export default function MapPage() {
           <div className="back-btn-bx">
             <button
               className="back-btn"
-              onClick={() => router.push("/detail")}
+              onClick={() => router.push("/storedetail")}
             ></button>
           </div>
           <h1>점포정보</h1>

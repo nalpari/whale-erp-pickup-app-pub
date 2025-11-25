@@ -46,7 +46,7 @@ export default function MainContents() {
           <div
             className="contents-item "
             key={index}
-            onClick={() => router.push(`/detail`)}
+            onClick={() => router.push(`/storedetail`)}
           >
             <div className="contents-img ">
               <div className="badge-wrap">
