@@ -786,3 +786,79 @@
     }
   }
 }
+
+// 주문내역
+.order-history-contents {
+  margin-top: 66px;
+  background-color: #f2f0f0;
+  height: calc(100vh - 66px);
+}
+
+.history-data-wrap {
+  @include flex(0px);
+  align-items: center;
+  background-color: #fff;
+  padding: 18px 24px;
+  .history-data {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    span {
+      font-weight: 600;
+    }
+  }
+  .history-data-btn {
+    display: block;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/contents/history_data_btn.svg) no-repeat
+      center center;
+    background-size: cover;
+  }
+}
+.history-empty {
+  background-color: #fff;
+  height: 100%;
+  .empty-wrap {
+    @include flex(0px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 185px;
+    margin: 0 auto;
+    height: 100%;
+    .empty-icon-bx {
+      @include flex(0px);
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      background-color: #f8f8f8;
+      border-radius: 50%;
+      i {
+        display: block;
+        width: 60px;
+        height: 66px;
+        background: url(/assets/images/contents/empty_basket.svg) no-repeat
+          center center;
+        background-size: cover;
+      }
+    }
+    .empty-text {
+      @include fontDefinition(18px, 500, 140%);
+      color: #1a1a1a;
+      margin-top: 28px;
+    }
+    .empty-btn {
+      display: block;
+      width: 100%;
+      padding: 0 24px;
+      @include fontDefinition(15px, 500, 140%);
+      color: #444444;
+      height: 48px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      margin-top: 17px;
+    }
+  }
+}

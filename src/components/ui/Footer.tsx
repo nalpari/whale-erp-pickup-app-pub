@@ -15,7 +15,7 @@ export default function Footer() {
       </div>
       <Link href="/" className="ai-icon"></Link>
       <div className="footer-right">
-        <Link href="/orderdetail" className="footer-btn">
+        <Link href="/orderhistory" className="footer-btn">
           <span className="icon03"></span>
           <span className="text">주문내역</span>
         </Link>
