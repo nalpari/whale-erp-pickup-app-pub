@@ -25,6 +25,7 @@ export default function MainContents() {
               src="/assets/images/layout/store_img.jpg"
               alt="contents-img"
               fill
+              sizes="(max-width: 320px) 100vw, 100vw"
             />
           </div>
           <div className="contents-info">
@@ -64,6 +65,7 @@ export default function MainContents() {
                 src="/assets/images/layout/store_img.jpg"
                 alt="contents-img"
                 fill
+                sizes="(max-width: 320px) 100vw, 100vw"
               />
             </div>
             <div className="contents-info">

@@ -25,6 +25,7 @@
     height: auto;
   }
   .photo-img {
+    position: relative;
     @include flex(0px);
     align-items: center;
     height: 100%;

@@ -57,6 +57,7 @@ export default function DetailHeader() {
                 src="/assets/images/contents/store_img.png"
                 alt="store-img"
                 fill
+                loading="eager"
               />
             </div>
           </SwiperSlide>
@@ -66,6 +67,7 @@ export default function DetailHeader() {
                 src="/assets/images/layout/store_img.jpg"
                 alt="store-img"
                 fill
+                loading="eager"
               />
             </div>
           </SwiperSlide>
@@ -75,6 +77,7 @@ export default function DetailHeader() {
                 src="/assets/images/layout/store_img.jpg"
                 alt="store-img"
                 fill
+                loading="eager"
               />
             </div>
           </SwiperSlide>
@@ -116,6 +119,7 @@ export default function DetailHeader() {
             <span className="comment icon"></span>
             <span>후기</span>
           </button>
+          {/* act 클래스 추가시 찜 탭 아이콘 컬러 변경 */}
           <button className="detail-tab-item act">
             <span className="bookmark icon"></span>
             <span>찜</span>
