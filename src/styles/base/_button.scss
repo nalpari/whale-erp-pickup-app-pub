@@ -88,7 +88,7 @@
 // 데스크탑 small 버튼
 .btn-form {
   @include btn-frame(48px, 24px, $n-btn-font, 24px);
-  &.outline {
+  &.min {
     @include btn-frame(30px, 12px, $sn-btn-font, 24px);
     font-weight: 500;
   }

@@ -14,7 +14,9 @@ export default function OrderHistoryContents() {
             <div className="history-data">
                최근 <span>1년</span>까지의 이력만 조회 가능합니다.
             </div>
-            <button className="history-data-btn"></button>
+            <div className="history-btn-bx">
+              <button className="history-data-btn"></button>
+            </div>
           </div>
           <div className="history-list-wrap">
             {/* cancel 클래스 추가 시 주문취소 */}
@@ -43,7 +45,11 @@ export default function OrderHistoryContents() {
               </div>
             </button>
             {Array.from({ length: arrayLength }).map((_, index) => (
-              <button className="history-list-item" key={index}>
+              <button
+                className="history-list-item"
+                key={index}
+                onClick={() => router.push(`/orderhistory/${index + 1}`)}
+              >
                 <ul className="item-step-list">
                   <li className="step-item act">주문접수</li>
                   <li className="step-item act">제조중</li>

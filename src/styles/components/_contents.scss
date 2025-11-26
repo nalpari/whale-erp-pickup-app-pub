@@ -791,7 +791,7 @@
 .order-history-contents {
   margin-top: 66px;
   background-color: #f2f0f0;
-  height: calc(100vh - 66px);
+  min-height: calc(100vh - 66px);
 }
 
 .history-data-wrap {
@@ -807,14 +807,22 @@
       font-weight: 600;
     }
   }
-  .history-data-btn {
-    display: block;
+  .history-btn-bx {
     margin-left: auto;
-    width: 24px;
-    height: 24px;
-    background: url(/assets/images/contents/history_data_btn.svg) no-repeat
-      center center;
-    background-size: cover;
+    button {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      &.history-data-btn {
+        background-image: url(/assets/images/contents/history_data_btn.svg);
+      }
+      &.history-reset-btn {
+        background-image: url(/assets/images/contents/history_reset_btn.svg);
+      }
+    }
   }
 }
 
@@ -927,9 +935,165 @@
     }
   }
 }
-.history-empty {
+
+.history-detail-bx {
+  margin-top: 10px;
+  padding: 25px 0 22px;
   background-color: #fff;
-  height: 100%;
+  border-top: 1px solid #f2f0f0;
+  border-bottom: 1px solid #f2f0f0;
+
+  .item-step-list {
+    padding-top: 0;
+  }
+}
+.detail-data-wrap {
+  padding: 32px 24px 0;
+  .detail-data-name {
+    position: relative;
+    @include fontDefinition(16px, 600, 140%);
+    color: #1a1a1a;
+    margin-bottom: 7px;
+    padding-left: 18px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 12px;
+      height: 13px;
+      background: url(/assets/images/contents/history_detail_name.svg) no-repeat
+        center center;
+      background-size: cover;
+    }
+  }
+  .detail-data {
+    @include fontDefinition(14px, 400, 140%);
+    color: #777;
+    span {
+      display: block;
+    }
+  }
+  .bill-btn {
+    margin-top: 24px;
+  }
+}
+.history-detail-form {
+  padding: 0 24px;
+  .detail-form-tit {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+    margin-bottom: 7px;
+  }
+  .detail-form-txt {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    span {
+      font-weight: 600;
+      color: #e6854a;
+    }
+  }
+}
+
+.cost-form-tit {
+  @include flex(0px);
+  align-items: center;
+  padding: 0 24px 14px;
+  border-bottom: 1px solid #f2f0f0;
+  .name {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .cost {
+    margin-left: auto;
+    @include flex(12px);
+    align-items: center;
+    @include fontDefinition(16px, 600, 140%);
+    color: #1a1a1a;
+    span {
+      display: block;
+    }
+  }
+}
+.cost-form-sub {
+  padding: 20px 24px 0;
+  .sub-list {
+    @include flex(10px);
+    flex-direction: column;
+    &.dot {
+      .sub-item {
+        padding-left: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 4px;
+          height: 4px;
+          background-color: #ccc;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .sub-item {
+    position: relative;
+    @include flex(0px);
+    align-items: center;
+    .sub-item-name {
+      @include fontDefinition(15px, 400, 140%);
+      color: #777;
+    }
+    .sub-item-cost {
+      @include flex(12px);
+      align-items: center;
+      margin-left: auto;
+      @include fontDefinition(15px, 500, 140%);
+      color: #777;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+.cost-form-total {
+  @include flex(0px);
+  align-items: center;
+  padding: 25px 24px 0;
+  margin-top: 20px;
+  border-top: 1px solid #f2f0f0;
+  .total-name {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .total-cost {
+    margin-left: auto;
+    @include fontDefinition(18px, 600, 140%);
+    color: #f34a5a;
+    span {
+      display: block;
+    }
+  }
+}
+.history-detail-guide {
+  padding: 0 24px;
+  span {
+    @include fontDefinition(14px, 400, 140%);
+    color: #777;
+    display: block;
+    word-break: keep-all;
+  }
+}
+.history-detail-btn-bx {
+  @include flex(6px);
+  align-items: center;
+  padding: 0 24px;
+}
+
+.history-empty {
+  height: calc(100vh - 66px);
+  background-color: #fff;
   .empty-wrap {
     @include flex(0px);
     flex-direction: column;
