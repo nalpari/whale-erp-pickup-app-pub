@@ -1,9 +1,13 @@
+"use client";
+import { usePopupControler } from "@/store/usePopupControler";
+
 export default function HistoryDetail() {
+  const popupControler = usePopupControler();
   return (
     <div className="order-history-contents">
       <div className="history-data-wrap">
         <div className="history-data">
-            대기번호 : <span>98</span>
+          픽업번호 : <span>98</span>
         </div>
         <div className="history-btn-bx">
           <button className="history-reset-btn"></button>
@@ -21,11 +25,16 @@ export default function HistoryDetail() {
             힘이 나는 커피 생활 종로 젊음의 거리점
           </div>
           <div className="detail-data">
-            <span>결제 완료일 : 25.11.04 09:18</span>
+            <span>결제 완료일시 : 25.11.04 09:18</span>
             <span>주문번호 : 516302700</span>
           </div>
           <div className="bill-btn">
-            <button className="btn-form outline block">영수증 보기</button>
+            <button
+              className="btn-form outline block"
+              onClick={() => popupControler.setOrderBillPopup(true)}
+            >
+              영수증 보기
+            </button>
           </div>
         </div>
       </div>
@@ -46,7 +55,7 @@ export default function HistoryDetail() {
       <div className="history-detail-bx">
         <div className="history-cost-form">
           <div className="cost-form-tit">
-            <p className="name">총 결제 금액</p>
+            <p className="name">아메리카노</p>
             <p className="cost">
               <span>2,600원</span>
               <span>1개</span>
@@ -127,7 +136,7 @@ export default function HistoryDetail() {
           <button className="btn-form black block">구매 후기 작성</button>
           <button className="btn-form org block">같은 메뉴 담기</button>
           {/* 주문취소 버튼 추가 시 주석 해제 */}
-          {/* <button className="btn-form pink block">주문취소</button> */}
+          {/* <button className="btn-form pink block">주문 취소 하기</button> */}
         </div>
       </div>
     </div>

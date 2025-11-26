@@ -37,3 +37,173 @@
     letter-spacing: -0.375px;
   }
 }
+
+.bill-frame {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+.bill-table-wrap {
+  padding: 28px 24px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f0f0;
+}
+.bill-table {
+  width: 100%;
+  td {
+    padding: 4px 0;
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    vertical-align: top;
+    &.end {
+      position: relative;
+      padding-left: 10px;
+      &:before {
+        content: ":";
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 1px;
+      }
+    }
+  }
+}
+.bill-frame-bx {
+  margin-top: 10px;
+  padding: 28px 0 20px;
+  background-color: #fff;
+  border-top: 1px solid #f2f0f0;
+  border-bottom: 1px solid #f2f0f0;
+}
+.bill-frame-bx-tit {
+  @include flex(0px);
+  align-items: center;
+  padding: 0 24px;
+  margin-bottom: 5px;
+  .tit-name {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+  }
+  .tit-price {
+    @include fontDefinition(15px, 600, 140%);
+    color: #1a1a1a;
+    margin-left: auto;
+  }
+}
+.bill-frame-bx-inner {
+  padding: 0 24px;
+}
+.bill-menu-table {
+  width: 100%;
+  table-layout: fixed;
+  th {
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f2f0f0;
+    &:last-child {
+      padding-right: 24px;
+    }
+  }
+  td {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    text-align: center;
+    padding-bottom: 8px;
+
+    .option-name {
+      position: relative;
+      color: #777;
+      @include fontDefinition(15px, 400, 140%);
+      padding-left: 10px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 8px;
+        width: 4px;
+        height: 4px;
+        background-color: #777;
+        border-radius: 50%;
+      }
+    }
+    &.b {
+      font-weight: 600;
+    }
+    &:first-child {
+      padding-left: 24px;
+    }
+    &:last-child {
+      padding-right: 24px;
+    }
+  }
+  tr {
+    &:first-child {
+      td {
+        padding-top: 20px;
+      }
+    }
+    &:last-child {
+      td {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f2f0f0;
+      }
+    }
+  }
+  tbody {
+    &:last-child {
+      tr {
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+.bill-menu-total {
+  padding: 20px 24px 0;
+  border-top: 1px solid #f2f0f0;
+  .bill-total-data {
+    @include flex(0px);
+    align-items: center;
+    padding-bottom: 8px;
+    .total-name {
+      @include fontDefinition(15px, 600, 140%);
+      color: #1a1a1a;
+      &.light {
+        font-weight: 400;
+      }
+      &.option {
+        position: relative;
+        padding-left: 10px;
+        color: #777;
+        font-weight: 400;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 4px;
+          height: 4px;
+          background-color: #777;
+          border-radius: 50%;
+        }
+      }
+    }
+    .total-price {
+      @include fontDefinition(15px, 600, 140%);
+      color: #1a1a1a;
+      margin-left: auto;
+    }
+  }
+}
+.icon-down {
+  display: block;
+  width: 16px;
+  height: 15px;
+  background: url(/assets/images/contents/down_icon.svg) no-repeat center center;
+  background-size: cover;
+}

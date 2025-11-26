@@ -63,6 +63,9 @@
 /******************** btn-type 모음 *****************/
 // btn-frame 공통
 @mixin btn-frame($height, $padding, $font-size, $i-size) {
+  @include flex(10px);
+  align-items: center;
+  justify-content: center;
   height: $height;
   padding: 0px $padding;
   border-radius: 6px;
@@ -71,10 +74,6 @@
   letter-spacing: 0;
   transition: all 0.15s ease-in-out;
   cursor: pointer;
-  i {
-    width: $i-size;
-    height: $i-size;
-  }
   &:disabled {
     cursor: default;
   }
