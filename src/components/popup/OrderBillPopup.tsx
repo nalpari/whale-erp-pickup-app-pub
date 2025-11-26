@@ -203,7 +203,11 @@ export default function OrderBillPopup() {
               </div>
               <div className="bill-frame-bx">
                 <div className="bill-frame-bx-inner">
-                  <button className="btn-form black block">
+                  {/* 임시 alert 팝업 노출 */}
+                  <button
+                    className="btn-form black block"
+                    onClick={() => popupControler.setAlertPopup(true)}
+                  >
                     <i className="icon-down"></i> 전자 영수증 다운로드
                   </button>
                 </div>

@@ -207,3 +207,26 @@
   background: url(/assets/images/contents/down_icon.svg) no-repeat center center;
   background-size: cover;
 }
+
+.alert-frame {
+  .alert-tit {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .alert-info {
+    @include fontDefinition(14px, 400, 140%);
+    color: #1a1a1a;
+    span {
+      display: block;
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+  .alert-btn {
+    @include flex(6px);
+    margin-top: 25px;
+    align-items: center;
+  }
+}

@@ -33,7 +33,7 @@ export default function DetailContents() {
             <button className="menu-item-btn">
               <div className="menu-item-img">
                 <Image
-                  src="/assets/images/contents/menu_img01.svg"
+                  src="/assets/images/contents/menu_item.png"
                   alt="menu-img"
                   fill
                 />
@@ -57,7 +57,7 @@ export default function DetailContents() {
               >
                 <div className="menu-item-img">
                   <Image
-                    src="/assets/images/contents/menu_img01.svg"
+                    src="/assets/images/contents/menu_item.png"
                     alt="menu-img"
                     fill
                   />
@@ -82,7 +82,7 @@ export default function DetailContents() {
             <button className="menu-item-btn">
               <div className="menu-item-img">
                 <Image
-                  src="/assets/images/contents/menu_img01.svg"
+                  src="/assets/images/contents/menu_item.png"
                   alt="menu-img"
                   fill
                 />
@@ -103,7 +103,7 @@ export default function DetailContents() {
               <button className="menu-item-btn">
                 <div className="menu-item-img">
                   <Image
-                    src="/assets/images/contents/menu_img01.svg"
+                    src="/assets/images/contents/menu_item.png"
                     alt="menu-img"
                     fill
                   />

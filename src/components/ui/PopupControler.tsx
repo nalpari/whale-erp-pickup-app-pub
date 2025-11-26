@@ -5,6 +5,7 @@ import { usePopupControler } from "@/store/usePopupControler";
 import MapPopup from "../popup/MapPopup";
 import PhotoPopup from "../popup/PhotoPopup";
 import OrderBillPopup from "../popup/OrderBillPopup";
+import Alert from "../popup/Alert";
 
 export default function PopupControler() {
   const popupControler = usePopupControler();
@@ -14,7 +15,8 @@ export default function PopupControler() {
     const isAnyPopupOpen =
       popupControler.mapPopup ||
       popupControler.photoPopup ||
-      popupControler.orderBillPopup;
+      popupControler.orderBillPopup ||
+      popupControler.alertPopup;
 
     // body 클래스 토글
     if (isAnyPopupOpen) {
@@ -31,6 +33,7 @@ export default function PopupControler() {
     popupControler.mapPopup,
     popupControler.photoPopup,
     popupControler.orderBillPopup,
+    popupControler.alertPopup,
   ]);
 
   return (
@@ -38,6 +41,7 @@ export default function PopupControler() {
       {popupControler.mapPopup && <MapPopup />}
       {popupControler.photoPopup && <PhotoPopup />}
       {popupControler.orderBillPopup && <OrderBillPopup />}
+      {popupControler.alertPopup && <Alert />}
     </>
   );
 }
