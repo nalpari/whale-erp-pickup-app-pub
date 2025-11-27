@@ -230,3 +230,11 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 321px) {
+  .bill-menu-table {
+    td {
+      font-size: 14px;
+    }
+  }
+}

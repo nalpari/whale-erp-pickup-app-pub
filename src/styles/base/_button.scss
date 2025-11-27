@@ -92,3 +92,10 @@
     font-weight: 500;
   }
 }
+
+@media screen and (max-width: 321px) {
+  .btn-form {
+    font-size: 13px;
+    padding: 0 15px;
+  }
+}

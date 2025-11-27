@@ -128,3 +128,9 @@
     }
   }
 }
+
+@media screen and (max-width: 321px) {
+  .modal-popup .modal-dialog .modal-content .modal-header h3 {
+    font-size: 18px;
+  }
+}

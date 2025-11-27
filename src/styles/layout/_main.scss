@@ -317,14 +317,19 @@
   }
 }
 @media screen and (max-width: 321px) {
+  .main-header-body {
+    padding: 14px 24px 14px;
+  }
   .filter-wrap {
     .filter-btn {
+      padding: 9px 5px;
       .filter-text {
         font-size: 13px;
       }
     }
   }
   .contents-item {
+    gap: 14px;
     .contents-img {
       width: 100px;
       height: 100px;

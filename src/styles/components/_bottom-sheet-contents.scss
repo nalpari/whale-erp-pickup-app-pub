@@ -87,3 +87,9 @@
   @include fontDefinition(14px, 500, 140%);
   color: #444;
 }
+
+@media screen and (max-width: 321px) {
+  .category-btn {
+    font-size: 12px;
+  }
+}

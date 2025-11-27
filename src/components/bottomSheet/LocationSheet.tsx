@@ -4,7 +4,7 @@ import { Sheet } from "react-modal-sheet";
 
 export default function LocationSheet() {
   const bottomSheetControler = useBottomSheetControler();
-  const dataLength = 0;
+  const dataLength = 3;
 
   return (
     <Sheet
@@ -21,7 +21,7 @@ export default function LocationSheet() {
               <h3>위치 설정</h3>
               <div className="bt-sh-btn-wrap">
                 {dataLength > 0 && (
-                  <button className="btn-form outline">수정</button>
+                  <button className="btn-form outline min">수정</button>
                 )}
               </div>
             </div>
