@@ -412,8 +412,34 @@
     color: #1a1a1a;
   }
 }
+
+//메뉴 컨텐츠
+.menu-wrap {
+  background-color: #f2f0f0;
+}
+.menu-contents {
+  padding: 66px 0px 116px;
+  .header {
+    border-bottom: none;
+  }
+}
+.menu-content-data {
+  padding-bottom: 24px;
+}
+.menu-content-bx {
+  background-color: #fff;
+  padding: 0 24px;
+  margin-top: 10px;
+  border-top: 1px solid #f2f0f0;
+  border-bottom: 1px solid #f2f0f0;
+  &:first-child {
+    margin-top: 0;
+    border-top: none;
+  }
+}
 .menu-item {
   position: relative;
+  background-color: #fff;
   .menu-item-btn {
     @include flex(24px);
     width: 100%;
@@ -478,13 +504,6 @@
   }
 }
 
-//메뉴 컨텐츠
-.menu-contents {
-  padding: 66px 24px 120px;
-  .header {
-    border-bottom: none;
-  }
-}
 .menu-badge-wrap {
   @include flex(6px);
   align-items: center;
@@ -525,28 +544,37 @@
   @include flex(0px);
   align-items: center;
   width: 100%;
-  height: 44px;
+  height: 48px;
   border: 1px solid #eee;
   background-color: #fff;
   border-radius: 6px;
   margin-top: 15px;
   .menu-minus {
     display: block;
-    width: 44px;
+    width: 48px;
     height: 100%;
-    background: url(/assets/images/contents/minus.svg) no-repeat center center;
+    background: #f5f5f5 url(/assets/images/contents/minus.svg) no-repeat center
+      center;
     background-size: 24px 24px;
     border-right: 1px solid #eee;
-    background-color: #fff;
+    transition: all 0.15s ease;
+    &:disabled {
+      background: #f5f5f5 url(/assets/images/contents/minus_disable.svg)
+        no-repeat center center;
+    }
   }
   .menu-plus {
     display: block;
-    width: 44px;
+    width: 48px;
     height: 100%;
     background: url(/assets/images/contents/plus.svg) no-repeat center center;
-    background-size: 16px 16px;
+    background-size: 14px 14px;
     border-left: 1px solid #eee;
-    background-color: #fff;
+    background-color: #f5f5f5;
+    &:disabled {
+      background: #f5f5f5 url(/assets/images/contents/plus_disable.svg)
+        no-repeat center center;
+    }
   }
   .menu-count {
     flex: 1;
@@ -556,6 +584,113 @@
     color: #888;
   }
 }
+.menu-option-setting {
+  padding: 28px 0 24px;
+  .option-setting-tit {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .option-setting-list {
+    @include flex(12px);
+    align-items: center;
+    margin-top: 12px;
+  }
+}
+.menu-option-wrap {
+  padding: 28px 0 24px;
+  &.all_same {
+    .menu-option-item:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+  .menu-option-num {
+    width: 100%;
+    @include flex(0px);
+    align-items: center;
+    span {
+      display: block;
+      @include fontDefinition(18px, 600, 140%);
+      color: #1a1a1a;
+    }
+    .menu-option-arr {
+      margin-left: auto;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(/assets/images/contents/cup_num_arr.svg) no-repeat center
+        center;
+      background-size: cover;
+      transition: all 0.15s ease;
+      &.act {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .menu-option-item {
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    &:first-child {
+      margin-top: 15px;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+    .option-tit {
+      @include flex(0px);
+      align-items: center;
+      margin-bottom: 16px;
+      span {
+        display: block;
+        @include fontDefinition(16px, 500, 140%);
+        color: #1a1a1a;
+        &.required {
+          margin-left: auto;
+          font-size: 15px;
+          color: #f34a5a;
+        }
+      }
+    }
+    .check-wrap {
+      @include flex(10px);
+      flex-direction: column;
+    }
+  }
+}
+.option-check-wrap {
+  @include flex(0px);
+  align-items: center;
+  .option-info-wrap {
+    @include flex(12px);
+    align-items: center;
+    margin-left: auto;
+    .menu-count-wrap {
+      height: 38px;
+      margin-top: 0;
+      .menu-count {
+        width: 47px;
+      }
+      .menu-minus {
+        width: 38px;
+        background-size: 20px 20px;
+      }
+      .menu-plus {
+        width: 38px;
+        background-size: 10px 10px;
+      }
+    }
+    .option-cost {
+      flex: none;
+      @include fontDefinition(14px, 500, 140%);
+      color: #999;
+      &.checked {
+        color: #1a1a1a;
+      }
+    }
+  }
+}
+
 .menu-btn-wrap {
   position: fixed;
   bottom: 0;
@@ -565,6 +700,14 @@
   background-color: #fff;
   border-top: 1px solid #f2f0f0;
   z-index: 3;
+  button {
+    gap: 3px;
+    font-size: 18px;
+    height: 68px;
+    span {
+      font-size: 22px;
+    }
+  }
 }
 
 // 점포정보
