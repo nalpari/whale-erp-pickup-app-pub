@@ -1280,6 +1280,120 @@
     }
   }
 }
+
+// mypage
+.mypage-wrap {
+  .header {
+    border-bottom: none;
+  }
+}
+.mypage-container {
+  padding-top: 66px;
+  padding-bottom: 65px;
+  min-height: 100vh;
+}
+.mypage-contents {
+  padding: 0 24px;
+}
+.mydata-bx {
+  padding: 42px 24px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #0c3579 0%, #152d5c 100%);
+}
+.mydata-info {
+  @include flex(14px);
+  align-items: center;
+  .mydata-info-img {
+    position: relative;
+    width: 46px;
+    height: 46px;
+  }
+  .mydata-info-text {
+    div {
+      @include fontDefinition(18px, 400, 150%);
+      color: #fff;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+.mydata-menu-list {
+  padding-top: 28px;
+}
+.mydata-menu-item {
+  width: 100%;
+  @include flex(0px);
+  align-items: center;
+  padding: 12px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  &:last-child {
+    border-bottom: none;
+  }
+  .mydata-item-tit {
+    @include flex(6px);
+    align-items: center;
+    @include fontDefinition(14px, 500, 140%);
+    color: #fff;
+    .icon {
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      @include fontDefinition(11px, 900, 18px);
+      color: #fff;
+      border: 1px solid #fff;
+      &.p {
+        background-color: #7490ff;
+      }
+      &.s {
+        background-color: #4fbfff;
+      }
+      &.c {
+        background-color: #f9833b;
+      }
+    }
+  }
+  .mydata-item-data {
+    margin-left: auto;
+    @include fontDefinition(15px, 700, 140%);
+    color: #fff;
+    span {
+      font-weight: 400;
+    }
+  }
+}
+.mypage-menu-list {
+  padding-top: 8px;
+}
+.mypage-menu-item {
+  position: relative;
+  @include flex(0px);
+  align-items: center;
+  width: 100%;
+  padding: 19px 4px;
+  border-bottom: 1px solid #f2f0f0;
+  &:last-child {
+    border-bottom: none;
+  }
+  .mypage-item-tit {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+  }
+  .mypage-txt {
+    margin-left: auto;
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    .mypage-arr {
+      display: block;
+      width: 6px;
+      height: 12px;
+      background: url(/assets/images/contents/mypage_arr.svg) no-repeat center
+        center;
+      background-size: cover;
+    }
+  }
+}
 @media screen and (max-width: 321px) {
   .header {
     h1 {
