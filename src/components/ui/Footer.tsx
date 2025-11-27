@@ -1,6 +1,9 @@
+"use client";
 import Link from "next/link";
+import { usePopupControler } from "@/store/usePopupControler";
 
 export default function Footer() {
+  const popupControler = usePopupControler();
   return (
     <div className="footer">
       <div className="footer-left">
@@ -13,7 +16,10 @@ export default function Footer() {
           <span className="text">찜</span>
         </Link>
       </div>
-      <Link href="/" className="ai-icon"></Link>
+      <button
+        className="ai-icon"
+        onClick={() => popupControler.setAiChatPopup(true)}
+      ></button>
       <div className="footer-right">
         <Link href="/orderhistory" className="footer-btn">
           <span className="icon03"></span>

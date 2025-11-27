@@ -41,6 +41,9 @@
         height: 66px;
         background: #fff;
         border-bottom: 1px solid #ededed;
+        &.ai {
+          border-bottom: none;
+        }
         h3 {
           @include fontDefinition(20px, 600, 140%);
           color: #1a1a1a;

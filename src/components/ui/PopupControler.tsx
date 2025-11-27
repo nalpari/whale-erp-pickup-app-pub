@@ -6,6 +6,7 @@ import MapPopup from "../popup/MapPopup";
 import PhotoPopup from "../popup/PhotoPopup";
 import OrderBillPopup from "../popup/OrderBillPopup";
 import Alert from "../popup/Alert";
+import AIChat from "../popup/AIChat";
 
 export default function PopupControler() {
   const popupControler = usePopupControler();
@@ -16,7 +17,8 @@ export default function PopupControler() {
       popupControler.mapPopup ||
       popupControler.photoPopup ||
       popupControler.orderBillPopup ||
-      popupControler.alertPopup;
+      popupControler.alertPopup ||
+      popupControler.aiChatPopup;
 
     // body 클래스 토글
     if (isAnyPopupOpen) {
@@ -34,6 +36,7 @@ export default function PopupControler() {
     popupControler.photoPopup,
     popupControler.orderBillPopup,
     popupControler.alertPopup,
+    popupControler.aiChatPopup,
   ]);
 
   return (
@@ -42,6 +45,7 @@ export default function PopupControler() {
       {popupControler.photoPopup && <PhotoPopup />}
       {popupControler.orderBillPopup && <OrderBillPopup />}
       {popupControler.alertPopup && <Alert />}
+      {popupControler.aiChatPopup && <AIChat />}
     </>
   );
 }
