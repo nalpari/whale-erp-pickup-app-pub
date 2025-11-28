@@ -1,6 +1,9 @@
+"use client";
+import { usePopupControler } from "@/store/usePopupControler";
 import Image from "next/image";
 
 export default function MyPageMain() {
+  const popupControler = usePopupControler();
   return (
     <div className="mypage-contents">
       <div className="mydata-bx">
@@ -20,7 +23,10 @@ export default function MyPageMain() {
           </div>
         </div>
         <div className="mydata-menu-list">
-          <button className="mydata-menu-item">
+          <button
+            className="mydata-menu-item"
+            onClick={() => popupControler.setMypagePointPopup(true)}
+          >
             <div className="mydata-item-tit">
               <i className="icon p">P</i>WHALE 포인트
             </div>
@@ -57,6 +63,12 @@ export default function MyPageMain() {
         </button>
         <button className="mypage-menu-item">
           <div className="mypage-item-tit">환경설정</div>
+          <div className="mypage-txt">
+            <i className="mypage-arr"></i>
+          </div>
+        </button>
+        <button className="mypage-menu-item">
+          <div className="mypage-item-tit">결제수단 관리</div>
           <div className="mypage-txt">
             <i className="mypage-arr"></i>
           </div>

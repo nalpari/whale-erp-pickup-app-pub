@@ -300,6 +300,86 @@
     center;
   background-size: 20px 20px;
 }
+// MyPage Point
+.point-frame {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f0f0;
+}
+.point-guide {
+  padding: 19.5px 24px;
+  background-color: #fff;
+  span {
+    @include fontDefinition(14px, 400, 140%);
+    color: #1a1a1a;
+    display: block;
+    word-break: keep-all;
+    letter-spacing: -0.35px;
+  }
+}
+.point-data-wrap {
+  background: linear-gradient(180deg, #0c3579 0%, #152d5c 100%), #6f82aa;
+  padding: 28px 24px 20px;
+  .point-data-item {
+    @include flex(0px);
+    align-items: center;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .point-data-tit {
+      @include fontDefinition(15px, 500, 140%);
+      color: #fff;
+    }
+    .point-data {
+      margin-left: auto;
+      @include fontDefinition(16px, 700, 140%);
+      color: #fff;
+    }
+  }
+}
+.point-list-wrap {
+  @include flex(10px);
+  flex-direction: column;
+}
+.point-item {
+  background-color: #fff;
+  padding: 26px 24px 19px;
+  border-top: 1px solid #f2f0f0;
+  border-bottom: 1px solid #f2f0f0;
+  .point-item-tit {
+    @include flex(0px);
+    align-items: center;
+    margin-bottom: 8px;
+    .point-item-date {
+      @include fontDefinition(14px, 400, 140%);
+      color: #777;
+    }
+    .point-item-txt {
+      margin-left: auto;
+      @include fontDefinition(14px, 400, 140%);
+      color: #777;
+    }
+  }
+  .point-item-info {
+    @include flex(0px);
+    align-items: center;
+    .point-item-info-tit {
+      @include fontDefinition(15px, 600, 140%);
+      color: #1a1a1a;
+    }
+    .point-item-info-data {
+      margin-left: auto;
+      span {
+        @include fontDefinition(15px, 600, 140%);
+        color: #1a1a1a;
+        &.use {
+          color: #e6854a;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 321px) {
   .bill-menu-table {

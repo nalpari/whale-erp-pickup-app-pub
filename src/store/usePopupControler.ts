@@ -6,11 +6,13 @@ type PopupControlerState = {
   orderBillPopup: boolean;
   alertPopup: boolean;
   aiChatPopup: boolean;
+  mypagePointPopup: boolean;
   setMapPopup: (isOpen: boolean) => void;
   setPhotoPopup: (isOpen: boolean) => void;
   setOrderBillPopup: (isOpen: boolean) => void;
   setAlertPopup: (isOpen: boolean) => void;
   setAiChatPopup: (isOpen: boolean) => void;
+  setMypagePointPopup: (isOpen: boolean) => void;
 };
 
 type InitialStateType = {
@@ -19,6 +21,7 @@ type InitialStateType = {
   orderBillPopup: boolean;
   alertPopup: boolean;
   aiChatPopup: boolean;
+  mypagePointPopup: boolean;
 };
 
 const initialState: InitialStateType = {
@@ -27,6 +30,7 @@ const initialState: InitialStateType = {
   orderBillPopup: false,
   alertPopup: false,
   aiChatPopup: false,
+  mypagePointPopup: false,
 };
 
 export const usePopupControler = create<PopupControlerState>((set) => ({
@@ -41,4 +45,6 @@ export const usePopupControler = create<PopupControlerState>((set) => ({
     set((state) => ({ ...state, alertPopup: isOpen })),
   setAiChatPopup: (isOpen: boolean) =>
     set((state) => ({ ...state, aiChatPopup: isOpen })),
+  setMypagePointPopup: (isOpen: boolean) =>
+    set((state) => ({ ...state, mypagePointPopup: isOpen })),
 }));
