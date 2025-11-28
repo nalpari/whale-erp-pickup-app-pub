@@ -2,16 +2,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import { usePopupControler } from "@/store/usePopupControler";
 
 export default function MainHeader() {
   const bottomSheetControler = useBottomSheetControler();
+  const popupControler = usePopupControler();
   return (
     <div className="main-header">
       <div className="main-header-top">
-        <div className="order-point">
+        <button
+          className="order-point"
+          onClick={() => popupControler.setMypagePointPopup(true)}
+        >
           <span>P</span>
           <span>1,200</span>
-        </div>
+        </button>
         <Link className="logo" href="/">
           <Image src="/assets/images/layout/logo.svg" alt="logo" fill />
         </Link>
