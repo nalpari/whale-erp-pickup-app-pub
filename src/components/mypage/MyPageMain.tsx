@@ -1,9 +1,10 @@
 "use client";
 import { usePopupControler } from "@/store/usePopupControler";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 export default function MyPageMain() {
   const popupControler = usePopupControler();
+  const router = useRouter();
   return (
     <div className="mypage-contents">
       <div className="mydata-bx">
@@ -40,7 +41,10 @@ export default function MyPageMain() {
               3점포 <span>발행중</span>
             </div>
           </button>
-          <button className="mydata-menu-item">
+          <button
+            className="mydata-menu-item"
+            onClick={() => router.push("/mypage/coupon")}
+          >
             <div className="mydata-item-tit">
               <i className="icon c">C</i>내쿠폰
             </div>
