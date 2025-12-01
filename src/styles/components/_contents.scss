@@ -1399,6 +1399,214 @@
 .coupon-contents {
   padding-top: 66px;
 }
+.coupon-list-contents {
+  padding: 28px 24px 24px;
+}
+.coupon-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 35px 25px;
+  background: linear-gradient(180deg, #eef1f7 0%, #fff 100%);
+  border: 1px solid #e5eaf3;
+  border-radius: 8px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    left: -1px;
+    width: 21px;
+    height: 42px;
+    border-radius: 0 100px 100px 0;
+    background: #fff;
+    border: 1px solid #e5eaf3;
+    border-left: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    right: -1px;
+    width: 21px;
+    height: 42px;
+    border-radius: 100px 0 0 100px;
+    background: #fff;
+    border: 1px solid #e5eaf3;
+    border-right: none;
+  }
+  .coupon-sub-tit {
+    @include fontDefinition(15px, 500, 140%);
+    color: #47587f;
+    margin-bottom: 5px;
+  }
+  .coupon-main-tit {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .coupon-data-wrap {
+    @include flex(8px);
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    .coupon-badge {
+      @include fontDefinition(14px, 500, 140%);
+      background-color: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 100px;
+      padding: 6px 15px;
+      &.o {
+        color: #e6854a;
+      }
+      &.g {
+        color: #777;
+      }
+      &.b {
+        color: #2f83e4;
+      }
+    }
+    .coupon-use-btn {
+      @include flex(8px);
+      align-items: center;
+      justify-content: center;
+      @include fontDefinition(14px, 500, 140%);
+      color: #fff;
+      background-color: #444;
+      border: 1px solid #eaeaea;
+      border-radius: 100px;
+      padding: 6px 14px;
+      i {
+        display: block;
+        width: 5px;
+        height: 8px;
+        background: url(/assets/images/contents/coupon_btn_arr.svg) no-repeat
+          center center;
+        background-size: cover;
+      }
+    }
+  }
+}
+.coupon-header {
+  padding-bottom: 21px;
+  border-bottom: 1px solid #f2f0f0;
+}
+.coupon-header-tit {
+  @include flex(0px);
+  align-items: center;
+  margin-bottom: 12px;
+  .count {
+    @include fontDefinition(14px, 400, 140%);
+    color: #777;
+    b {
+      font-weight: 600;
+    }
+  }
+  .sort {
+    margin-left: auto;
+    @include fontDefinition(14px, 400, 140%);
+    color: #777;
+  }
+}
+.target-store-wrap {
+  @include flex(0px);
+  align-items: center;
+  margin-top: 22px;
+  .target-store-tit {
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+  }
+  .target-store-txt {
+    margin-left: auto;
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+  }
+}
+.coupon-list-wrap {
+  padding-top: 24px;
+  @include flex(24px);
+  flex-direction: column;
+}
+
+// 쿠폰 상세
+.coupon-detail-contents {
+  padding-top: 66px;
+  min-height: calc(100vh);
+  background-color: #f8f8f8;
+}
+.coupon-data-form {
+  background-color: #fff;
+  border-bottom: 1px solid #f2f0f0;
+}
+.coupon-data-tit-wrap {
+  padding: 28px 24px 20px;
+  background: linear-gradient(180deg, #0c3579 0%, #152d5c 100%), #6f82aa;
+  .coupon-data-sub-tit {
+    @include fontDefinition(15px, 500, 140%);
+    color: #bfcbe5;
+    margin-bottom: 4px;
+  }
+  .coupon-data-tit {
+    @include fontDefinition(18px, 600, 140%);
+    color: #fff;
+  }
+}
+.coupon-data-item {
+  @include flex(0px);
+  align-items: center;
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid #f2f0f0;
+  &:last-child {
+    border-bottom: none;
+  }
+  .coupon-data-item-tit {
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+  }
+  .coupon-data-item-txt {
+    margin-left: auto;
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    text-align: right;
+    span {
+      display: block;
+    }
+  }
+}
+.coupon-use-guide-wrap {
+  margin-top: 10px;
+  background-color: #fff;
+  .use-guide-tit {
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+    padding: 28px 24px 20px;
+    border-bottom: 1px solid #f2f0f0;
+  }
+}
+.use-guide-list {
+  padding: 28px 24px 20px;
+  .use-guide-item {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .use-guide-item-tit {
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  .use-guide-item-txt {
+    @include flex(10px);
+    flex-direction: column;
+    @include fontDefinition(15px, 400, 140%);
+    color: #777;
+    span {
+      display: block;
+    }
+  }
+}
+
 @media screen and (max-width: 321px) {
   .header {
     h1 {
