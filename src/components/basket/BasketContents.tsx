@@ -242,12 +242,22 @@ export default function BasketContents() {
                   >
                     <ul className="payment-method-list-sub">
                       <li className="payment-method-item-sub">
-                        <button className="option-btn-select">
+                        <button
+                          className="option-btn-select"
+                          onClick={() =>
+                            bottomSheetControler.setCardSelectSheet(true)
+                          }
+                        >
                           <span>신용/체크카드 선택</span>
                         </button>
                       </li>
                       <li className="payment-method-item-sub">
-                        <button className="option-btn-select">
+                        <button
+                          className="option-btn-select"
+                          onClick={() =>
+                            bottomSheetControler.setInstallmentSheet(true)
+                          }
+                        >
                           <span>일시불/할부 선택</span>
                         </button>
                       </li>

@@ -5,10 +5,14 @@ type BottomSheetControlerState = {
   arraySheet: boolean;
   categorySheet: boolean;
   orderRequestSheet: boolean;
+  cardSelectSheet: boolean;
+  installmentSheet: boolean;
   setLocationSheet: (isOpen: boolean) => void;
   setArraySheet: (isOpen: boolean) => void;
   setCategorySheet: (isOpen: boolean) => void;
   setOrderRequestSheet: (isOpen: boolean) => void;
+  setCardSelectSheet: (isOpen: boolean) => void;
+  setInstallmentSheet: (isOpen: boolean) => void;
 };
 
 type InitialStateType = {
@@ -16,6 +20,8 @@ type InitialStateType = {
   arraySheet: boolean;
   categorySheet: boolean;
   orderRequestSheet: boolean;
+  cardSelectSheet: boolean;
+  installmentSheet: boolean;
 };
 
 const initialState: InitialStateType = {
@@ -23,6 +29,8 @@ const initialState: InitialStateType = {
   arraySheet: false,
   categorySheet: false,
   orderRequestSheet: false,
+  cardSelectSheet: false,
+  installmentSheet: false,
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>(
@@ -36,5 +44,9 @@ export const useBottomSheetControler = create<BottomSheetControlerState>(
       set((state) => ({ ...state, categorySheet: isOpen })),
     setOrderRequestSheet: (isOpen: boolean) =>
       set((state) => ({ ...state, orderRequestSheet: isOpen })),
+    setCardSelectSheet: (isOpen: boolean) =>
+      set((state) => ({ ...state, cardSelectSheet: isOpen })),
+    setInstallmentSheet: (isOpen: boolean) =>
+      set((state) => ({ ...state, installmentSheet: isOpen })),
   })
 );

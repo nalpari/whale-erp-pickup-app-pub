@@ -74,7 +74,14 @@
   gap: 6px;
   padding: 24px 0 0;
 }
-
+.category-item {
+  &.act {
+    .category-btn {
+      background: #ededed;
+      font-weight: 600;
+    }
+  }
+}
 .category-btn {
   display: block;
   width: 100%;
@@ -84,7 +91,7 @@
   border: 1px solid #ededed;
   background: #fff;
   padding: 0 5px;
-  @include fontDefinition(14px, 500, 140%);
+  @include fontDefinition(14px, 400, 140%);
   color: #444;
 }
 
@@ -142,6 +149,12 @@
     @include fontDefinition(14px, 400, 140%);
     color: #f34a5a;
   }
+}
+// 일시불/할부
+.installment-form {
+  @include flex(10px);
+  flex-direction: column;
+  padding-top: 24px;
 }
 
 @media screen and (max-width: 321px) {

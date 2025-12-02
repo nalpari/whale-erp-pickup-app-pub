@@ -6,6 +6,8 @@ import LocationSheet from "../bottomSheet/LocationSheet";
 import ArraySheet from "../bottomSheet/ArraySheet";
 import CategorySheet from "../bottomSheet/CategorySheet";
 import OrderRequestSheet from "../bottomSheet/OrderRequestSheet";
+import CardSelectSheet from "../bottomSheet/CardSelectSheet";
+import InstallmentSheet from "../bottomSheet/InstallmentSheet";
 
 export default function BottomSheetControler() {
   const bottomSheetControler = useBottomSheetControler();
@@ -16,7 +18,9 @@ export default function BottomSheetControler() {
       bottomSheetControler.locationSheet ||
       bottomSheetControler.arraySheet ||
       bottomSheetControler.categorySheet ||
-      bottomSheetControler.orderRequestSheet;
+      bottomSheetControler.orderRequestSheet ||
+      bottomSheetControler.cardSelectSheet ||
+      bottomSheetControler.installmentSheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -34,6 +38,8 @@ export default function BottomSheetControler() {
     bottomSheetControler.arraySheet,
     bottomSheetControler.categorySheet,
     bottomSheetControler.orderRequestSheet,
+    bottomSheetControler.cardSelectSheet,
+    bottomSheetControler.installmentSheet,
   ]);
 
   return (
@@ -42,6 +48,8 @@ export default function BottomSheetControler() {
       {bottomSheetControler.arraySheet && <ArraySheet />}
       {bottomSheetControler.categorySheet && <CategorySheet />}
       {bottomSheetControler.orderRequestSheet && <OrderRequestSheet />}
+      {bottomSheetControler.cardSelectSheet && <CardSelectSheet />}
+      {bottomSheetControler.installmentSheet && <InstallmentSheet />}
     </>
   );
 }

@@ -6,14 +6,14 @@
   width: 100%;
   min-width: 150px;
   height: $height;
-  padding: 0px 12px;
+  padding: 0px 16px;
   @include fontDefinition($font-size, $font-w-400, $line-h-140);
   border: 1px solid $sel-brd-default;
   border-radius: 6px;
   letter-spacing: 0;
   color: $sel-c-font;
   background-color: #fff;
-  background-image: url(../../../public/assets/images/common/select_arr.svg);
+  background-image: url(/assets/images/common/select_arr.svg);
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 24px 24px;
@@ -33,7 +33,7 @@
 }
 // select 데스크탑
 .select-form {
-  @include select-form(36px, $sel-font);
+  @include select-form(48px, $sel-font);
 }
 
 /******************** textarea-type 모음 *****************/

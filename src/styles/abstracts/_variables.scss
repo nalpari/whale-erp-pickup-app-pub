@@ -153,12 +153,12 @@ $check-disabled-c-font: #d0c9d6;
 
 /*************** select *************/
 
-$sel-font: 14px;
+$sel-font: 15px;
 
-$sel-brd-default: #e9edf5;
+$sel-brd-default: #ebebeb;
 $sel-brd-focus: #948ea5;
 
-$sel-c-font: #666;
+$sel-c-font: #1a1a1a;
 
 /*************** textarea *************/
 
@@ -170,6 +170,6 @@ $txtarea-brd-focus: #1a1a1a;
 $txtarea-c-font: #1a1a1a;
 $txtarea-c-placehold: #444;
 
-$txtarea-disable-c-font: #d0c9d6;
-$txtarea-disable-c-border: #ecebed;
-$txtarea-disable-c-back: #ecebed;
+$txtarea-disable-c-font: #999;
+$txtarea-disable-c-border: #ebebeb;
+$txtarea-disable-c-back: #f5f5f5;
