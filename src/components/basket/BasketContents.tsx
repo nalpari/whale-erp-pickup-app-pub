@@ -3,10 +3,12 @@ import { useState } from "react";
 import AnimateHeight from "react-animate-height";
 import { useRouter } from "next/navigation";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import { usePopupControler } from "@/store/usePopupControler";
 
 export default function BasketContents() {
   const router = useRouter();
   const bottomSheetControler = useBottomSheetControler();
+  const popupControler = usePopupControler();
   const [count, setCount] = useState(1); //메뉴 더미 개수
   const [paymentMethodHeight, setPaymentMethodHeight] = useState(false); //결제수단 높이 조절
 
@@ -59,7 +61,14 @@ export default function BasketContents() {
                         </span>
                       </div>
                       <div className="menu-item-btn-wrap">
-                        <button className="menu-option">옵션변경</button>
+                        <button
+                          className="menu-option"
+                          onClick={() =>
+                            popupControler.setOptionChangePopup(true)
+                          }
+                        >
+                          옵션변경
+                        </button>
                         <button className="menu-del">삭제</button>
                       </div>
                     </div>

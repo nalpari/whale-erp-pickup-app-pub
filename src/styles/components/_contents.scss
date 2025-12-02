@@ -628,34 +628,34 @@
       }
     }
   }
-  .menu-option-item {
-    padding: 20px 0;
-    border-top: 1px solid #e0e0e0;
-    &:first-child {
-      margin-top: 15px;
-    }
-    &:last-child {
-      padding-bottom: 0;
-    }
-    .option-tit {
-      @include flex(0px);
-      align-items: center;
-      margin-bottom: 16px;
-      span {
-        display: block;
-        @include fontDefinition(16px, 500, 140%);
-        color: #1a1a1a;
-        &.required {
-          margin-left: auto;
-          font-size: 15px;
-          color: #f34a5a;
-        }
+}
+.menu-option-item {
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  &:first-child {
+    margin-top: 15px;
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
+  .option-tit {
+    @include flex(0px);
+    align-items: center;
+    margin-bottom: 16px;
+    span {
+      display: block;
+      @include fontDefinition(16px, 500, 140%);
+      color: #1a1a1a;
+      &.required {
+        margin-left: auto;
+        font-size: 15px;
+        color: #f34a5a;
       }
     }
-    .check-wrap {
-      @include flex(10px);
-      flex-direction: column;
-    }
+  }
+  .check-wrap {
+    @include flex(10px);
+    flex-direction: column;
   }
 }
 .option-check-wrap {

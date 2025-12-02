@@ -380,6 +380,61 @@
     }
   }
 }
+// 옵션변경
+.option-change-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 127px;
+  background-color: #f2f0f0;
+}
+.option-menu-data {
+  padding: 20px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f0f0;
+  .option-menu-name {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .option-menu-price {
+    @include flex(0px);
+    align-items: center;
+    margin-top: 5px;
+    .original-price {
+      @include fontDefinition(15px, 500, 140%);
+      color: #1a1a1a;
+    }
+    .discount-price {
+      @include fontDefinition(14px, 400, 140%);
+      color: #777;
+      text-decoration: line-through;
+    }
+  }
+}
+.option-change-bx {
+  margin-top: 10px;
+  padding: 28px 24px 20px;
+  background-color: #fff;
+  border-top: 1px solid #f2f0f0;
+  border-bottom: 1px solid #f2f0f0;
+  .menu-option-item {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
+  }
+}
+.option-change-btn-bx {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background-color: #fff;
+  border-top: 1px solid #f2f0f0;
+  .basket-pay-btn {
+    margin-top: 0;
+  }
+}
 
 @media screen and (max-width: 321px) {
   .bill-menu-table {

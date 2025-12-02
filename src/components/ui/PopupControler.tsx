@@ -8,6 +8,7 @@ import OrderBillPopup from "../popup/OrderBillPopup";
 import Alert from "../popup/Alert";
 import AIChat from "../popup/AIChat";
 import MypagePoint from "../popup/MypagePoint";
+import OptionChangePopup from "../popup/OptionChangePopup";
 
 export default function PopupControler() {
   const popupControler = usePopupControler();
@@ -20,7 +21,8 @@ export default function PopupControler() {
       popupControler.orderBillPopup ||
       popupControler.alertPopup ||
       popupControler.aiChatPopup ||
-      popupControler.mypagePointPopup;
+      popupControler.mypagePointPopup ||
+      popupControler.optionChangePopup;
 
     // body 클래스 토글
     if (isAnyPopupOpen) {
@@ -40,6 +42,7 @@ export default function PopupControler() {
     popupControler.alertPopup,
     popupControler.aiChatPopup,
     popupControler.mypagePointPopup,
+    popupControler.optionChangePopup,
   ]);
 
   return (
@@ -50,6 +53,7 @@ export default function PopupControler() {
       {popupControler.alertPopup && <Alert />}
       {popupControler.aiChatPopup && <AIChat />}
       {popupControler.mypagePointPopup && <MypagePoint />}
+      {popupControler.optionChangePopup && <OptionChangePopup />}
     </>
   );
 }
