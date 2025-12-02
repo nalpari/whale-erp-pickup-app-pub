@@ -40,7 +40,8 @@
   border: 1px solid $out-border-color;
   &.active,
   &:active {
-    background-color: $out-a-back-color;
+    background-color: #444;
+    color: #fff;
   }
   &:disabled {
     background-color: $out-d-back-color;

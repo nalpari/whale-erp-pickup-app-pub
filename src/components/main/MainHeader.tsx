@@ -3,10 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 import { usePopupControler } from "@/store/usePopupControler";
+import { useRouter } from "next/navigation";
 
 export default function MainHeader() {
   const bottomSheetControler = useBottomSheetControler();
   const popupControler = usePopupControler();
+  const router = useRouter();
   return (
     <div className="main-header">
       <div className="main-header-top">
@@ -24,7 +26,10 @@ export default function MainHeader() {
           <button className="order-ring">
             <span>2</span>
           </button>
-          <button className="order-basket">
+          <button
+            className="order-basket"
+            onClick={() => router.push("/basket")}
+          >
             <span>2</span>
           </button>
         </div>
