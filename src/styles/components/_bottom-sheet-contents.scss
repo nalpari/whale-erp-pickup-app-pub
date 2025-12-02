@@ -88,6 +88,62 @@
   color: #444;
 }
 
+// 요청사항
+.request-list {
+  padding: 10px 0 14px;
+}
+.request-item {
+  border-bottom: 1px solid #ededed;
+  .request-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    text-align: left;
+    @include fontDefinition(15px, 500, 140%);
+    color: #444;
+  }
+  &.act {
+    .request-btn {
+      color: #e6854a;
+    }
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.request-empty {
+  padding: 48px 0;
+  text-align: center;
+  @include fontDefinition(15px, 400, 140%);
+  color: #777;
+}
+.requst-guide {
+  margin-top: 14px;
+  @include fontDefinition(14px, 400, 140%);
+  color: #777;
+}
+.request-custom-box {
+  padding: 24px 0;
+
+  .request-custom-length {
+    margin-left: auto;
+    @include fontDefinition(14px, 400, 140%);
+    color: #444;
+    i {
+      font-weight: 600;
+    }
+  }
+  .request-custom-guide {
+    @include flex(0px);
+    align-items: center;
+    margin-top: 14px;
+  }
+  .request-custom-warning {
+    @include fontDefinition(14px, 400, 140%);
+    color: #f34a5a;
+  }
+}
+
 @media screen and (max-width: 321px) {
   .category-btn {
     font-size: 12px;

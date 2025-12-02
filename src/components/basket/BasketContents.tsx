@@ -2,13 +2,15 @@
 import { useState } from "react";
 import AnimateHeight from "react-animate-height";
 import { useRouter } from "next/navigation";
+import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 
 export default function BasketContents() {
   const router = useRouter();
-  const [count, setCount] = useState(1);
-  const [paymentMethodHeight, setPaymentMethodHeight] = useState(false);
+  const bottomSheetControler = useBottomSheetControler();
+  const [count, setCount] = useState(1); //메뉴 더미 개수
+  const [paymentMethodHeight, setPaymentMethodHeight] = useState(false); //결제수단 높이 조절
 
-  const dataLength = 2;
+  const dataLength = 2; // 장바구니 메뉴 더미 개수
   return (
     <div className="basket-contents">
       {dataLength > 0 ? (
@@ -142,7 +144,12 @@ export default function BasketContents() {
               </div>
               <div className="pickup-option-wrap">
                 <div className="pickup-option-tit">요청 사항</div>
-                <button className="option-btn-select">
+                <button
+                  className="option-btn-select"
+                  onClick={() =>
+                    bottomSheetControler.setOrderRequestSheet(true)
+                  }
+                >
                   <span>
                     요청사항 선택요청사항 선택요청사항 선택요청사항 선택요청사항
                     선택요청사항 선택요청사항 선택요청사항 선택요청사항 선택

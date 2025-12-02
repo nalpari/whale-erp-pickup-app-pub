@@ -5,6 +5,7 @@ import { useBottomSheetControler } from "@/store/useBottomSheetControler";
 import LocationSheet from "../bottomSheet/LocationSheet";
 import ArraySheet from "../bottomSheet/ArraySheet";
 import CategorySheet from "../bottomSheet/CategorySheet";
+import OrderRequestSheet from "../bottomSheet/OrderRequestSheet";
 
 export default function BottomSheetControler() {
   const bottomSheetControler = useBottomSheetControler();
@@ -14,7 +15,8 @@ export default function BottomSheetControler() {
     const isAnyBottomSheetOpen =
       bottomSheetControler.locationSheet ||
       bottomSheetControler.arraySheet ||
-      bottomSheetControler.categorySheet;
+      bottomSheetControler.categorySheet ||
+      bottomSheetControler.orderRequestSheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -31,6 +33,7 @@ export default function BottomSheetControler() {
     bottomSheetControler.locationSheet,
     bottomSheetControler.arraySheet,
     bottomSheetControler.categorySheet,
+    bottomSheetControler.orderRequestSheet,
   ]);
 
   return (
@@ -38,6 +41,7 @@ export default function BottomSheetControler() {
       {bottomSheetControler.locationSheet && <LocationSheet />}
       {bottomSheetControler.arraySheet && <ArraySheet />}
       {bottomSheetControler.categorySheet && <CategorySheet />}
+      {bottomSheetControler.orderRequestSheet && <OrderRequestSheet />}
     </>
   );
 }
