@@ -231,75 +231,6 @@
   }
 }
 
-// AI Chat
-.ai-chat-frame {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.ai-chat-body {
-  height: calc(100vh - 66px - 109px);
-  margin-bottom: 109px;
-  overflow-y: auto;
-  .ai-chat-inner {
-    padding: 0 24px;
-    height: 1000px;
-  }
-}
-.ai-chat-footer {
-  @include flex(18px);
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 32px 24px;
-  border-top: 1px solid #f5f5f5;
-}
-.chat-input-wrap {
-  @include flex(0px);
-  align-items: center;
-  border: 2px solid #979c9e;
-  background-color: #fff;
-  width: 100%;
-  height: 44px;
-  padding: 0 20px;
-  border-radius: 48px;
-  transition: all 0.15s ease-in-out;
-  &:focus-within {
-    border-color: #1a1a1a;
-  }
-  input {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    @include fontDefinition(16px, 400, 140%);
-    color: #1a1a1a;
-    &::placeholder {
-      color: #72777a;
-    }
-  }
-  .chat-mick-btn {
-    display: block;
-    flex: none;
-    width: 24px;
-    height: 24px;
-    background: url(/assets/images/popup/ai_mick_icon.svg) no-repeat center
-      center;
-    background-size: cover;
-  }
-}
-.send-message-btn {
-  margin-left: auto;
-  display: block;
-  flex: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #1c1c1c url(/assets/images/popup/send_icon.svg) no-repeat center
-    center;
-  background-size: 20px 20px;
-}
 // MyPage Point
 .point-frame {
   width: 100%;
@@ -559,6 +490,145 @@
     }
   }
 }
+
+// AI Chat
+.ai-chat-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.ai-chat-body {
+  height: calc(100vh - 66px - 109px);
+  margin-bottom: 109px;
+  overflow-y: auto;
+  .ai-chat-inner {
+    @include flex(32px);
+    flex-direction: column;
+    padding: 0 24px 32px;
+  }
+}
+.ai-chat-footer {
+  @include flex(18px);
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 24px;
+  border-top: 1px solid #f5f5f5;
+}
+.chat-input-wrap {
+  @include flex(0px);
+  align-items: center;
+  border: 2px solid #979c9e;
+  background-color: #fff;
+  width: 100%;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 48px;
+  transition: all 0.15s ease-in-out;
+  &:focus-within {
+    border-color: #1a1a1a;
+  }
+  input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    @include fontDefinition(16px, 400, 140%);
+    color: #1a1a1a;
+    &::placeholder {
+      color: #72777a;
+    }
+  }
+  .chat-mick-btn {
+    display: block;
+    flex: none;
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/popup/ai_mick_icon.svg) no-repeat center
+      center;
+    background-size: cover;
+  }
+}
+.send-message-btn {
+  margin-left: auto;
+  display: block;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #1c1c1c url(/assets/images/popup/send_icon.svg) no-repeat center
+    center;
+  background-size: 20px 20px;
+}
+.ai-chat {
+  .ai-chat-time {
+    @include fontDefinition(14px, 400, 140%);
+    color: #777;
+    margin-bottom: 5px;
+    padding-left: 40px;
+  }
+  .ai-chat-list {
+    position: relative;
+    @include flex(16px);
+    flex-direction: column;
+    padding-left: 40px;
+    .ai-chat-data {
+      padding: 16px;
+      background-color: #f2f4f5;
+      border-radius: 24px;
+      width: fit-content;
+      span {
+        display: block;
+        @include fontDefinition(16px, 400, 140%);
+        color: #303437;
+        word-break: keep-all;
+      }
+      &:first-child {
+        border-top-left-radius: 0;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      background: url(/assets/images/layout/AI_icon.svg) no-repeat center center;
+      background-size: cover;
+    }
+  }
+}
+
+.user-chat {
+  .user-chat-time {
+    @include fontDefinition(14px, 400, 140%);
+    color: #777;
+    margin-bottom: 5px;
+    text-align: right;
+  }
+  .user-chat-list {
+    position: relative;
+    @include flex(16px);
+    flex-direction: column;
+    align-items: flex-end;
+    .user-chat-data {
+      padding: 16px;
+      background-color: #4a97f7;
+      border-radius: 24px;
+      width: fit-content;
+      span {
+        @include fontDefinition(16px, 400, 140%);
+        color: #fff;
+      }
+      &:last-child {
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 321px) {
   .bill-menu-table {
     td {

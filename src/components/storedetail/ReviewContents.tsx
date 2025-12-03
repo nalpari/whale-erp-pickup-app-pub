@@ -38,7 +38,7 @@ export default function ReviewContents() {
                     onClick={() => popupControler.setPhotoPopup(true)}
                   >
                     <Image
-                      src="/assets/images/contents/dummy03.jpg"
+                      src="/assets/images/contents/dummy02.jpg"
                       alt="review-img"
                       fill
                       sizes="(max-width: 320px) 100vw, 100vw"
