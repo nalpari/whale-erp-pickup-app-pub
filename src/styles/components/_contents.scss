@@ -1394,6 +1394,10 @@
       background-size: cover;
     }
   }
+  &.none {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 // 쿠폰

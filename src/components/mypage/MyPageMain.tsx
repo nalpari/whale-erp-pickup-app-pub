@@ -77,7 +77,7 @@ export default function MyPageMain() {
             <i className="mypage-arr"></i>
           </div>
         </button>
-        <button className="mypage-menu-item">
+        <button className="mypage-menu-item none">
           <div className="mypage-item-tit">버전정보</div>
           <div className="mypage-txt">2.116.0</div>
         </button>

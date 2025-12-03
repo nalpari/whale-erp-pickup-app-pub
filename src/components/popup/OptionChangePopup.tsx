@@ -156,7 +156,7 @@ export default function OptionChangePopup() {
               <div className="option-change-btn-bx">
                 <div className="basket-pay-btn">
                   <button className="btn-form black block">
-                    <span className="btn-text">결제하기</span>
+                    <span className="btn-text">변경하기</span>
                     <span className="btn-price">28,500원</span>
                   </button>
                 </div>

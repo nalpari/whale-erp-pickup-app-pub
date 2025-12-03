@@ -435,7 +435,130 @@
     margin-top: 0;
   }
 }
+// 쿠폰 선택
+.coupon-empty {
+  position: relative;
+  @include flex(10px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 21px 0;
+  background-color: #f5f5f5;
+  margin-top: 14px;
+  .empty-icon {
+    width: 56px;
+    height: 56px;
+    background: #fff url(/assets/images/contents/coupon_empty_icon.svg)
+      no-repeat center center;
+    background-size: 36px 36px;
+    border-radius: 50%;
+  }
+  .empty-txt {
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 0 100px 100px 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100px 0 0 100px;
+  }
+}
+.coupon-select-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 127px;
+  background-color: #f2f0f0;
+}
+.coupon-select-bx {
+  padding: 28px 24px 24px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-top: 1px solid #f2f0f0;
+  border-bottom: 1px solid #f2f0f0;
+  &:first-child {
+    border-top: none;
+  }
+  &.basket {
+    margin-bottom: 0;
+  }
+  .coupon-select-item-tit {
+    @include fontDefinition(18px, 600, 140%);
+    color: #1a1a1a;
+  }
+}
 
+.coupon-item-list {
+  @include flex(18px);
+  flex-direction: column;
+  margin-top: 14px;
+  li {
+    .coupon-data-sel {
+      margin-top: 12px;
+    }
+  }
+}
+.coupon-data-wrap {
+  @include flex(24px);
+  .coupon-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #f8f8f8;
+    border-radius: 32px;
+  }
+  .coupon-data-info {
+    .coupon-data-name {
+      @include fontDefinition(15px, 500, 140%);
+      color: #1a1a1a;
+    }
+    .coupon-data-price {
+      @include fontDefinition(15px, 700, 140%);
+      color: #1a1a1a;
+    }
+  }
+}
+.basket-coupon-sel {
+  margin-top: 14px;
+}
+.coupon-select-btn-wrap {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+  background-color: #fff;
+  button {
+    gap: 6px;
+    height: 68px;
+    font-size: 18px;
+    font-weight: 600;
+    span {
+      font-size: 22px;
+      font-weight: 700;
+      i {
+        font-weight: 500;
+      }
+    }
+  }
+}
 @media screen and (max-width: 321px) {
   .bill-menu-table {
     td {

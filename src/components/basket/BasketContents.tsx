@@ -185,7 +185,12 @@ export default function BasketContents() {
                       <input type="number" defaultValue={0} readOnly />
                       <button className="input-icon-btn"></button>
                     </div>
-                    <button className="discount-btn">쿠폰 선택</button>
+                    <button
+                      className="discount-btn"
+                      onClick={() => popupControler.setCouponSelectPopup(true)}
+                    >
+                      쿠폰 선택
+                    </button>
                   </div>
                 </div>
                 <div className="discount-data-item">
