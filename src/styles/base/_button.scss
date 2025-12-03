@@ -38,8 +38,7 @@
   background-color: $out-back-color;
   color: $out-font-color;
   border: 1px solid $out-border-color;
-  &.active,
-  &:active {
+  &.active {
     background-color: #444;
     color: #fff;
   }
