@@ -629,6 +629,33 @@
   }
 }
 
+.ai-mick-wrap {
+  @include absoluteCenter;
+  @include flex(0px);
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(48, 52, 55, 0.7);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in-out;
+  &.act {
+    opacity: 1;
+    visibility: visible;
+  }
+  .ai-mick-icon {
+    width: 56px;
+  }
+  .ai-mick-text {
+    @include fontDefinition(16px, 500, 140%);
+    color: #fff;
+    margin-top: 5px;
+  }
+}
 @media screen and (max-width: 321px) {
   .bill-menu-table {
     td {

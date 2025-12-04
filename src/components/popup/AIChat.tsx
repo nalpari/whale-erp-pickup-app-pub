@@ -1,10 +1,12 @@
 import { usePopupControler } from "@/store/usePopupControler";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function AIChat() {
   const [active, setActive] = useState(false);
   const popupControler = usePopupControler();
 
+  const [mickActive, setMickActive] = useState(false); //마이크 아이콘 노출
   useEffect(() => {
     // 팝업 열기 시간 필요
     setTimeout(() => {
@@ -91,9 +93,22 @@ export default function AIChat() {
               <div className="ai-chat-footer">
                 <div className="chat-input-wrap">
                   <input type="text" placeholder="Type a message..." />
-                  <button className="chat-mick-btn"></button>
+                  <button
+                    className="chat-mick-btn"
+                    onClick={() => setMickActive(!mickActive)}
+                  ></button>
                 </div>
                 <button className="send-message-btn"></button>
+              </div>
+              <div className={`ai-mick-wrap ${mickActive ? "act" : ""}`}>
+                <div className="ai-mick-icon">
+                  <Image
+                    src="/assets/images/popup/ai_mick.svg"
+                    alt="ai-mick-icon"
+                    fill
+                  />
+                </div>
+                <div className="ai-mick-text ">음성모드</div>
               </div>
             </div>
           </div>
