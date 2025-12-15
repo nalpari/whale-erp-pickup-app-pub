@@ -18,9 +18,16 @@ export default function DetailHeader() {
 
   // 상단 고정 헤더 추가
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       setOpenFixHeader(window.scrollY > 400);
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // 클린업 함수 추가
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
