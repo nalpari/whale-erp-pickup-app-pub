@@ -57,17 +57,20 @@
   }
   .ai-icon {
     position: absolute;
-    top: -15px;
+    bottom: 23px;
     left: 50%;
     transform: translateX(-50%);
-    width: 42px;
-    height: 42px;
-    background-image: url(/assets/images/layout/AI_icon.svg);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(135, 192, 238, 0.4);
+    border-radius: 50%;
+    background-image: url(/assets/images/layout/AI_icon.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 0 0 24px 0 rgba(29, 57, 80, 0.4);
     &::before {
-      content: "AI";
+      content: "";
       position: absolute;
       bottom: -20px;
       left: 50%;

@@ -656,6 +656,64 @@
     margin-top: 5px;
   }
 }
+.location-allow-wrap {
+  background-color: #fff;
+  border-radius: 16px;
+}
+.location-allow-guide {
+  padding: 26px 26px 18px;
+  text-align: center;
+  .location-allow-guide-tit {
+    @include fontDefinition(16px, 500, 140%);
+    color: #1a1a1a;
+    margin-bottom: 5px;
+  }
+  .location-allow-guide-txt {
+    @include fontDefinition(14px, 400, 140%);
+    color: #444;
+  }
+}
+.location-allow-iframe {
+  position: relative;
+  iframe {
+    width: 100%;
+    border: none;
+    height: 174px;
+  }
+  .location-iframe-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #fff;
+    border-radius: 100px;
+    padding: 2px 10px;
+    @include flex(5px);
+    align-items: center;
+    i {
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: url(/assets/images/popup/location_allow_icon.svg) no-repeat
+        center center;
+      background-size: cover;
+    }
+    span {
+      @include fontDefinition(13px, 400, 140%);
+      color: #007aff;
+    }
+  }
+}
+.location-allow-access-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ebebeb;
+  @include fontDefinition(15px, 400, 140%);
+  color: #007aff;
+  &:last-child {
+    border-bottom: none;
+  }
+}
 @media screen and (max-width: 321px) {
   .bill-menu-table {
     td {

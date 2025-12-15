@@ -10,7 +10,7 @@ import AIChat from "../popup/AIChat";
 import MypagePoint from "../popup/MypagePoint";
 import OptionChangePopup from "../popup/OptionChangePopup";
 import CouponSelectPopup from "../popup/CouponSelectPopup";
-
+import LocationAllowPopup from "../popup/LocationAllowPopup";
 export default function PopupControler() {
   const popupControler = usePopupControler();
 
@@ -24,7 +24,8 @@ export default function PopupControler() {
       popupControler.aiChatPopup ||
       popupControler.mypagePointPopup ||
       popupControler.optionChangePopup ||
-      popupControler.couponSelectPopup;
+      popupControler.couponSelectPopup ||
+      popupControler.locationAllowPopup;
 
     // body 클래스 토글
     if (isAnyPopupOpen) {
@@ -46,6 +47,7 @@ export default function PopupControler() {
     popupControler.mypagePointPopup,
     popupControler.optionChangePopup,
     popupControler.couponSelectPopup,
+    popupControler.locationAllowPopup,
   ]);
 
   return (
@@ -58,6 +60,7 @@ export default function PopupControler() {
       {popupControler.mypagePointPopup && <MypagePoint />}
       {popupControler.optionChangePopup && <OptionChangePopup />}
       {popupControler.couponSelectPopup && <CouponSelectPopup />}
+      {popupControler.locationAllowPopup && <LocationAllowPopup />}
     </>
   );
 }
