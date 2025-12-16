@@ -1942,29 +1942,35 @@
           center;
         background-size: cover;
       }
-      .kakao-icon {
-        width: 22px;
-        height: 21px;
-        background: url(/assets/images/contents/kakao_icon.svg) no-repeat center
-          center;
-        background-size: cover;
-      }
-      .naver-icon {
-        width: 22px;
-        height: 22px;
-        background: url(/assets/images/contents/naver_icon.svg) no-repeat center
-          center;
-        background-size: cover;
-      }
-      .toss-icon {
-        width: 22px;
-        height: 20px;
-        background: url(/assets/images/contents/toss_icon.svg) no-repeat center
-          center;
-        background-size: cover;
-      }
     }
   }
+}
+.kakao-icon {
+  width: 20px;
+  height: 19px;
+  background: url(/assets/images/contents/kakao_icon.svg) no-repeat center
+    center;
+  background-size: cover;
+}
+.naver-icon {
+  width: 22px;
+  height: 22px;
+  background: url(/assets/images/contents/naver_icon.svg) no-repeat center
+    center;
+  background-size: cover;
+}
+.toss-icon {
+  width: 22px;
+  height: 20px;
+  background: url(/assets/images/contents/toss_icon.svg) no-repeat center center;
+  background-size: cover;
+}
+.google-icon {
+  width: 18px;
+  height: 18px;
+  background: url(/assets/images/contents/google_icon.svg) no-repeat center
+    center;
+  background-size: cover;
 }
 .payment-method-list-sub {
   @include flex(10px);
@@ -2001,6 +2007,109 @@
       margin-left: auto;
       font-size: 22px;
       font-weight: 700;
+    }
+  }
+}
+
+// login
+.login-contents {
+  padding-top: 68px;
+  .login-contents-inner {
+    padding: 32px 24px 24px;
+  }
+}
+.login-logo {
+  @include flex(8px);
+  align-items: center;
+  justify-content: center;
+  .login-logo-img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+  .login-logo-txt {
+    .login-logo-txt-tit {
+      display: block;
+      @include fontDefinition(16px, 700, 120%);
+      color: #444;
+    }
+    .login-logo-txt-sub {
+      display: block;
+      @include fontDefinition(16px, 400, 120%);
+      color: #444;
+    }
+  }
+}
+.login-form {
+  @include flex(8px);
+  flex-direction: column;
+  margin-top: 24px;
+}
+.login-form-sub {
+  @include flex(0px);
+  align-items: center;
+  margin-top: 18px;
+  .id-find {
+    margin-left: auto;
+    button {
+      @include fontDefinition(14px, 400, 140%);
+      color: #333;
+    }
+  }
+}
+.login-warning {
+  @include fontDefinition(14px, 400, 140%);
+  color: #ff3838;
+  margin-top: 24px;
+}
+.login-btn-wrap {
+  @include flex(10px);
+  flex-direction: column;
+  margin-top: 24px;
+}
+.login-footer {
+  margin-top: 32px;
+  .login-footer-tit {
+    @include fontDefinition(13px, 400, 110%);
+    color: #777;
+    span {
+      font-weight: 700;
+    }
+  }
+  .login-copyright {
+    @include fontDefinition(13px, 400, 110%);
+    color: #777;
+  }
+}
+.footer-list {
+  @include flex(0px);
+  align-items: center;
+  margin: 5px 0;
+  .login-item {
+    position: relative;
+    padding: 0 8px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 1px;
+      height: 8px;
+      background-color: #777;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      &::before {
+        display: none;
+      }
+    }
+    .login-item-btn {
+      @include fontDefinition(13px, 400, 110%);
+      color: #777;
     }
   }
 }

@@ -190,7 +190,6 @@
   display: inline-block;
   width: 44px;
   height: 24px;
-  padding-right: 12px;
   input {
     display: none;
   }
@@ -204,11 +203,11 @@
     background-color: #e0e0e0;
     border-radius: 20px;
     text-align: center;
-    line-height: $line-h-140;
-    color: $check-c-font;
-    font-size: $check-ds-font;
+    line-height: 24px;
+    color: #333;
+    font-size: 14px;
     font-weight: $font-w-400;
-    text-indent: 54px;
+    text-indent: 52px;
     white-space: nowrap;
     transition: all 0.4s ease-in-out;
     -webkit-user-select: none;
@@ -228,7 +227,7 @@
     }
   }
   input:checked + .slider {
-    background-color: $check-c-back;
+    background-color: #444;
     &:before {
       transform: translateX(20px);
     }

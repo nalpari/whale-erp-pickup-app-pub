@@ -41,6 +41,13 @@ export default function Footer() {
           <span className="icon04"></span>
           <span className="text">마이페이지</span>
         </Link>
+        {/* <Link
+          href={"/mypage"}
+          className={`footer-btn ${pathname === "/mypage" ? "act" : ""}`}
+        >
+          <span className="icon04"></span>
+          <span className="text">마이페이지</span>
+        </Link> */}
       </div>
     </div>
   );
