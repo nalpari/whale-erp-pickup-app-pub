@@ -63,6 +63,30 @@
     background-color: $log-d-back-color;
   }
 }
+.black-outline {
+  background-color: $out-back-color;
+  color: $out-font-color;
+  border: 1px solid #444;
+  &:disabled {
+    background-color: $out-d-back-color;
+    color: $out-d-font-color;
+    border-color: $out-d-border-color;
+  }
+}
+.grey-outline {
+  background-color: $out-back-color;
+  color: #999;
+  border: 1px solid #ddd;
+  &.active {
+    border: 1px solid #444;
+    color: #444;
+  }
+  &:disabled {
+    background-color: $out-d-back-color;
+    color: $out-d-font-color;
+    border-color: $out-d-border-color;
+  }
+}
 
 /******************** btn-type 모음 *****************/
 // btn-frame 공통

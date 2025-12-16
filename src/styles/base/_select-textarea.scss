@@ -4,7 +4,6 @@
 @mixin select-form($height, $font-size) {
   display: block;
   width: 100%;
-  min-width: 150px;
   height: $height;
   padding: 0px 16px;
   @include fontDefinition($font-size, $font-w-400, $line-h-140);

@@ -2113,6 +2113,34 @@
     }
   }
 }
+.signup-item {
+  margin-bottom: 20px;
+  .signup-item-tit {
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  .signup-item-data-wrap {
+    @include flex(10px);
+    flex-direction: column;
+  }
+  .signup-warning {
+    @include fontDefinition(14px, 400, 140%);
+    color: #ff3838;
+    &.right {
+      color: #1a1a1a;
+    }
+  }
+  .signup-btn {
+    width: 100%;
+  }
+  .signup-flx-wrap {
+    @include flex(6px);
+    .data-frame {
+      flex: 1;
+    }
+  }
+}
 
 @media screen and (max-width: 321px) {
   .header {

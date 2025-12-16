@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import LoginFooter from "./LoginFooter";
 
 export default function LoginContents() {
+  const router = useRouter();
   return (
     <div className="login-contents">
       <div className="login-contents-inner">
@@ -25,9 +29,12 @@ export default function LoginContents() {
               </div>
             </div>
             <div className="login-form-item">
-              <div className="input-icon-frame pw">
+              <div className="input-icon-frame ">
                 <input type="password" placeholder="Password" />
-                <button type="button" className="input-icon-btn show"></button>
+                <button
+                  type="button"
+                  className="input-icon-btn pw show"
+                ></button>
               </div>
             </div>
             <div className="login-form-item">
@@ -50,7 +57,10 @@ export default function LoginContents() {
           </div>
         </div>
         <div className="login-btn-wrap">
-          <button className="btn-form outline block">
+          <button
+            className="btn-form outline block"
+            onClick={() => router.push("/login/signup")}
+          >
             WHALE ORDER 회원가입
           </button>
           <button className="btn-form outline block">
@@ -66,28 +76,7 @@ export default function LoginContents() {
             Google 로그인
           </button>
         </div>
-        <div className="login-footer">
-          <div className="login-footer-tit">
-            <span>WHALE</span> Pickup Order
-          </div>
-          <ul className="footer-list">
-            <li className="login-item">
-              <button className="login-item-btn">회사정보</button>
-            </li>
-            <li className="login-item">
-              <button className="login-item-btn">이용약관</button>
-            </li>
-            <li className="login-item">
-              <button className="login-item-btn">이용안내</button>
-            </li>
-            <li className="login-item">
-              <button className="login-item-btn">개인정보처리방침</button>
-            </li>
-          </ul>
-          <div className="login-copyright">
-            Copyright ⓒ INTERPLUG. All Rights Reserved.
-          </div>
-        </div>
+        <LoginFooter />
       </div>
     </div>
   );
