@@ -56,7 +56,7 @@ export default function LocationSheet() {
             </div>
             <div className="bottom-sheet-footer">
               <button className="btn-form black">현재 위치로 설정</button>
-              <button className="btn-form org">위치 추가</button>
+              <button className="btn-form blue-b">위치 추가</button>
             </div>
           </div>
         </Sheet.Content>

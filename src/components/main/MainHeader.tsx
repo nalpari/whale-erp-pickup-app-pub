@@ -19,7 +19,7 @@ export default function MainHeader() {
           <span>P</span>
           <span>1,200</span>
         </button>
-        <Link className="logo" href="/">
+        <Link className="logo" href="/list">
           <Image src="/assets/images/layout/logo.svg" alt="logo" fill />
         </Link>
         <div className="order-side">

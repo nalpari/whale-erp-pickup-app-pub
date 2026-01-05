@@ -134,7 +134,7 @@ export default function HistoryDetail() {
       <div className="history-detail-bx">
         <div className="history-detail-btn-bx">
           <button className="btn-form black block">구매 후기 작성</button>
-          <button className="btn-form org block">같은 메뉴 담기</button>
+          <button className="btn-form blue-b block">같은 메뉴 담기</button>
           {/* 주문취소 버튼 추가 시 주석 해제 */}
           {/* <button className="btn-form pink block">주문 취소 하기</button> */}
         </div>

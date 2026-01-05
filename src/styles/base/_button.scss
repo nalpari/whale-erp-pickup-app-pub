@@ -12,15 +12,15 @@
     background-color: $normal-d-back-color;
   }
 }
-.org {
-  background-color: $org-back-color;
-  color: $org-font-color;
+.blue-b {
+  background-color: $blue-back-color;
+  color: $blue-font-color;
   &.active,
   &:active {
-    background-color: $org-a-back-color;
+    background-color: $blue-a-back-color;
   }
   &:disabled {
-    background-color: $org-d-back-color;
+    background-color: $blue-d-back-color;
   }
 }
 .pink {

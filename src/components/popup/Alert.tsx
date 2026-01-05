@@ -25,7 +25,7 @@ export default function Alert() {
                 </button>
                 {/* alert 팝업시 취소 버튼 숨김 confirm 팝업시 취소 버튼 노출 */}
                 {/* <button
-                  className="btn-form org block"
+                  className="btn-form blue-b block"
                   onClick={() => popupControler.setAlertPopup(false)}
                 >
                   취소
