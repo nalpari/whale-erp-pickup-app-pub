@@ -185,8 +185,8 @@ export default function SingUpContents() {
             </button>
           </div>
         </div>
-        <LoginFooter />
       </div>
+      <LoginFooter />
     </div>
   )
 }

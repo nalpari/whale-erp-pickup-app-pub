@@ -1979,9 +1979,13 @@
 
 // login
 .login-contents {
+  @include flex(0px);
+  flex-direction: column;
+  min-height: 100vh;
   padding-top: 68px;
   .login-contents-inner {
-    padding: 32px 24px 24px;
+    flex: 1;
+    padding: 32px 24px 0;
   }
 }
 .login-logo {
@@ -2034,7 +2038,8 @@
   margin-top: 24px;
 }
 .login-footer {
-  margin-top: 32px;
+  margin-top: auto;
+  padding: 32px 24px 24px;
   .login-footer-tit {
     @include fontDefinition(13px, 400, 110%);
     color: #777;
@@ -2081,6 +2086,9 @@
 }
 .signup-item {
   margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   .signup-item-tit {
     @include fontDefinition(15px, 500, 140%);
     color: #1a1a1a;
@@ -2157,6 +2165,35 @@
       @include fontDefinition(14px, 400, 140%);
       color: #007aff;
     }
+  }
+}
+.signup-success-box {
+  .signup-success-tit {
+    @include fontDefinition(20px, 700, 140%);
+    color: #1a1a1a;
+  }
+  .signup-success-data {
+    margin-top: 24px;
+    border-radius: 6px;
+    background: #f4f5f6;
+    padding: 18px;
+    .signup-success-table {
+      width: 100%;
+      border-collapse: collapse;
+      th {
+        @include fontDefinition(15px, 500, 140%);
+        color: #1a1a1a;
+        padding: 6px 0;
+      }
+      td {
+        @include fontDefinition(15px, 400, 140%);
+        color: #1a1a1a;
+        padding: 6px 0;
+      }
+    }
+  }
+  .signup-success-btn {
+    margin-top: 10px;
   }
 }
 

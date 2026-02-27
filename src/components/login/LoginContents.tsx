@@ -1,20 +1,16 @@
-"use client";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import LoginFooter from "./LoginFooter";
+'use client'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import LoginFooter from './LoginFooter'
 
 export default function LoginContents() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <div className="login-contents">
       <div className="login-contents-inner">
         <div className="login-logo">
           <div className="login-logo-img">
-            <Image
-              src="/assets/images/contents/login_logo.svg"
-              alt="logo"
-              fill
-            />
+            <Image src="/assets/images/contents/login_logo.svg" alt="logo" fill />
           </div>
           <div className="login-logo-txt">
             <span className="login-logo-txt-tit">WHALE</span>
@@ -31,10 +27,7 @@ export default function LoginContents() {
             <div className="login-form-item">
               <div className="input-icon-frame ">
                 <input type="password" placeholder="Password" />
-                <button
-                  type="button"
-                  className="input-icon-btn pw show"
-                ></button>
+                <button type="button" className="input-icon-btn pw show"></button>
               </div>
             </div>
             <div className="login-form-item">
@@ -52,15 +45,10 @@ export default function LoginContents() {
               <button className="id-find-btn">ID 찿기 / 비밀번호 찿기</button>
             </div>
           </div>
-          <div className="login-warning">
-            입력하신 아이디와 비밀번호가 일치하지 않습니다.
-          </div>
+          <div className="login-warning">입력하신 아이디와 비밀번호가 일치하지 않습니다.</div>
         </div>
         <div className="login-btn-wrap">
-          <button
-            className="btn-form outline block"
-            onClick={() => router.push("/login/signup")}
-          >
+          <button className="btn-form outline block" onClick={() => router.push('/login/signup')}>
             WHALE ORDER 회원가입
           </button>
           <button className="btn-form outline block">
@@ -76,8 +64,8 @@ export default function LoginContents() {
             Google 로그인
           </button>
         </div>
-        <LoginFooter />
       </div>
+      <LoginFooter />
     </div>
-  );
+  )
 }

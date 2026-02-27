@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 .open {
   overflow: hidden;
 }
@@ -8,6 +8,9 @@
   width: 100%;
   min-height: 100vh;
   background-color: #f8f8f8;
+}
+.container {
+  flex: 1;
 }
 .main-container {
   padding-top: 273px;
@@ -25,7 +28,7 @@
   background-color: #fff;
   z-index: 9999;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0px;
     left: 50%;
@@ -70,7 +73,7 @@
     background-repeat: no-repeat;
     box-shadow: 0 0 24px 0 rgba(29, 57, 80, 0.4);
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -20px;
       left: 50%;
