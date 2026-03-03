@@ -7,7 +7,13 @@ export default function Footer() {
   const popupControler = usePopupControler()
   const pathname = usePathname()
 
-  if (pathname === '/mypage' || pathname === '/' || pathname === '/search' || pathname === '/save-store') {
+  if (
+    pathname === '/mypage' ||
+    pathname === '/' ||
+    pathname === '/search' ||
+    pathname === '/save-store' ||
+    pathname === '/notification'
+  ) {
     return (
       <div className="footer">
         <div className="footer-left">

@@ -20,7 +20,7 @@ export default function MainHeader() {
           <Image src="/assets/images/layout/logo.svg" alt="logo" fill />
         </Link>
         <div className="order-side">
-          <button className="order-ring">
+          <button className="order-ring" onClick={() => router.push('/notification')}>
             <span>2</span>
           </button>
           <button className="order-basket" onClick={() => router.push('/basket')}>
