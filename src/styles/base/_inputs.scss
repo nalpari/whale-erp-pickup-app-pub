@@ -1,6 +1,6 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
@@ -12,13 +12,7 @@ input::-webkit-inner-spin-button {
 
 /******************** input-type 모음 *****************/
 // input-frame 공통
-@mixin input-frame(
-  $height,
-  $border-color,
-  $back-color,
-  $font-size,
-  $font-color
-) {
+@mixin input-frame($height, $border-color, $back-color, $font-size, $font-color) {
   width: 100%;
   height: $height;
   padding: 0 16px;
@@ -48,13 +42,7 @@ input::-webkit-inner-spin-button {
 @mixin input-icon-frame($height, $font-size, $border-color, $back-color) {
   display: flex;
   align-items: center;
-  @include input-frame(
-    $height,
-    $border-color,
-    $back-color,
-    $font-size,
-    $input-c-default
-  );
+  @include input-frame($height, $border-color, $back-color, $font-size, $input-c-default);
   input {
     flex: 1;
     width: 100%;
@@ -98,7 +86,7 @@ input::-webkit-inner-spin-button {
     &.del {
       width: 18px;
       height: 18px;
-      background-image: url("/assets/images/common/input_delete.svg");
+      background-image: url('/assets/images/common/input_delete.svg');
     }
   }
   &.err {
@@ -107,7 +95,7 @@ input::-webkit-inner-spin-button {
     .input-icon-btn {
       width: 16px;
       height: 16px;
-      background-image: url("/assets/images/common/input_err.svg");
+      background-image: url('/assets/images/common/input_err.svg');
     }
   }
 
@@ -115,23 +103,27 @@ input::-webkit-inner-spin-button {
     &.pw {
       width: 16px;
       height: 16px;
-      background-image: url("/assets/images/common/input_show.svg");
+      background-image: url('/assets/images/common/input_show.svg');
       &.show {
-        background-image: url("/assets/images/common/input_hide.svg");
+        background-image: url('/assets/images/common/input_hide.svg');
       }
+    }
+    &.search {
+      width: 24px;
+      height: 24px;
+      background-image: url('/assets/images/popup/input_search.svg');
+    }
+    &.search-del {
+      width: 24px;
+      height: 24px;
+      background-image: url('/assets/images/popup/search_del.svg');
     }
   }
 }
 
 // 데스크탑 input default
 .input-frame {
-  @include input-frame(
-    36px,
-    $input-brd-default,
-    $input-back-default,
-    $input-font,
-    $input-c-default
-  );
+  @include input-frame(36px, $input-brd-default, $input-back-default, $input-font, $input-c-default);
   &:read-only {
     border-color: $input-brd-disabled;
     background-color: $input-back-disabled;
@@ -140,13 +132,7 @@ input::-webkit-inner-spin-button {
 }
 // 모바일 input default
 .input-log-frame {
-  @include input-frame(
-    48px,
-    none,
-    rgba(255, 255, 255, 0.85),
-    $input-font,
-    $input-c-default
-  );
+  @include input-frame(48px, none, rgba(255, 255, 255, 0.85), $input-font, $input-c-default);
 }
 
 // icon 있을때

@@ -11,11 +11,12 @@ import MypagePoint from "../popup/MypagePoint";
 import OptionChangePopup from "../popup/OptionChangePopup";
 import CouponSelectPopup from "../popup/CouponSelectPopup";
 import LocationAllowPopup from "../popup/LocationAllowPopup";
+import AddressSearchPop from "../popup/AddressSearchPop";
+
 export default function PopupControler() {
   const popupControler = usePopupControler();
 
   useEffect(() => {
-    // 모든 팝업 상태를 배열로 확인
     const isAnyPopupOpen =
       popupControler.mapPopup ||
       popupControler.photoPopup ||
@@ -25,16 +26,15 @@ export default function PopupControler() {
       popupControler.mypagePointPopup ||
       popupControler.optionChangePopup ||
       popupControler.couponSelectPopup ||
-      popupControler.locationAllowPopup;
+      popupControler.locationAllowPopup ||
+      popupControler.addressSearchPopup;
 
-    // body 클래스 토글
     if (isAnyPopupOpen) {
       document.body.classList.add("open");
     } else {
       document.body.classList.remove("open");
     }
 
-    // 컴포넌트 언마운트 시 클래스 제거
     return () => {
       document.body.classList.remove("open");
     };
@@ -48,6 +48,7 @@ export default function PopupControler() {
     popupControler.optionChangePopup,
     popupControler.couponSelectPopup,
     popupControler.locationAllowPopup,
+    popupControler.addressSearchPopup,
   ]);
 
   return (
@@ -61,6 +62,7 @@ export default function PopupControler() {
       {popupControler.optionChangePopup && <OptionChangePopup />}
       {popupControler.couponSelectPopup && <CouponSelectPopup />}
       {popupControler.locationAllowPopup && <LocationAllowPopup />}
+      {popupControler.addressSearchPopup && <AddressSearchPop />}
     </>
   );
 }

@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .map-frame {
   @include flex(0px);
@@ -59,7 +59,7 @@
       position: relative;
       padding-left: 10px;
       &:before {
-        content: ":";
+        content: ':';
         position: absolute;
         left: 0;
         top: 1px;
@@ -118,7 +118,7 @@
       @include fontDefinition(15px, 400, 140%);
       padding-left: 10px;
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0px;
         top: 8px;
@@ -182,7 +182,7 @@
         color: #777;
         font-weight: 400;
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           top: 8px;
@@ -379,8 +379,7 @@
   .empty-icon {
     width: 56px;
     height: 56px;
-    background: #fff url(/assets/images/contents/coupon_empty_icon.svg)
-      no-repeat center center;
+    background: #fff url(/assets/images/contents/coupon_empty_icon.svg) no-repeat center center;
     background-size: 36px 36px;
     border-radius: 50%;
   }
@@ -389,7 +388,7 @@
     color: #1a1a1a;
   }
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 0;
@@ -400,7 +399,7 @@
     border-radius: 0 100px 100px 0;
   }
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     right: 0;
@@ -545,8 +544,7 @@
     flex: none;
     width: 24px;
     height: 24px;
-    background: url(/assets/images/popup/ai_mick_icon.svg) no-repeat center
-      center;
+    background: url(/assets/images/popup/ai_mick_icon.svg) no-repeat center center;
     background-size: cover;
   }
 }
@@ -557,8 +555,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #1c1c1c url(/assets/images/popup/send_icon.svg) no-repeat center
-    center;
+  background: #1c1c1c url(/assets/images/popup/send_icon.svg) no-repeat center center;
   background-size: 20px 20px;
 }
 .ai-chat {
@@ -589,7 +586,7 @@
       }
     }
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -694,8 +691,7 @@
       display: block;
       width: 8px;
       height: 8px;
-      background: url(/assets/images/popup/location_allow_icon.svg) no-repeat
-        center center;
+      background: url(/assets/images/popup/location_allow_icon.svg) no-repeat center center;
       background-size: cover;
     }
     span {
@@ -719,6 +715,92 @@
   .bill-menu-table {
     td {
       font-size: 14px;
+    }
+  }
+}
+
+// 주소검색
+.back-frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f4f5f6;
+}
+.address-search {
+  padding: 24px;
+  border-bottom: 1px solid #ebebeb;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.address-list-wrap {
+  flex: 1;
+  padding: 24px 24px 0;
+  border-top: 1px solid #ebebeb;
+  background-color: #fff;
+  .address-count {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-140);
+    color: #111;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+    span {
+      font-weight: $font-w-600;
+    }
+  }
+}
+.address-list {
+  height: calc(100vh - 239px);
+  overflow-y: auto;
+  margin-right: -24px;
+  padding-right: 24px;
+  .address-item {
+    border-bottom: 1px solid #eee;
+  }
+}
+.address-item-btn {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  text-align: left;
+  .address-tit {
+    @include fontDefinition($font-ds-16, $font-w-600, $line-h-160);
+    color: #111;
+  }
+  .address-addr {
+    @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+    color: #505050;
+  }
+}
+
+.address-list-empty-tit {
+  @include flex(6px);
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+  .tip-badge {
+    @include fontDefinition($font-ds-14, $font-w-600, 28px);
+    color: #fff;
+    height: 28px;
+    background-color: #666;
+    padding: 0 8px;
+    border-radius: 100px;
+  }
+  span {
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-140);
+    color: #111;
+  }
+}
+.address-example-list {
+  @include flex(20px);
+  flex-direction: column;
+  padding: 24px 0;
+  .address-example-item {
+    .address-example-item-tit {
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+      color: #1a1a1a;
+    }
+    .address-example-item-addr {
+      @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+      color: #007aff;
     }
   }
 }
