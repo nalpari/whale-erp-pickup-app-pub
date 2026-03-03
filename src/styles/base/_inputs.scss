@@ -123,7 +123,7 @@ input::-webkit-inner-spin-button {
 
 // 데스크탑 input default
 .input-frame {
-  @include input-frame(36px, $input-brd-default, $input-back-default, $input-font, $input-c-default);
+  @include input-frame(48px, $input-brd-default, $input-back-default, $input-font, $input-c-default);
   &:read-only {
     border-color: $input-brd-disabled;
     background-color: $input-back-disabled;

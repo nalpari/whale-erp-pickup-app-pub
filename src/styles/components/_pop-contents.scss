@@ -1,5 +1,35 @@
 @use '../abstracts' as *;
 
+// toast
+.toast-container {
+  padding: 0 24px 24px;
+  .Toastify__toast {
+    border-radius: 12px;
+    border: 1px solid #9dc0ee;
+    background: #f5f9ff;
+    box-shadow:
+      0 28px 8px 0 rgba(0, 0, 0, 0),
+      0 18px 7px 0 rgba(0, 0, 0, 0.01),
+      0 10px 6px 0 rgba(0, 0, 0, 0.03),
+      0 5px 5px 0 rgba(0, 0, 0, 0.04),
+      0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    justify-content: center;
+    @include fontDefinition($font-ds-15, $font-w-600, $line-h-160);
+    color: #1a1a1a;
+    font-family: 'Pretendard', sans-serif;
+  }
+  .Toastify__close-button {
+    display: none;
+  }
+}
+.msg {
+  @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+  color: #1a1a1a;
+  &.err {
+    color: #ff3838;
+  }
+}
+
 .map-frame {
   @include flex(0px);
   width: 100%;
@@ -806,24 +836,24 @@
 }
 
 // 위치편집
-.alias-list {
+.address-edit-list {
   @include flex(16px);
   flex-direction: column;
   padding: 24px;
-  .alias-item {
+  .address-edit-item {
     @include flex(16px);
     align-items: center;
     padding: 24px 11px 28px;
     border-radius: 18px;
     border: 1px solid #eff0f1;
     background: #fff;
-    .alias-item-info {
+    .address-edit-item-info {
       flex: 1;
-      .alias-item-name {
+      .address-edit-item-name {
         @include fontDefinition($font-ds-16, $font-w-600, $line-h-160);
         color: #1a1a1a;
       }
-      .alias-item-address {
+      .address-edit-item-address {
         @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
         color: #333;
       }
@@ -838,7 +868,7 @@
   background: url(/assets/images/popup/drag_icon.svg) no-repeat center center;
   background-size: cover;
 }
-.alias-item-delete {
+.address-edit-item-delete {
   flex: none;
   display: block;
   width: 42px;
@@ -847,25 +877,33 @@
   background-size: cover;
 }
 
-// toast
-.toast-container {
-  padding: 0 24px 24px;
-  .Toastify__toast {
-    border-radius: 12px;
-    border: 1px solid #9dc0ee;
-    background: #f5f9ff;
-    box-shadow:
-      0 28px 8px 0 rgba(0, 0, 0, 0),
-      0 18px 7px 0 rgba(0, 0, 0, 0.01),
-      0 10px 6px 0 rgba(0, 0, 0, 0.03),
-      0 5px 5px 0 rgba(0, 0, 0, 0.04),
-      0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    justify-content: center;
-    @include fontDefinition($font-ds-15, $font-w-600, $line-h-160);
+// 위치편집
+.alias-form-wrap {
+  padding: 24px 24px 0;
+}
+.alias-form-item {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 18px;
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .alias-form-item-tit {
+    @include fontDefinition($font-ds-15, $font-w-500, $line-h-160);
     color: #1a1a1a;
-    font-family: 'Pretendard', sans-serif;
+    margin-bottom: 16px;
+    span {
+      display: block;
+    }
+    .alias-form-item-addr {
+      font-weight: $font-w-400;
+      color: #333;
+    }
   }
-  .Toastify__close-button {
-    display: none;
-  }
+}
+.alias-btn-wrap {
+  padding: 0 24px;
+  margin-top: 20px;
 }

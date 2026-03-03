@@ -1,8 +1,5 @@
-'use client'
-import { useEffect, useState } from 'react'
 import { usePopupControler } from '@/store/usePopupControler'
-import { ToastContainer, toast, Slide } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import { useEffect, useState } from 'react'
 
 export default function AddressAliasPop() {
   const [active, setActive] = useState(false)
@@ -25,75 +22,40 @@ export default function AddressAliasPop() {
       setAddressAliasPopup(false)
     }, 250)
   }
-
-  const notify = () => toast('저장되었습니다.')
   return (
     <div className={`modal-popup ${active ? 'act' : ''}`}>
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h3>위치편집</h3>
+            <h3>별명설정</h3>
             <button className="modal-close" onClick={handleClose}></button>
           </div>
           <div className="modal-body">
-            <div className="back-frame">
-              <div className="alias-list">
-                <div className="alias-item">
-                  <button className="drag-btn" onClick={notify}></button>
-                  <div className="alias-item-info">
-                    <div className="alias-item-name">현대백화점 판교점</div>
-                    <div className="alias-item-address">[주소] 경기 성남시 분당구 판교역로 146번길 20</div>
-                  </div>
-                  <button className="alias-item-delete"></button>
+            <div className="alias-form-wrap">
+              <div className="alias-form-item">
+                <div className="alias-form-item-tit">
+                  <span>현대백화점 판교점</span>
+                  <span className="alias-form-item-addr">[주소] 경기 성남시 분당구 판교역로 146번길 20</span>
                 </div>
-                <div className="alias-item">
-                  <button className="drag-btn"></button>
-                  <div className="alias-item-info">
-                    <div className="alias-item-name">현대백화점 판교점</div>
-                    <div className="alias-item-address">[주소] 경기 성남시 분당구 판교역로 146번길 20</div>
-                  </div>
-                  <button className="alias-item-delete"></button>
-                </div>
-                <div className="alias-item">
-                  <button className="drag-btn"></button>
-                  <div className="alias-item-info">
-                    <div className="alias-item-name">현대백화점 판교점</div>
-                    <div className="alias-item-address">[주소] 경기 성남시 분당구 판교역로 146번길 20</div>
-                  </div>
-                  <button className="alias-item-delete"></button>
-                </div>
-                <div className="alias-item">
-                  <button className="drag-btn"></button>
-                  <div className="alias-item-info">
-                    <div className="alias-item-name">현대백화점 판교점</div>
-                    <div className="alias-item-address">[주소] 경기 성남시 분당구 판교역로 146번길 20</div>
-                  </div>
-                  <button className="alias-item-delete"></button>
-                </div>
-                <div className="alias-item">
-                  <button className="drag-btn"></button>
-                  <div className="alias-item-info">
-                    <div className="alias-item-name">현대백화점 판교점</div>
-                    <div className="alias-item-address">[주소] 경기 성남시 분당구 판교역로 146번길 20</div>
-                  </div>
-                  <button className="alias-item-delete"></button>
+                <div className="block">
+                  <input type="text" className="input-frame" placeholder="상세 주소를 입력해 주세요." />
                 </div>
               </div>
+              <div className="alias-form-item">
+                <div className="alias-form-item-tit">
+                  <span>
+                    별명을 입력해주세요 <i className="red">(필수)</i>
+                  </span>
+                </div>
+                <div className="block">
+                  <input type="text" className="input-frame" placeholder="위치 별명 입력(ex. 집, 회사 등)" />
+                </div>
+                <div className="msg err mt10">별명입력은 필수입니다.</div>
+              </div>
             </div>
-            <ToastContainer
-              className="toast-container"
-              position="bottom-center"
-              autoClose={3000}
-              hideProgressBar
-              newestOnTop={false}
-              closeOnClick={false}
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover={false}
-              theme="light"
-              transition={Slide}
-            />
+            <div className="alias-btn-wrap">
+              <button className="btn-form black block">해당 위치로 설정</button>
+            </div>
           </div>
         </div>
       </div>
