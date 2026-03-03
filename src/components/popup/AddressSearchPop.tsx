@@ -5,6 +5,7 @@ export default function AddressSearchPop() {
   const [active, setActive] = useState(false)
   const addressSearchPopup = usePopupControler((state) => state.addressSearchPopup)
   const setAddressSearchPopup = usePopupControler((state) => state.setAddressSearchPopup)
+  const setAddressAliasPopup = usePopupControler((state) => state.setAddressAliasPopup)
 
   const dataLengthDummy = 3 // 검색 결과 건수
 
@@ -23,6 +24,14 @@ export default function AddressSearchPop() {
     setTimeout(() => {
       setAddressSearchPopup(false)
     }, 250)
+  }
+
+  const handleAddressItemClick = () => {
+    setActive(false)
+    setTimeout(() => {
+      setAddressSearchPopup(false)
+    }, 250)
+    setAddressAliasPopup(true)
   }
 
   return (
@@ -51,7 +60,7 @@ export default function AddressSearchPop() {
                   <ul className="address-list">
                     {Array.from({ length: dataLengthDummy }).map((_, index) => (
                       <li className="address-item" key={index}>
-                        <button className="address-item-btn">
+                        <button className="address-item-btn" onClick={handleAddressItemClick}>
                           <div className="address-tit">현대백화점 판교점</div>
                           <div className="address-addr">[주소] 경기 성남시 분당구 판교역로 146번길 20</div>
                         </button>

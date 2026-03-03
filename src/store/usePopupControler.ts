@@ -11,6 +11,7 @@ type PopupControlerState = {
   couponSelectPopup: boolean;
   locationAllowPopup: boolean;
   addressSearchPopup: boolean;
+  addressAliasPopup: boolean;
   setMapPopup: (isOpen: boolean) => void;
   setPhotoPopup: (isOpen: boolean) => void;
   setOrderBillPopup: (isOpen: boolean) => void;
@@ -21,6 +22,7 @@ type PopupControlerState = {
   setCouponSelectPopup: (isOpen: boolean) => void;
   setLocationAllowPopup: (isOpen: boolean) => void;
   setAddressSearchPopup: (isOpen: boolean) => void;
+  setAddressAliasPopup: (isOpen: boolean) => void;
 };
 
 type InitialStateType = {
@@ -34,6 +36,7 @@ type InitialStateType = {
   couponSelectPopup: boolean;
   locationAllowPopup: boolean;
   addressSearchPopup: boolean;
+  addressAliasPopup: boolean;
 };
 
 const initialState: InitialStateType = {
@@ -47,6 +50,7 @@ const initialState: InitialStateType = {
   couponSelectPopup: false,
   locationAllowPopup: false,
   addressSearchPopup: false,
+  addressAliasPopup: false,
 };
 
 export const usePopupControler = create<PopupControlerState>((set) => ({
@@ -71,4 +75,6 @@ export const usePopupControler = create<PopupControlerState>((set) => ({
     set((state) => ({ ...state, locationAllowPopup: isOpen })),
   setAddressSearchPopup: (isOpen: boolean) =>
     set((state) => ({ ...state, addressSearchPopup: isOpen })),
+  setAddressAliasPopup: (isOpen: boolean) =>
+    set((state) => ({ ...state, addressAliasPopup: isOpen })),
 }));
