@@ -1,33 +1,21 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { HEADER_MENUS, HeaderMenuType } from "@/constants/HeaderMenu";
+import { HeaderMenuType } from "@/constants/HeaderMenu";
 
 type HeaderProps = {
-  menuKey?: keyof typeof HEADER_MENUS;
   url?: string;
   title?: string;
   basket?: boolean;
 };
 
-export default function Header({
-  menuKey,
-  url,
-  title,
-  basket,
-}: HeaderProps) {
+export default function Header({ url, title, basket }: HeaderProps) {
   const router = useRouter();
 
-  let headerConfig: HeaderMenuType;
-
-  if (menuKey && HEADER_MENUS[menuKey]) {
-    headerConfig = HEADER_MENUS[menuKey];
-  } else {
-    headerConfig = {
-      url: url || "/",
-      title: title || "",
-      basket: basket || false,
-    };
-  }
+  const headerConfig: HeaderMenuType = {
+    url: url || "/",
+    title: title || "",
+    basket: basket || false,
+  };
 
   return (
     <div className="header">

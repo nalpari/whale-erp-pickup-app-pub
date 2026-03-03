@@ -138,6 +138,12 @@ input::-webkit-inner-spin-button {
 // icon 있을때
 .input-icon-frame {
   @include input-icon-frame(48px, 15px, #ebebeb, $input-back-default);
+  &.search {
+    height: 44px;
+    border-radius: 100px;
+    background: #f6f7f9;
+    color: #999;
+  }
 }
 .input-icon-log-frame {
   @include input-icon-frame(48px, $input-font, none, rgba(255, 255, 255, 0.85));

@@ -19,22 +19,22 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     basket: false,
   },
   '/login/signup': {
-    url: '/login/signup',
+    url: '/login',
     title: '회원가입',
     basket: false,
   },
   '/login/singup-success': {
-    url: '/login/singup-success',
+    url: '/login',
     title: '회원가입완료',
     basket: false,
   },
   '/basket': {
-    url: '/basket',
+    url: '/',
     title: '장바구니',
     basket: false,
   },
   '/mypage': {
-    url: '/mypage',
+    url: '/',
     title: '마이페이지',
     basket: false,
   },
@@ -57,6 +57,11 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     url: '/storedetail',
     title: '구매후기',
     basket: true,
+  },
+  '/search': {
+    url: '/',
+    title: '검색하기',
+    basket: false,
   },
 }
 
@@ -98,73 +103,4 @@ export function getHeaderConfigByPathname(pathname: string): HeaderMenuType | nu
   }
 
   return null
-}
-
-// 메뉴 키 기반 설정 (기존 호환성 유지)
-export const HEADER_MENUS: Record<string, HeaderMenuType> = {
-  LOGIN: {
-    url: '/',
-    title: '로그인',
-    basket: false,
-  },
-  SIGNUP: {
-    url: '/login',
-    title: '회원가입',
-    basket: false,
-  },
-  SIGNUP_SUCCESS: {
-    url: '/login',
-    title: '회원가입',
-    basket: false,
-  },
-  BASKET: {
-    url: '/',
-    title: '장바구니',
-    basket: false,
-  },
-  MYPAGE: {
-    url: '/',
-    title: '마이페이지',
-    basket: false,
-  },
-  COUPON: {
-    url: '/mypage',
-    title: '쿠폰',
-    basket: false,
-  },
-  ORDER_HISTORY: {
-    url: '/',
-    title: '주문내역',
-    basket: false,
-  },
-  ORDER_HISTORY_DETAIL: {
-    url: '/orderhistory',
-    title: '주문 상세 내역',
-    basket: false,
-  },
-  STORE_DETAIL: {
-    url: '/',
-    title: '힘이나는커피생활무교점',
-    basket: true,
-  },
-  STORE_MAP: {
-    url: '/storedetail',
-    title: '점포정보',
-    basket: false,
-  },
-  STORE_REVIEW: {
-    url: '/storedetail',
-    title: '구매후기',
-    basket: true,
-  },
-  MENU_DETAIL: {
-    url: '/storedetail',
-    title: '스위츠 복숭아 아이스티',
-    basket: true,
-  },
-  COUPON_DETAIL: {
-    url: '/mypage/coupon',
-    title: '쿠폰 상세',
-    basket: false,
-  },
 }

@@ -4,6 +4,7 @@ import '@/styles/style.scss'
 import BottomSheetControler from '@/components/ui/BottomSheetControler'
 import PopupControler from '@/components/ui/PopupControler'
 import CommonHeader from '@/components/ui/CommonHeader'
+import Footer from '@/components/ui/Footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,8 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <CommonHeader />
-        <div className="container">{children}</div>
+        <div className="wrap">
+          <CommonHeader />
+          <div className="container">{children}</div>
+          <Footer />
+        </div>
         <BottomSheetControler />
         <PopupControler />
       </body>
