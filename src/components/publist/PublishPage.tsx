@@ -1,5 +1,5 @@
-import Link from "next/link";
-import "@/styles/publishpage.scss";
+import Link from 'next/link'
+import '@/styles/publishpage.scss'
 
 export default function PublishPage() {
   return (
@@ -29,17 +29,14 @@ export default function PublishPage() {
                 <span> ex) &quot;sample-class&quot;</span>
               </p>
               <p>
-                ※ img네이밍은 &quot;_&quot;로 사용, 번호 사용시 01, 02 와 같이
-                2자리 숫자 사용 <span>ex) &quot;img_sample01&quot;</span>
+                ※ img네이밍은 &quot;_&quot;로 사용, 번호 사용시 01, 02 와 같이 2자리 숫자 사용{' '}
+                <span>ex) &quot;img_sample01&quot;</span>
               </p>
               <p>
                 ※ button, select, checkbox, radio... 등 기본 설정은
                 <span> Style Guide</span>에 정의된 내용만 사용
               </p>
-              <p>
-                ※ scss파일 생성시 &quot;_&quot;를 앞에 붙힌 후 생성, 또한 해당
-                카테고리에 적합한 폴더에 생성
-              </p>
+              <p>※ scss파일 생성시 &quot;_&quot;를 앞에 붙힌 후 생성, 또한 해당 카테고리에 적합한 폴더에 생성</p>
             </div>
           </div>
           <div className="p-list-wrap">
@@ -47,12 +44,12 @@ export default function PublishPage() {
             <div className="p-list-table">
               <table>
                 <colgroup>
-                  <col style={{ width: "10%" }} />
-                  <col style={{ width: "15%" }} />
+                  <col style={{ width: '10%' }} />
+                  <col style={{ width: '15%' }} />
                   <col />
-                  <col style={{ width: "13%" }} />
-                  <col style={{ width: "20%" }} />
-                  <col style={{ width: "13%" }} />
+                  <col style={{ width: '13%' }} />
+                  <col style={{ width: '20%' }} />
+                  <col style={{ width: '13%' }} />
                 </colgroup>
                 <thead>
                   <tr>
@@ -69,7 +66,7 @@ export default function PublishPage() {
                     <td>Main</td>
                     <td></td>
                     <td>
-                      <Link href={"/main"}>Main.tsx</Link>
+                      <Link href={'/'}>Main.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -79,7 +76,7 @@ export default function PublishPage() {
                     <td rowSpan={2}>로그인 </td>
                     <td>Login</td>
                     <td>
-                      <Link href={"/login"}>Login.tsx</Link>
+                      <Link href={'/login'}>Login.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -88,7 +85,7 @@ export default function PublishPage() {
                   <tr>
                     <td>회원가입</td>
                     <td>
-                      <Link href={"/login/signup"}>Signup.tsx</Link>
+                      <Link href={'/login/signup'}>Signup.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -98,7 +95,7 @@ export default function PublishPage() {
                     <td rowSpan={4}>매장정보 </td>
                     <td>매장정보</td>
                     <td>
-                      <Link href={"/storedetail"}>StoreDetail.tsx</Link>
+                      <Link href={'/storedetail'}>StoreDetail.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -107,7 +104,7 @@ export default function PublishPage() {
                   <tr>
                     <td>메뉴 상세</td>
                     <td>
-                      <Link href={"/storedetail/1"}>MenuDetail.tsx</Link>
+                      <Link href={'/storedetail/1'}>MenuDetail.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -116,7 +113,7 @@ export default function PublishPage() {
                   <tr>
                     <td>점포정보</td>
                     <td>
-                      <Link href={"/storedetail/map"}>StoreMap.tsx</Link>
+                      <Link href={'/storedetail/map'}>StoreMap.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -125,7 +122,7 @@ export default function PublishPage() {
                   <tr>
                     <td>구매후기기</td>
                     <td>
-                      <Link href={"/storedetail/review"}>Review.tsx</Link>
+                      <Link href={'/storedetail/review'}>Review.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -135,7 +132,7 @@ export default function PublishPage() {
                     <td rowSpan={2}>주문내역 </td>
                     <td>주문내역</td>
                     <td>
-                      <Link href={"/orderhistory"}>OrderHistory.tsx</Link>
+                      <Link href={'/orderhistory'}>OrderHistory.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -144,9 +141,7 @@ export default function PublishPage() {
                   <tr>
                     <td>주문내역 상세</td>
                     <td>
-                      <Link href={"/orderhistory/1"}>
-                        OrderHistoryDetail.tsx
-                      </Link>
+                      <Link href={'/orderhistory/1'}>OrderHistoryDetail.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -156,7 +151,7 @@ export default function PublishPage() {
                     <td>장바구니 </td>
                     <td>장바구니</td>
                     <td>
-                      <Link href={"/basket"}>Basket.tsx</Link>
+                      <Link href={'/basket'}>Basket.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -166,7 +161,7 @@ export default function PublishPage() {
                     <td rowSpan={3}>마이페이지 </td>
                     <td>마이페이지</td>
                     <td>
-                      <Link href={"/mypage"}>Mypage.tsx</Link>
+                      <Link href={'/mypage'}>Mypage.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -175,7 +170,7 @@ export default function PublishPage() {
                   <tr>
                     <td>마이페이지 쿠폰</td>
                     <td>
-                      <Link href={"/mypage/coupon"}>Coupon.tsx</Link>
+                      <Link href={'/mypage/coupon'}>Coupon.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -184,7 +179,27 @@ export default function PublishPage() {
                   <tr>
                     <td>마이페이지 쿠폰 상세</td>
                     <td>
-                      <Link href={"/mypage/coupon/1"}>CouponDetail.tsx</Link>
+                      <Link href={'/mypage/coupon/1'}>CouponDetail.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>검색하기</td>
+                    <td></td>
+                    <td>
+                      <Link href={'/search'}>Search.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>찜한 점포</td>
+                    <td></td>
+                    <td>
+                      <Link href={'/save-store'}>SaveStore.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -197,5 +212,5 @@ export default function PublishPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

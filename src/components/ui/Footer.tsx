@@ -7,7 +7,7 @@ export default function Footer() {
   const popupControler = usePopupControler()
   const pathname = usePathname()
 
-  if (pathname === '/mypage' || pathname === '/' || pathname === '/orderhistory' || pathname === '/search') {
+  if (pathname === '/mypage' || pathname === '/' || pathname === '/search' || pathname === '/save-store') {
     return (
       <div className="footer">
         <div className="footer-left">
@@ -15,14 +15,14 @@ export default function Footer() {
             <span className="icon01"></span>
             <span className="text">홈</span>
           </Link>
-          <Link href="/" className="footer-btn ">
+          <Link href="/save-store" className={`footer-btn ${pathname === '/save-store' ? 'act' : ''}`}>
             <span className="icon02"></span>
             <span className="text">찜</span>
           </Link>
         </div>
         <button className="ai-icon" onClick={() => popupControler.setAiChatPopup(true)}></button>
         <div className="footer-right">
-          <Link href="/orderhistory" className={`footer-btn ${pathname === '/orderhistory' ? 'act' : ''}`}>
+          <Link href="/orderhistory" className={`footer-btn`}>
             <span className="icon03"></span>
             <span className="text">주문내역</span>
           </Link>

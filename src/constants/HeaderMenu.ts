@@ -63,6 +63,11 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     title: '검색하기',
     basket: false,
   },
+  '/save-store': {
+    url: '/',
+    title: '찜한 점포',
+    basket: true,
+  },
 }
 
 // 동적 라우트 패턴 매칭을 위한 함수
