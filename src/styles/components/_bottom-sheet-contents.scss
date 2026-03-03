@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 // 위치 설정
 .location-list {
@@ -21,6 +21,9 @@
     }
   }
   &.act {
+    padding: 18px 14px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
     span {
       color: #e6854a;
       &.location-tit {
@@ -57,12 +60,18 @@
       padding-bottom: 0;
     }
   }
+  &.act {
+    .array-addr {
+      color: #007aff;
+      font-weight: 600;
+    }
+  }
 }
 .array-addr {
   display: block;
   width: 100%;
   text-align: left;
-  @include fontDefinition(15px, 500, 140%);
+  @include fontDefinition(15px, 400, 140%);
   color: #444;
   padding: 10px 0;
 }

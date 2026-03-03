@@ -1,8 +1,8 @@
-import { Sheet } from "react-modal-sheet";
-import { useBottomSheetControler } from "@/store/useBottomSheetControler";
+import { Sheet } from 'react-modal-sheet'
+import { useBottomSheetControler } from '@/store/useBottomSheetControler'
 
 export default function ArraySheet() {
-  const bottomSheetControler = useBottomSheetControler();
+  const bottomSheetControler = useBottomSheetControler()
 
   return (
     <Sheet
@@ -20,7 +20,7 @@ export default function ArraySheet() {
             </div>
             <div className=" bottom-sheet-body">
               <ul className="array-list">
-                <li className="array-item">
+                <li className="array-item act">
                   <button className="array-addr">가까운 순</button>
                 </li>
                 <li className="array-item">
@@ -39,5 +39,5 @@ export default function ArraySheet() {
       </Sheet.Container>
       <Sheet.Backdrop onTap={() => bottomSheetControler.setArraySheet(false)} />
     </Sheet>
-  );
+  )
 }
