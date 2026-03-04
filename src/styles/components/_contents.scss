@@ -1400,6 +1400,27 @@
     @include fontDefinition(18px, 600, 140%);
     color: #1a1a1a;
   }
+
+  .coupon-down {
+    @include flex(8px);
+    align-items: center;
+    justify-content: center;
+    min-width: 174px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #fff;
+    padding: 0 12px;
+    height: 44px;
+    @include fontDefinition(15px, 500, 140%);
+    color: #1a1a1a;
+    i {
+      display: block;
+      width: 16px;
+      height: 14px;
+      background: url(/assets/images/contents/coupon_down.svg) no-repeat center center;
+      background-size: cover;
+    }
+  }
   .coupon-data-wrap {
     @include flex(8px);
     align-items: center;
@@ -1420,6 +1441,22 @@
       &.b {
         color: #2f83e4;
       }
+    }
+  }
+  &.used {
+    .coupon-sub-tit {
+      opacity: 0.4;
+    }
+    .coupon-main-tit {
+      opacity: 0.4;
+    }
+    .coupon-used {
+      min-width: 174px;
+      border-radius: 6px;
+      background: #f4f5f6;
+      height: 44px;
+      @include fontDefinition(15px, 500, 44px);
+      color: #777;
     }
   }
 }
@@ -2531,6 +2568,10 @@
   }
 }
 .notification-coupon-item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   .coupon-date-wrap {
     @include flex(0px);
     align-items: center;
