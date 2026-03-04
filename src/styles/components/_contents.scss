@@ -1,4 +1,10 @@
 @use '../abstracts' as *;
+.sub-contents {
+  padding-top: 68px;
+  .sub-contents-inner {
+    padding: 24px;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -1430,15 +1436,15 @@
       @include fontDefinition(14px, 500, 140%);
       background-color: #fff;
       border: 1px solid #eaeaea;
-      border-radius: 100px;
+      border-radius: 6;
       padding: 6px 15px;
       &.o {
         color: #e6854a;
       }
-      &.g {
-        color: #777;
-      }
       &.b {
+        color: #1a1a1a;
+      }
+      &.s {
         color: #2f83e4;
       }
     }
@@ -1479,25 +1485,21 @@
     background-size: cover;
   }
 }
-.coupon-header {
-  padding-bottom: 21px;
-  border-bottom: 1px solid #f2f0f0;
-}
 .coupon-header-tit {
   @include flex(0px);
   align-items: center;
   margin-bottom: 12px;
   .count {
-    @include fontDefinition(14px, 400, 140%);
-    color: #777;
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
     b {
-      font-weight: 600;
+      font-weight: 500;
     }
   }
   .sort {
     margin-left: auto;
     @include fontDefinition(14px, 400, 140%);
-    color: #777;
+    color: #1a1a1a;
   }
 }
 .target-store-wrap {
@@ -1505,7 +1507,7 @@
   align-items: center;
   margin-top: 22px;
   .target-store-tit {
-    @include fontDefinition(15px, 500, 140%);
+    @include fontDefinition(15px, 600, 140%);
     color: #1a1a1a;
   }
   .target-store-txt {
@@ -1518,85 +1520,6 @@
   padding-top: 24px;
   @include flex(24px);
   flex-direction: column;
-}
-
-// 쿠폰 상세
-.coupon-detail-contents {
-  padding-top: 66px;
-  min-height: calc(100vh);
-  background-color: #f8f8f8;
-}
-.coupon-data-form {
-  background-color: #fff;
-  border-bottom: 1px solid #f2f0f0;
-}
-.coupon-data-tit-wrap {
-  padding: 28px 24px 20px;
-  background: linear-gradient(180deg, #0c3579 0%, #152d5c 100%), #6f82aa;
-  .coupon-data-sub-tit {
-    @include fontDefinition(15px, 500, 140%);
-    color: #bfcbe5;
-    margin-bottom: 4px;
-  }
-  .coupon-data-tit {
-    @include fontDefinition(18px, 600, 140%);
-    color: #fff;
-  }
-}
-.coupon-data-item {
-  @include flex(0px);
-  align-items: center;
-  padding: 28px 24px 20px;
-  border-bottom: 1px solid #f2f0f0;
-  &:last-child {
-    border-bottom: none;
-  }
-  .coupon-data-item-tit {
-    @include fontDefinition(15px, 500, 140%);
-    color: #1a1a1a;
-  }
-  .coupon-data-item-txt {
-    margin-left: auto;
-    @include fontDefinition(15px, 400, 140%);
-    color: #1a1a1a;
-    text-align: right;
-    span {
-      display: block;
-    }
-  }
-}
-.coupon-use-guide-wrap {
-  margin-top: 10px;
-  background-color: #fff;
-  .use-guide-tit {
-    @include fontDefinition(15px, 500, 140%);
-    color: #1a1a1a;
-    padding: 28px 24px 20px;
-    border-bottom: 1px solid #f2f0f0;
-  }
-}
-.use-guide-list {
-  padding: 28px 24px 20px;
-  .use-guide-item {
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .use-guide-item-tit {
-    @include fontDefinition(15px, 500, 140%);
-    color: #1a1a1a;
-    margin-bottom: 10px;
-  }
-  .use-guide-item-txt {
-    @include flex(10px);
-    flex-direction: column;
-    @include fontDefinition(15px, 400, 140%);
-    color: #777;
-    span {
-      display: block;
-    }
-  }
 }
 
 // 장바구니
@@ -2211,9 +2134,7 @@
 }
 
 // 검색하기
-.sub-contents {
-  padding-top: 68px;
-}
+
 .search-contents-wrap {
   @include flex(0px);
   flex-direction: column;
@@ -2583,6 +2504,56 @@
     .coupon-btn {
       margin-left: auto;
     }
+  }
+}
+
+// 스탬프
+.stemp-list {
+  @include flex(16px);
+  flex-direction: column;
+}
+.stemp-item {
+  @include flex(10px);
+  align-items: center;
+  padding: 20px 24px;
+  border: 1px solid #eff0f1;
+  background-color: #fff;
+  border-radius: 18px;
+  text-align: left;
+  .stemp-item-tit {
+    @include fontDefinition(16px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .stemp-item-data {
+    @include flex(6px);
+    align-items: center;
+    margin-top: 7px;
+    .stemp {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-radius: 100px;
+      background: #4fbfff;
+      box-shadow:
+        0 12px 3px 0 rgba(0, 0, 0, 0),
+        0 8px 3px 0 rgba(0, 0, 0, 0.01),
+        0 4px 3px 0 rgba(0, 0, 0, 0.05),
+        0 2px 2px 0 rgba(0, 0, 0, 0.09),
+        0 0 1px 0 rgba(0, 0, 0, 0.1);
+      @include fontDefinition(16px, 800, 22px);
+      color: #fff;
+      text-align: center;
+    }
+    span {
+      @include fontDefinition(15px, 400, 140%);
+      color: #1a1a1a;
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+  .list-arr-btn {
+    transform: rotate(-90deg);
   }
 }
 

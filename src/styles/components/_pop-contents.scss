@@ -267,9 +267,12 @@
   height: 100%;
   background-color: #f2f0f0;
 }
-.point-guide {
-  padding: 19.5px 24px;
+.point-guide-wrap {
+  padding: 24px 24px 32px;
   background-color: #fff;
+}
+.point-guide {
+  margin-bottom: 20px;
   span {
     @include fontDefinition(14px, 400, 140%);
     color: #1a1a1a;
@@ -281,58 +284,60 @@
 .point-data-wrap {
   background: linear-gradient(180deg, #0c3579 0%, #152d5c 100%), #6f82aa;
   padding: 28px 24px 20px;
+  border-radius: 18px;
   .point-data-item {
     @include flex(0px);
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     &:last-child {
       margin-bottom: 0;
     }
     .point-data-tit {
-      @include fontDefinition(15px, 500, 140%);
+      @include fontDefinition(18px, 700, 140%);
       color: #fff;
     }
     .point-data {
       margin-left: auto;
-      @include fontDefinition(16px, 700, 140%);
+      @include fontDefinition(18px, 700, 140%);
       color: #fff;
     }
   }
 }
 .point-list-wrap {
-  @include flex(10px);
+  @include flex(16px);
   flex-direction: column;
+  padding: 24px;
 }
 .point-item {
   background-color: #fff;
-  padding: 26px 24px 19px;
-  border-top: 1px solid #f2f0f0;
-  border-bottom: 1px solid #f2f0f0;
+  padding: 20px;
+  border: 1px solid #eff0f1;
+  border-radius: 18px;
   .point-item-tit {
     @include flex(0px);
     align-items: center;
     margin-bottom: 8px;
     .point-item-date {
-      @include fontDefinition(14px, 400, 140%);
+      @include fontDefinition(15px, 400, 140%);
       color: #777;
     }
     .point-item-txt {
       margin-left: auto;
-      @include fontDefinition(14px, 400, 140%);
-      color: #777;
+      @include fontDefinition(15px, 400, 140%);
+      color: #1a1a1a;
     }
   }
   .point-item-info {
     @include flex(0px);
     align-items: center;
     .point-item-info-tit {
-      @include fontDefinition(15px, 600, 140%);
+      @include fontDefinition(16px, 600, 140%);
       color: #1a1a1a;
     }
     .point-item-info-data {
       margin-left: auto;
       span {
-        @include fontDefinition(15px, 600, 140%);
+        @include fontDefinition(16px, 700, 140%);
         color: #1a1a1a;
         &.use {
           color: #e6854a;

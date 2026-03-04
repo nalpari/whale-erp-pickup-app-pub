@@ -73,6 +73,11 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     title: '알림',
     basket: false,
   },
+  '/mypage/stemp': {
+    url: '/mypage',
+    title: '스템프',
+    basket: false,
+  },
 }
 
 // 동적 라우트 패턴 매칭을 위한 함수

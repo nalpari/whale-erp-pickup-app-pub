@@ -1,20 +1,16 @@
-"use client";
-import { usePopupControler } from "@/store/usePopupControler";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+'use client'
+import { usePopupControler } from '@/store/usePopupControler'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 export default function MyPageMain() {
-  const popupControler = usePopupControler();
-  const router = useRouter();
+  const popupControler = usePopupControler()
+  const router = useRouter()
   return (
     <div className="mypage-contents">
       <div className="mydata-bx">
         <div className="mydata-info">
           <div className="mydata-info-img">
-            <Image
-              src="/assets/images/contents/review_master.svg"
-              alt="mydata-img"
-              fill
-            />
+            <Image src="/assets/images/contents/review_master.svg" alt="mydata-img" fill />
           </div>
           <div className="mydata-info-text">
             <div className="mydata-name">
@@ -24,16 +20,13 @@ export default function MyPageMain() {
           </div>
         </div>
         <div className="mydata-menu-list">
-          <button
-            className="mydata-menu-item"
-            onClick={() => popupControler.setMypagePointPopup(true)}
-          >
+          <button className="mydata-menu-item" onClick={() => popupControler.setMypagePointPopup(true)}>
             <div className="mydata-item-tit">
               <i className="icon p">P</i>WHALE 포인트
             </div>
             <div className="mydata-item-data">300,000 P</div>
           </button>
-          <button className="mydata-menu-item">
+          <button className="mydata-menu-item" onClick={() => router.push('/mypage/stemp')}>
             <div className="mydata-item-tit">
               <i className="icon s">S</i>스탬프
             </div>
@@ -41,10 +34,7 @@ export default function MyPageMain() {
               3점포 <span>발행중</span>
             </div>
           </button>
-          <button
-            className="mydata-menu-item"
-            onClick={() => router.push("/mypage/coupon")}
-          >
+          <button className="mydata-menu-item" onClick={() => router.push('/mypage/coupon')}>
             <div className="mydata-item-tit">
               <i className="icon c">C</i>내쿠폰
             </div>
@@ -86,5 +76,5 @@ export default function MyPageMain() {
         </button>
       </div>
     </div>
-  );
+  )
 }
