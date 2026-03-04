@@ -14,6 +14,7 @@ import LocationAllowPopup from "../popup/LocationAllowPopup";
 import AddressSearchPop from "../popup/AddressSearchPop";
 import AddressAliasPop from "../popup/AddressAliasPop";
 import AddressEditPop from "../popup/AddressEditPop";
+import CouponDetailPop from "../popup/CouponDetailPop";
 
 export default function PopupControler() {
   const popupControler = usePopupControler();
@@ -31,7 +32,8 @@ export default function PopupControler() {
       popupControler.locationAllowPopup ||
       popupControler.addressSearchPopup ||
       popupControler.addressAliasPopup ||
-      popupControler.addressEditPopup;
+      popupControler.addressEditPopup ||
+      popupControler.couponDetailPopup;
 
     if (isAnyPopupOpen) {
       document.body.classList.add("open");
@@ -55,6 +57,7 @@ export default function PopupControler() {
     popupControler.addressSearchPopup,
     popupControler.addressAliasPopup,
     popupControler.addressEditPopup,
+    popupControler.couponDetailPopup,
   ]);
 
   return (
@@ -71,6 +74,7 @@ export default function PopupControler() {
       {popupControler.addressSearchPopup && <AddressSearchPop />}
       {popupControler.addressAliasPopup && <AddressAliasPop />}
       {popupControler.addressEditPopup && <AddressEditPop />}
+      {popupControler.couponDetailPopup && <CouponDetailPop />}
     </>
   );
 }

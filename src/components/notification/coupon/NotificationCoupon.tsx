@@ -1,4 +1,8 @@
+'use client'
+import { usePopupControler } from '@/store/usePopupControler'
+
 export default function NotificationCoupon() {
+  const setCouponDetailPopup = usePopupControler((state) => state.setCouponDetailPopup)
   return (
     <div className="notification-body coupon">
       <div className="swich-tab-wrap">
@@ -23,7 +27,7 @@ export default function NotificationCoupon() {
             <div className="coupon-date-wrap">
               <div className="coupon-date">25.11.09 23:59까지 사용</div>
               <div className="coupon-btn">
-                <button className="coupon-use-btn">
+                <button className="coupon-use-btn" onClick={() => setCouponDetailPopup(true)}>
                   쿠폰상세 <i className="arr-icon"></i>
                 </button>
               </div>
