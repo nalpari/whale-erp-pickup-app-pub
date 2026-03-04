@@ -1005,3 +1005,67 @@
     }
   }
 }
+
+// 스탬프 상세
+.stemp-detail {
+  @include flex(0px);
+  flex-direction: column;
+  min-height: 100%;
+  padding: 32px 24px 34px;
+  .stemp-detail-inner {
+    flex: 1;
+  }
+  .stemp-detail-tit {
+    @include fontDefinition(20px, 700, 140%);
+    color: #1a1a1a;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f0f0;
+  }
+  .stemp-detail-guide {
+    padding: 20px 0;
+    border-bottom: 1px solid #f2f0f0;
+    .stemp-detail-guide-tit {
+      @include fontDefinition(18px, 600, 140%);
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+    .stemp-detail-guide-desc {
+      @include fontDefinition(15px, 400, 150%);
+      color: #1a1a1a;
+      span {
+        display: block;
+      }
+    }
+  }
+  .stemp-detail-favor {
+    padding: 20px 0 27px;
+    .stemp-detail-favor-tit {
+      @include fontDefinition(18px, 600, 140%);
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+    .stemp-detail-favor-desc {
+      @include fontDefinition(15px, 400, 150%);
+      color: #1a1a1a;
+      span {
+        display: block;
+      }
+    }
+  }
+  .stemp-total {
+    @include flex(0px);
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #0c3579 0%, #152d5c 100%), #6f82aa;
+    .stemp-total-tit {
+      @include fontDefinition(18px, 600, 140%);
+      color: #fff;
+    }
+    .stemp-total-data {
+      margin-left: auto;
+      @include fontDefinition(18px, 700, 140%);
+      color: #fff;
+    }
+  }
+}
