@@ -73,7 +73,37 @@ export default function PublishPage() {
                     <td className="c red">2025-12-24</td>
                   </tr>
                   <tr>
-                    <td rowSpan={2}>로그인 </td>
+                    <td>알림</td>
+                    <td></td>
+                    <td>
+                      <Link href={'/notification'}>Notification.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-03-05</td>
+                  </tr>
+                  <tr>
+                    <td>검색하기</td>
+                    <td></td>
+                    <td>
+                      <Link href={'/search'}>Search.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-03-05</td>
+                  </tr>
+                  <tr>
+                    <td>찜한 점포</td>
+                    <td></td>
+                    <td>
+                      <Link href={'/save-store'}>SaveStore.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-03-05</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan={3}>로그인 </td>
                     <td>Login</td>
                     <td>
                       <Link href={'/login'}>Login.tsx</Link>
@@ -91,6 +121,16 @@ export default function PublishPage() {
                     <td></td>
                     <td className="c red">2025-12-24</td>
                   </tr>
+                  <tr>
+                    <td>회원가입 완료</td>
+                    <td>
+                      <Link href={'/login/singup-success'}>SingupSuccess.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-03-05</td>
+                  </tr>
+
                   <tr>
                     <td rowSpan={4}>매장정보 </td>
                     <td>매장정보</td>
@@ -158,10 +198,19 @@ export default function PublishPage() {
                     <td className="c red">2025-12-24</td>
                   </tr>
                   <tr>
-                    <td rowSpan={3}>마이페이지 </td>
+                    <td rowSpan={7}>마이페이지 </td>
                     <td>마이페이지</td>
                     <td>
                       <Link href={'/mypage'}>Mypage.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2025-12-24</td>
+                  </tr>
+                  <tr>
+                    <td>마이페이지 스템프 </td>
+                    <td>
+                      <Link href={'/mypage/stemp'}>Stemp.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
@@ -177,33 +226,40 @@ export default function PublishPage() {
                     <td className="c red">2025-12-24</td>
                   </tr>
                   <tr>
-                    <td>마이페이지 쿠폰 상세</td>
+                    <td>마이페이지 내정보 수정</td>
                     <td>
-                      <Link href={'/mypage/coupon/1'}>CouponDetail.tsx</Link>
+                      <Link href={'/mypage/edit'}>Edit.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-03-05</td>
                   </tr>
                   <tr>
-                    <td>검색하기</td>
-                    <td></td>
+                    <td>마이페이지 구매후기 관리</td>
                     <td>
-                      <Link href={'/search'}>Search.tsx</Link>
+                      <Link href={'/mypage/review'}>Review.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-03-05</td>
                   </tr>
                   <tr>
-                    <td>찜한 점포</td>
-                    <td></td>
+                    <td>마이페이지 결제수단 관리</td>
                     <td>
-                      <Link href={'/save-store'}>SaveStore.tsx</Link>
+                      <Link href={'/mypage/payment'}>Payment.tsx</Link>
                     </td>
                     <td></td>
                     <td></td>
-                    <td className="c red">2025-12-24</td>
+                    <td className="c red">2026-03-05</td>
+                  </tr>
+                  <tr>
+                    <td>마이페이지 환경설정</td>
+                    <td>
+                      <Link href={'/mypage/setting'}>Setting.tsx</Link>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="c red">2026-03-05</td>
                   </tr>
                 </tbody>
               </table>

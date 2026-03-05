@@ -1281,7 +1281,8 @@
   min-height: 100vh;
 }
 .mypage-contents {
-  padding: 66px 24px 0;
+  padding: 78px 24px 83px;
+  background-color: #fff;
 }
 .mydata-bx {
   padding: 42px 24px 16px;
@@ -1359,13 +1360,19 @@
   @include flex(0px);
   align-items: center;
   width: 100%;
-  padding: 19px 4px;
+  padding: 24px 4px;
   border-bottom: 1px solid #f2f0f0;
   &:last-child {
     border-bottom: none;
   }
+  &.logout {
+    padding-bottom: 0;
+    .mypage-item-tit {
+      font-weight: 700;
+    }
+  }
   .mypage-item-tit {
-    @include fontDefinition(15px, 400, 140%);
+    @include fontDefinition(16px, 500, 140%);
     color: #1a1a1a;
   }
   .mypage-txt {
@@ -2759,7 +2766,7 @@
 }
 
 .review-completed-guide {
-  padding: 18px 24px;
+  padding: 24px 24px;
   @include fontDefinition(15px, 400, 140%);
   color: #1a1a1a;
   word-break: keep-all;

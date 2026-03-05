@@ -71,8 +71,8 @@ export default function MyPageMain() {
           <div className="mypage-item-tit">버전정보</div>
           <div className="mypage-txt">2.116.0</div>
         </button>
-        <button className="mypage-menu-item">
-          <div className="mypage-item-tit">로그아웃</div>
+        <button className="mypage-menu-item logout">
+          <div className="mypage-item-tit ">로그아웃</div>
         </button>
       </div>
     </div>
