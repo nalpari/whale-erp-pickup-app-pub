@@ -1,4 +1,8 @@
+'use client'
+import { usePopupControler } from '@/store/usePopupControler'
+
 export default function PaymentMethod() {
+  const setAddPaymentPopup = usePopupControler((state) => state.setAddPaymentPopup)
   return (
     <div className="sub-contents">
       <div className="sub-contents-inner">
@@ -47,7 +51,9 @@ export default function PaymentMethod() {
           </div>
         </div>
         <div className="payment-method-btn-wrap">
-          <button className="btn-form black block">신용/체크카드 등록</button>
+          <button className="btn-form black block" onClick={() => setAddPaymentPopup(true)}>
+            신용/체크카드 등록
+          </button>
         </div>
       </div>
     </div>

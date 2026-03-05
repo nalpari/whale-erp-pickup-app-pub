@@ -16,6 +16,7 @@ import AddressAliasPop from "../popup/AddressAliasPop";
 import AddressEditPop from "../popup/AddressEditPop";
 import CouponDetailPop from "../popup/CouponDetailPop";
 import StempDetailPop from "../popup/StempDetailPop";
+import AddPaymentPop from "../popup/AddPaymentPop";
 
 export default function PopupControler() {
   const popupControler = usePopupControler();
@@ -35,7 +36,8 @@ export default function PopupControler() {
       popupControler.addressAliasPopup ||
       popupControler.addressEditPopup ||
       popupControler.couponDetailPopup ||
-      popupControler.stempDetailPopup;
+      popupControler.stempDetailPopup ||
+      popupControler.addPaymentPopup;
 
     if (isAnyPopupOpen) {
       document.body.classList.add("open");
@@ -61,6 +63,7 @@ export default function PopupControler() {
     popupControler.addressEditPopup,
     popupControler.couponDetailPopup,
     popupControler.stempDetailPopup,
+    popupControler.addPaymentPopup,
   ]);
 
   return (
@@ -79,6 +82,7 @@ export default function PopupControler() {
       {popupControler.addressEditPopup && <AddressEditPop />}
       {popupControler.couponDetailPopup && <CouponDetailPop />}
       {popupControler.stempDetailPopup && <StempDetailPop />}
+      {popupControler.addPaymentPopup && <AddPaymentPop />}
     </>
   );
 }

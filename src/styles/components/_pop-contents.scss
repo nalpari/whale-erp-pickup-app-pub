@@ -30,6 +30,18 @@
   }
 }
 
+.filed-form {
+  @include flex(20px);
+  flex-direction: column;
+  .filed-item {
+    .filed-tit {
+      @include fontDefinition(15px, 600, 140%);
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .map-frame {
   @include flex(0px);
   width: 100%;
@@ -1100,6 +1112,35 @@
       &.use {
         color: #e6854a;
       }
+    }
+  }
+}
+
+// 결제카드 등록
+.add-payment-frame {
+  @include flex(0px);
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 24px 32px;
+  .add-payment-guide {
+    @include fontDefinition(14px, 400, 140%);
+    color: #1a1a1a;
+    margin-bottom: 20px;
+  }
+  .add-payment-form {
+    flex: 1;
+  }
+}
+
+.add-payment-btn {
+  margin-top: 24px;
+  .payment-check-wrap {
+    @include flex(0px);
+    align-items: center;
+    margin-bottom: 20px;
+    .review-update-btn-item {
+      flex: none;
+      margin-left: auto;
     }
   }
 }
