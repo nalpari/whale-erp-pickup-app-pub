@@ -2,7 +2,7 @@
 .sub-contents {
   padding-top: 68px;
   .sub-contents-inner {
-    padding: 24px;
+    padding: 24px 24px 34px;
   }
   .sub-white-wrap {
     min-height: calc(100vh - 68px);
@@ -2654,6 +2654,14 @@
         background-size: cover;
       }
     }
+  }
+  .review-writeable-list-item-empty {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    text-align: center;
+    padding: 24px 20px;
+    border-radius: 18px;
+    background: #fff;
   }
 }
 

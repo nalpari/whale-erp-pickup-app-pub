@@ -56,6 +56,9 @@ export default function ReviewWriteable() {
                 </button>
               </div>
             </li>
+            <li className="review-writeable-list-item">
+              <div className="review-writeable-list-item-empty">작성가능한 구매후기가 없습니다.</div>
+            </li>
           </ul>
         </div>
       </div>
