@@ -1,8 +1,8 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 // check radio 공통
-.check-form-box input[type="checkbox"],
-.radio-form-box input[type="radio"] {
+.check-form-box input[type='checkbox'],
+.radio-form-box input[type='radio'] {
   position: absolute;
   top: 0;
   left: 0;
@@ -36,7 +36,7 @@
   label {
     padding-left: 26px;
     &::before {
-      content: "";
+      content: '';
       display: inline-block;
       position: absolute;
       width: 20px;
@@ -47,12 +47,14 @@
       border: 1px solid $check-c-bord;
       border-radius: 4px;
       background-color: #fff;
-      transition: border 0.15s ease-in-out, color 0.15s ease-in-out,
+      transition:
+        border 0.15s ease-in-out,
+        color 0.15s ease-in-out,
         background-color 0.15s ease-in-out;
       cursor: pointer;
     }
     &::after {
-      content: "";
+      content: '';
       display: inline-block;
       position: absolute;
       top: -1px;
@@ -65,21 +67,23 @@
       transform: translate(7.75px, 4.5px) rotate(45deg);
       -ms-transform: translate(7.75px, 4.5px) rotate(45deg);
       cursor: pointer;
-      transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      transition:
+        border 0.15s ease-in-out,
+        color 0.15s ease-in-out;
     }
   }
-  input[type="checkbox"]:checked + label {
+  input[type='checkbox']:checked + label {
     color: #1a1a1a;
   }
-  input[type="checkbox"]:checked + label::before {
+  input[type='checkbox']:checked + label::before {
     background-color: $check-c-back;
     border-color: #1a1a1a;
   }
-  input[type="checkbox"]:checked + label::after {
-    content: "";
+  input[type='checkbox']:checked + label::after {
+    content: '';
     border-color: #1a1a1a;
   }
-  input[type="checkbox"]:disabled + label {
+  input[type='checkbox']:disabled + label {
     cursor: default;
     color: $check-disabled-c-font;
     &::before {
@@ -90,7 +94,7 @@
       cursor: default;
     }
   }
-  input[type="checkbox"]:disabled:checked + label::before {
+  input[type='checkbox']:disabled:checked + label::before {
     background-color: #a8b6c7;
     border-color: #a8b6c7;
   }
@@ -129,7 +133,7 @@
   label {
     padding-left: 28px;
     &::before {
-      content: "";
+      content: '';
       display: inline-block;
       position: absolute;
       width: 20px;
@@ -141,11 +145,13 @@
       border-radius: 100%;
       background-color: #fff;
       text-align: center;
-      transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      transition:
+        border 0.15s ease-in-out,
+        color 0.15s ease-in-out;
       cursor: pointer;
     }
     &::after {
-      content: "";
+      content: '';
       display: inline-block;
       position: absolute;
       top: 5px;
@@ -157,16 +163,16 @@
       transition: background-color 0.1s ease-in-out;
     }
   }
-  input[type="radio"]:checked + label {
+  input[type='radio']:checked + label {
     color: #1a1a1a;
   }
-  input[type="radio"]:checked + label::before {
+  input[type='radio']:checked + label::before {
     border-color: #1a1a1a;
   }
-  input[type="radio"]:checked + label::after {
+  input[type='radio']:checked + label::after {
     background-color: #1a1a1a;
   }
-  input[type="radio"]:disabled + label {
+  input[type='radio']:disabled + label {
     cursor: default;
     color: $check-disabled-c-font;
     &::before {
@@ -176,10 +182,10 @@
       cursor: default;
     }
   }
-  input[type="radio"]:disabled:checked + label::before {
+  input[type='radio']:disabled:checked + label::before {
     border-color: #a8b6c7;
   }
-  input[type="radio"]:disabled:checked + label::after {
+  input[type='radio']:disabled:checked + label::after {
     background-color: #a8b6c7;
   }
 }
@@ -216,7 +222,7 @@
     user-select: none;
     &:before {
       position: absolute;
-      content: "";
+      content: '';
       height: 20px;
       width: 20px;
       left: 2px;
@@ -230,6 +236,11 @@
     background-color: #444;
     &:before {
       transform: translateX(20px);
+    }
+  }
+  &.blue {
+    input:checked + .slider {
+      background-color: #9ba7ba;
     }
   }
   &.mb {

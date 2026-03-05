@@ -4,6 +4,11 @@
   .sub-contents-inner {
     padding: 24px;
   }
+  .sub-white-wrap {
+    min-height: calc(100vh - 68px);
+    background-color: #fff;
+    padding: 0 24px;
+  }
 }
 .header {
   position: fixed;
@@ -2555,6 +2560,32 @@
   .list-arr-btn {
     transform: rotate(-90deg);
   }
+}
+
+// 환경설정
+.setting-list {
+  padding-top: 5px;
+}
+.setting-item {
+  @include flex(0px);
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #f2f0f0;
+  &:last-child {
+    border-bottom: none;
+  }
+  .setting-item-tit {
+    @include fontDefinition(16px, 600, 140%);
+    color: #1a1a1a;
+  }
+  .toggle-btn {
+    margin-left: auto;
+  }
+}
+.setting-location-txt {
+  @include fontDefinition(15px, 400, 140%);
+  color: #1a1a1a;
+  word-break: keep-all;
 }
 
 @media screen and (max-width: 321px) {

@@ -78,6 +78,11 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     title: '스템프',
     basket: false,
   },
+  '/mypage/setting': {
+    url: '/mypage',
+    title: '환경설정',
+    basket: false,
+  },
 }
 
 // 동적 라우트 패턴 매칭을 위한 함수

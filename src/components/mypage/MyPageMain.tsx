@@ -55,7 +55,7 @@ export default function MyPageMain() {
             <i className="mypage-arr"></i>
           </div>
         </button>
-        <button className="mypage-menu-item">
+        <button className="mypage-menu-item" onClick={() => router.push('/mypage/setting')}>
           <div className="mypage-item-tit">환경설정</div>
           <div className="mypage-txt">
             <i className="mypage-arr"></i>
