@@ -8,6 +8,7 @@ import CategorySheet from "../bottomSheet/CategorySheet";
 import OrderRequestSheet from "../bottomSheet/OrderRequestSheet";
 import CardSelectSheet from "../bottomSheet/CardSelectSheet";
 import InstallmentSheet from "../bottomSheet/InstallmentSheet";
+import AddPhotoSheet from "../bottomSheet/AddPhotoSheet";
 
 export default function BottomSheetControler() {
   const bottomSheetControler = useBottomSheetControler();
@@ -20,7 +21,8 @@ export default function BottomSheetControler() {
       bottomSheetControler.categorySheet ||
       bottomSheetControler.orderRequestSheet ||
       bottomSheetControler.cardSelectSheet ||
-      bottomSheetControler.installmentSheet;
+      bottomSheetControler.installmentSheet ||
+      bottomSheetControler.addPhotoSheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -40,6 +42,7 @@ export default function BottomSheetControler() {
     bottomSheetControler.orderRequestSheet,
     bottomSheetControler.cardSelectSheet,
     bottomSheetControler.installmentSheet,
+    bottomSheetControler.addPhotoSheet,
   ]);
 
   return (
@@ -50,6 +53,7 @@ export default function BottomSheetControler() {
       {bottomSheetControler.orderRequestSheet && <OrderRequestSheet />}
       {bottomSheetControler.cardSelectSheet && <CardSelectSheet />}
       {bottomSheetControler.installmentSheet && <InstallmentSheet />}
+      {bottomSheetControler.addPhotoSheet && <AddPhotoSheet />}
     </>
   );
 }

@@ -83,6 +83,11 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     title: '환경설정',
     basket: false,
   },
+  '/mypage/review': {
+    url: '/mypage',
+    title: '구매후기 관리',
+    basket: false,
+  },
 }
 
 // 동적 라우트 패턴 매칭을 위한 함수
@@ -118,6 +123,14 @@ export function getHeaderConfigByPathname(pathname: string): HeaderMenuType | nu
     return {
       url: '/mypage/coupon',
       title: '쿠폰 상세',
+      basket: false,
+    }
+  }
+
+  if (pathname.startsWith('/mypage/review/') && pathname !== '/mypage/review/') {
+    return {
+      url: '/mypage/review',
+      title: '구매후기 작성',
       basket: false,
     }
   }
