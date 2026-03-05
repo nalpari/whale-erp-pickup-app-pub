@@ -34,7 +34,9 @@ export default function Header({ url, title, basket }: HeaderProps) {
         )}
         {pathname === '/mypage/edit' && (
           <div className="order-side member">
-            <button className="member-delete-btn">회원탈퇴</button>
+            <button className="member-delete-btn" onClick={() => router.push('/mypage/withdraw')}>
+              회원탈퇴
+            </button>
           </div>
         )}
       </div>

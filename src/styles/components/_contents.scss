@@ -2900,6 +2900,88 @@
   }
 }
 
+// 회원 탈퇴
+.withdraw-contents {
+  padding: 24px 0 34px;
+}
+.withdraw-guide {
+  border-radius: 18px;
+  background: #f4f5f6;
+  padding: 28px 20px 34px;
+  .withdraw-name {
+    @include fontDefinition(20px, 500, 140%);
+    color: #1a1a1a;
+    span {
+      display: block;
+    }
+    .name {
+      font-weight: 700;
+    }
+  }
+  .withdraw-applogy {
+    margin-top: 10px;
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+  }
+}
+.withdraw-reason-list {
+  margin-top: 32px;
+  .withdraw-reason-tit {
+    @include fontDefinition(16px, 600, 140%);
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  .withdraw-reason-item {
+    margin-bottom: 10px;
+    &.act {
+      .withdraw-reason-btn {
+        border-color: #d6e5ff;
+        background: #d6e5ff;
+        color: #2660ff;
+        font-weight: 500;
+      }
+    }
+    .withdraw-reason-btn {
+      display: block;
+      text-align: left;
+      width: 100%;
+      height: 48px;
+      border-radius: 6px;
+      border: 1px solid #ebebeb;
+      background: #fff;
+      padding: 0 16px;
+      @include fontDefinition(15px, 400, 140%);
+      color: #1a1a1a;
+      transition: all 0.15s ease;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.withdraw-reason-custom {
+  margin-top: 20px;
+  .withdraw-reason-custom-tit {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  textarea {
+    height: 80px;
+  }
+  .withdraw-warning {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    margin-top: 16px;
+  }
+}
+.withdraw-btn-wrap {
+  margin-top: 20px;
+  .btn-form {
+    margin-top: 28px;
+  }
+}
+
 @media screen and (max-width: 321px) {
   .header {
     h1 {

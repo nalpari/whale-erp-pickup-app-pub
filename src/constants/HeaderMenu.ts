@@ -98,6 +98,11 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     title: '내정보 수정',
     basket: false,
   },
+  '/mypage/withdraw': {
+    url: '/mypage',
+    title: '회원 탈퇴',
+    basket: false,
+  },
 }
 
 // 동적 라우트 패턴 매칭을 위한 함수
