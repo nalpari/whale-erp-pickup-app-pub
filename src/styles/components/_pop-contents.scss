@@ -1008,13 +1008,9 @@
 
 // 스탬프 상세
 .stemp-detail {
-  @include flex(0px);
-  flex-direction: column;
   min-height: 100%;
   padding: 32px 24px 34px;
-  .stemp-detail-inner {
-    flex: 1;
-  }
+
   .stemp-detail-tit {
     @include fontDefinition(20px, 700, 140%);
     color: #1a1a1a;
@@ -1049,6 +1045,7 @@
       color: #1a1a1a;
       span {
         display: block;
+        word-break: keep-all;
       }
     }
   }
@@ -1066,6 +1063,43 @@
       margin-left: auto;
       @include fontDefinition(18px, 700, 140%);
       color: #fff;
+    }
+  }
+}
+
+.stemp-history-list-wrap {
+  margin-top: 34px;
+  .history-guide {
+    @include fontDefinition(15px, 400, 140%);
+    color: #1a1a1a;
+    padding: 0 0 20px;
+  }
+}
+
+.stemp-history-item {
+  padding: 15px 0 20px;
+  border-top: 1px solid #f2f0f0;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  .history-info {
+    @include flex(0px);
+    align-items: center;
+    .history-date {
+      @include fontDefinition(15px, 400, 140%);
+      color: #777;
+    }
+    .history-name {
+      @include fontDefinition(16px, 600, 140%);
+      color: #1a1a1a;
+    }
+    .history-data {
+      margin-left: auto;
+      @include fontDefinition(15px, 700, 140%);
+      color: #1a1a1a;
+      &.use {
+        color: #e6854a;
+      }
     }
   }
 }

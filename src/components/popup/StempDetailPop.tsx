@@ -56,6 +56,32 @@ export default function StempDetailPop() {
                 <div className="stemp-total-tit">보유 스탬프</div>
                 <div className="stemp-total-data">20개</div>
               </div>
+              <div className="stemp-history-list-wrap">
+                <div className="history-guide">최근 1년간의 적립, 사용 이력을 조회할 수 있습니다.</div>
+                <ul className="stemp-history-list">
+                  <li className="stemp-history-item">
+                    <div className="history-date">2025.11.01 14:24</div>
+                    <div className="history-info">
+                      <div className="history-name">크피스피크림도넛 미아점</div>
+                      <div className="history-data">2</div>
+                    </div>
+                  </li>
+                  <li className="stemp-history-item">
+                    <div className="history-date">2025.11.01 14:24</div>
+                    <div className="history-info">
+                      <div className="history-name">관리자수동적립</div>
+                      <div className="history-data ">2</div>
+                    </div>
+                  </li>
+                  <li className="stemp-history-item">
+                    <div className="history-date">2025.11.01 14:24</div>
+                    <div className="history-info">
+                      <div className="history-name">주문사용</div>
+                      <div className="history-data use">-10</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
