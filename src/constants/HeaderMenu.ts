@@ -88,6 +88,11 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigType = {
     title: '구매후기 관리',
     basket: false,
   },
+  '/mypage/payment': {
+    url: '/mypage',
+    title: '결제수단 관리',
+    basket: false,
+  },
 }
 
 // 동적 라우트 패턴 매칭을 위한 함수

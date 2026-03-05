@@ -2795,16 +2795,16 @@
     margin-left: auto;
     @include flex(6px);
     align-items: center;
-    .review-update-btn-item {
-      height: 34px;
-      padding: 0 14px;
-      border-radius: 100px;
-      border: 1px solid #ededed;
-      background: #f8f8f8;
-      @include fontDefinition(14px, 500, 34px);
-      color: #444;
-    }
   }
+}
+.review-update-btn-item {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 100px;
+  border: 1px solid #ededed;
+  background: #f8f8f8;
+  @include fontDefinition(14px, 500, 34px);
+  color: #444;
 }
 .review-photo-wrap {
   padding-top: 24px;
@@ -2822,6 +2822,59 @@
   .review-img-item {
     margin-top: 18px;
   }
+}
+// 결제수단 관리
+.payment-method-list {
+  @include flex(16px);
+  flex-direction: column;
+}
+.payment-method-item {
+  padding: 22px 20px;
+  border-radius: 18px;
+  background: #fff;
+  .payment-method-item-date {
+    @include flex(0px);
+    align-items: center;
+    .tit {
+      @include fontDefinition(15px, 400, 140%);
+      color: #1a1a1a;
+    }
+    .data {
+      margin-left: auto;
+      @include fontDefinition(15px, 400, 140%);
+      color: #777;
+    }
+  }
+  .payment-method-item-data-wrap {
+    @include flex(0px);
+    align-items: center;
+    margin-top: 10px;
+  }
+  .payment-method-item-info {
+    .payment-method-item-tit {
+      @include fontDefinition(16px, 700, 150%);
+      color: #1a1a1a;
+    }
+    .payment-method-item-data {
+      @include fontDefinition(15px, 500, 150%);
+      color: #1a1a1a;
+    }
+  }
+  .review-update-btn-item {
+    margin-left: auto;
+  }
+}
+.payment-method-btn-wrap {
+  margin-top: 24px;
+}
+.payment-method-item-empty {
+  @include fontDefinition(15px, 400, 140%);
+  color: #1a1a1a;
+  word-break: keep-all;
+  text-align: center;
+  padding: 22px 20px;
+  border-radius: 18px;
+  background: #fff;
 }
 
 @media screen and (max-width: 321px) {

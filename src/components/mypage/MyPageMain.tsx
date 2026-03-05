@@ -61,7 +61,7 @@ export default function MyPageMain() {
             <i className="mypage-arr"></i>
           </div>
         </button>
-        <button className="mypage-menu-item">
+        <button className="mypage-menu-item" onClick={() => router.push('/mypage/payment')}>
           <div className="mypage-item-tit">결제수단 관리</div>
           <div className="mypage-txt">
             <i className="mypage-arr"></i>
