@@ -8,6 +8,9 @@ type BottomSheetControlerState = {
   cardSelectSheet: boolean;
   installmentSheet: boolean;
   addPhotoSheet: boolean;
+  passwordCheckSheet: boolean;
+  passwordSettingSheet: boolean;
+  snsDisconnectSheet: boolean;
   setLocationSheet: (isOpen: boolean) => void;
   setArraySheet: (isOpen: boolean) => void;
   setCategorySheet: (isOpen: boolean) => void;
@@ -15,6 +18,9 @@ type BottomSheetControlerState = {
   setCardSelectSheet: (isOpen: boolean) => void;
   setInstallmentSheet: (isOpen: boolean) => void;
   setAddPhotoSheet: (isOpen: boolean) => void;
+  setPasswordCheckSheet: (isOpen: boolean) => void;
+  setPasswordSettingSheet: (isOpen: boolean) => void;
+  setSnsDisconnectSheet: (isOpen: boolean) => void;
 };
 
 type InitialStateType = {
@@ -25,6 +31,9 @@ type InitialStateType = {
   cardSelectSheet: boolean;
   installmentSheet: boolean;
   addPhotoSheet: boolean;
+  passwordCheckSheet: boolean;
+  passwordSettingSheet: boolean;
+  snsDisconnectSheet: boolean;
 };
 
 const initialState: InitialStateType = {
@@ -35,6 +44,9 @@ const initialState: InitialStateType = {
   cardSelectSheet: false,
   installmentSheet: false,
   addPhotoSheet: false,
+  passwordCheckSheet: false,
+  passwordSettingSheet: false,
+  snsDisconnectSheet: false,
 };
 
 export const useBottomSheetControler = create<BottomSheetControlerState>(
@@ -54,5 +66,11 @@ export const useBottomSheetControler = create<BottomSheetControlerState>(
       set((state) => ({ ...state, installmentSheet: isOpen })),
     setAddPhotoSheet: (isOpen: boolean) =>
       set((state) => ({ ...state, addPhotoSheet: isOpen })),
+    setPasswordCheckSheet: (isOpen: boolean) =>
+      set((state) => ({ ...state, passwordCheckSheet: isOpen })),
+    setPasswordSettingSheet: (isOpen: boolean) =>
+      set((state) => ({ ...state, passwordSettingSheet: isOpen })),
+    setSnsDisconnectSheet: (isOpen: boolean) =>
+      set((state) => ({ ...state, snsDisconnectSheet: isOpen })),
   })
 );

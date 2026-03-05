@@ -43,7 +43,7 @@ export default function MyPageMain() {
         </div>
       </div>
       <div className="mypage-menu-list">
-        <button className="mypage-menu-item">
+        <button className="mypage-menu-item" onClick={() => router.push('/mypage/edit')}>
           <div className="mypage-item-tit">내정보 수정 / 탈퇴</div>
           <div className="mypage-txt">
             <i className="mypage-arr"></i>

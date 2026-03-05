@@ -1924,6 +1924,7 @@
   flex-direction: column;
   min-height: 100vh;
   padding-top: 68px;
+  background-color: #fff;
   .login-contents-inner {
     flex: 1;
     padding: 32px 24px 0;
@@ -2883,6 +2884,20 @@
   padding: 22px 20px;
   border-radius: 18px;
   background: #fff;
+}
+
+// 내정보 수정 / 탈퇴
+.sns-wrap {
+  border: 1px solid #ebebeb;
+  .sns-item-tit {
+    padding: 14px 12px;
+    @include fontDefinition(20px, 700, 150%);
+    color: #1a1a1a;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .sns-item {
+    padding: 18px 12px;
+  }
 }
 
 @media screen and (max-width: 321px) {

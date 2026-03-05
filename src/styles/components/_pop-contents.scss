@@ -23,7 +23,7 @@
   }
 }
 .msg {
-  @include fontDefinition($font-ds-15, $font-w-400, $line-h-160);
+  @include fontDefinition($font-ds-14, $font-w-400, $line-h-160);
   color: #1a1a1a;
   &.err {
     color: #ff3838;
@@ -37,6 +37,11 @@
     .filed-tit {
       @include fontDefinition(15px, 600, 140%);
       color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    .filed-guide {
+      @include fontDefinition(15px, 500, 140%);
+      color: #444;
       margin-bottom: 10px;
     }
   }

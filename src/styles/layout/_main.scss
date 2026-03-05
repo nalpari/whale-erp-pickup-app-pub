@@ -46,7 +46,9 @@
   @include flex(10px);
   margin-left: auto;
   margin-top: -11px;
-
+  &.member {
+    margin-top: 0;
+  }
   button {
     position: relative;
     width: 30px;
@@ -73,6 +75,15 @@
     &.order-basket {
       background: url(/assets/images/layout/basket.svg) no-repeat bottom left;
     }
+  }
+  .member-delete-btn {
+    width: auto;
+    height: 36px;
+    border-radius: 100px;
+    border: 1px solid #007aff;
+    padding: 0 8px;
+    @include fontDefinition(14px, 500, 140%);
+    color: #007aff;
   }
 }
 

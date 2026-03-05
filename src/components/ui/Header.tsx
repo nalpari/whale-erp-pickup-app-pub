@@ -1,5 +1,5 @@
 'use client'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { HeaderMenuType } from '@/constants/HeaderMenu'
 
 type HeaderProps = {
@@ -10,6 +10,7 @@ type HeaderProps = {
 
 export default function Header({ url, title, basket }: HeaderProps) {
   const router = useRouter()
+  const pathname = usePathname()
 
   const headerConfig: HeaderMenuType = {
     url: url || '/',
@@ -29,6 +30,11 @@ export default function Header({ url, title, basket }: HeaderProps) {
             <button className="order-basket">
               <span>2</span>
             </button>
+          </div>
+        )}
+        {pathname === '/mypage/edit' && (
+          <div className="order-side member">
+            <button className="member-delete-btn">회원탈퇴</button>
           </div>
         )}
       </div>

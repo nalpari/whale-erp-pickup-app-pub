@@ -9,6 +9,9 @@ import OrderRequestSheet from "../bottomSheet/OrderRequestSheet";
 import CardSelectSheet from "../bottomSheet/CardSelectSheet";
 import InstallmentSheet from "../bottomSheet/InstallmentSheet";
 import AddPhotoSheet from "../bottomSheet/AddPhotoSheet";
+import PasswordCheckSheet from "../bottomSheet/PasswordCheckSheet";
+import PasswordSettingSheet from "../bottomSheet/PasswordSettingSheet";
+import SnsDisconnectSheet from "../bottomSheet/SnsDisconnectSheet";
 
 export default function BottomSheetControler() {
   const bottomSheetControler = useBottomSheetControler();
@@ -22,7 +25,10 @@ export default function BottomSheetControler() {
       bottomSheetControler.orderRequestSheet ||
       bottomSheetControler.cardSelectSheet ||
       bottomSheetControler.installmentSheet ||
-      bottomSheetControler.addPhotoSheet;
+      bottomSheetControler.addPhotoSheet ||
+      bottomSheetControler.passwordCheckSheet ||
+      bottomSheetControler.passwordSettingSheet ||
+      bottomSheetControler.snsDisconnectSheet;
 
     // body 클래스 토글
     if (isAnyBottomSheetOpen) {
@@ -43,6 +49,9 @@ export default function BottomSheetControler() {
     bottomSheetControler.cardSelectSheet,
     bottomSheetControler.installmentSheet,
     bottomSheetControler.addPhotoSheet,
+    bottomSheetControler.passwordCheckSheet,
+    bottomSheetControler.passwordSettingSheet,
+    bottomSheetControler.snsDisconnectSheet,
   ]);
 
   return (
@@ -54,6 +63,9 @@ export default function BottomSheetControler() {
       {bottomSheetControler.cardSelectSheet && <CardSelectSheet />}
       {bottomSheetControler.installmentSheet && <InstallmentSheet />}
       {bottomSheetControler.addPhotoSheet && <AddPhotoSheet />}
+      {bottomSheetControler.passwordCheckSheet && <PasswordCheckSheet />}
+      {bottomSheetControler.passwordSettingSheet && <PasswordSettingSheet />}
+      {bottomSheetControler.snsDisconnectSheet && <SnsDisconnectSheet />}
     </>
   );
 }
