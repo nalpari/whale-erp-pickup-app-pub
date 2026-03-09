@@ -156,7 +156,7 @@
 }
 .detail-header {
   .header {
-    top: -66px;
+    top: -68px;
     transition: all 0.15s ease;
   }
   &.act {
@@ -823,6 +823,7 @@
 .review-contents {
   margin-top: 66px;
   padding: 32px 24px 0;
+  background-color: #fff;
 }
 .review-item {
   border-bottom: 1px solid #ededed;
@@ -2844,7 +2845,7 @@
   @include flex(16px);
   flex-direction: column;
 }
-.payment-method-item {
+.payment-item {
   padding: 22px 20px;
   border-radius: 18px;
   background: #fff;
@@ -2880,7 +2881,7 @@
     margin-left: auto;
   }
 }
-.payment-method-btn-wrap {
+.payment-btn-wrap {
   margin-top: 24px;
 }
 .payment-method-item-empty {

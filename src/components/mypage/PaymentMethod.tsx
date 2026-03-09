@@ -7,7 +7,7 @@ export default function PaymentMethod() {
     <div className="sub-contents">
       <div className="sub-contents-inner">
         <div className="payment-method-list">
-          <div className="payment-method-item">
+          <div className="payment-item">
             <div className="payment-method-item-date">
               <span className="tit">등록일</span>
               <span className="data">2025.08.06</span>
@@ -20,7 +20,7 @@ export default function PaymentMethod() {
               <button className="review-update-btn-item">삭제</button>
             </div>
           </div>
-          <div className="payment-method-item">
+          <div className="payment-item">
             <div className="payment-method-item-date">
               <span className="tit">등록일</span>
               <span className="data">2025.08.06</span>
@@ -33,7 +33,7 @@ export default function PaymentMethod() {
               <button className="review-update-btn-item">삭제</button>
             </div>
           </div>
-          <div className="payment-method-item">
+          <div className="payment-item">
             <div className="payment-method-item-date">
               <span className="tit">등록일</span>
               <span className="data">2025.08.06</span>
@@ -46,11 +46,11 @@ export default function PaymentMethod() {
               <button className="review-update-btn-item">삭제</button>
             </div>
           </div>
-          <div className="payment-method-item">
+          <div className="payment-item">
             <div className="payment-method-item-empty">등록된 결제수단이 없습니다.</div>
           </div>
         </div>
-        <div className="payment-method-btn-wrap">
+        <div className="payment-btn-wrap">
           <button className="btn-form black block" onClick={() => setAddPaymentPopup(true)}>
             신용/체크카드 등록
           </button>
